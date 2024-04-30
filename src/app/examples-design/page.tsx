@@ -7,7 +7,7 @@ import {
   ResizablePanelGroup,
 } from "@/components/ui/resizable";
 
-export default function Home() {
+export default function Page() {
   return (
     <main className="bg-slate-900 text-white">
       <Header />
@@ -17,7 +17,7 @@ export default function Home() {
         </ResizablePanel>
         <ResizableHandle withHandle />
         <ResizablePanel>
-          <Outlet />
+          <Outlet title="Examples Design" />
         </ResizablePanel>
       </ResizablePanelGroup>
     </main>
