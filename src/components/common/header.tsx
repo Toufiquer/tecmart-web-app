@@ -11,6 +11,23 @@ import Image from "next/image";
 
 import Link from "next/link";
 
+const navData = [
+  { id: "1", href: "/tools", name: "Tools", title: "Tools" },
+  {
+    id: "2",
+    href: "/examples-design/full-page",
+    name: "Page",
+    title: "Example Page Design",
+  },
+  {
+    id: "3",
+    href: "/examples-design/components",
+    name: "Components",
+    title: "Example Components Design",
+  },
+  { id: "4", href: "/boilerplate", name: "Boilerplate", title: "Boilerplate" },
+];
+
 const Header = () => {
   return (
     <div className="border-b w-full h-[8vh]">
@@ -27,30 +44,16 @@ const Header = () => {
           </Link>
         </div>
         <div className="flex items-center justify-end w-[30vw]">
-          <Link
-            href="/tools"
-            className="px-2 hover:underline"
-            title="Example Design"
-          >
-            Tools
-          </Link>
-          <Link
-            href="/examples-design/full-page"
-            className="px-2 hover:underline"
-            title="Example Design"
-          >
-            Page
-          </Link>
-          <Link
-            href="/examples-design/components"
-            className="px-2 hover:underline"
-            title="Example Design"
-          >
-            Components
-          </Link>
-          <Link href="/boilerplate" className="px-2 hover:underline">
-            Boilerplate
-          </Link>
+          {navData.map((curr) => (
+            <Link
+              key={curr.id}
+              href={curr.href}
+              className="px-2 hover:underline"
+              title={curr.title}
+            >
+              {curr.name}
+            </Link>
+          ))}
         </div>
       </div>
     </div>
