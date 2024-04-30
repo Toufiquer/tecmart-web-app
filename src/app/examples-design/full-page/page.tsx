@@ -5,7 +5,6 @@
 | @copyright: Toufiquer, May, 2024
 |-----------------------------------------
 */
-
 import Header from "@/components/common/header";
 import Outlet from "@/components/common/outlet";
 import SideBar from "@/components/common/side-bar";
@@ -25,7 +24,7 @@ export default function Page() {
         </ResizablePanel>
         <ResizableHandle withHandle />
         <ResizablePanel>
-          <Outlet title="Boilerplate" />
+          <Outlet title="Page Design" />
         </ResizablePanel>
       </ResizablePanelGroup>
     </main>

@@ -2,9 +2,11 @@
 |-----------------------------------------
 | setting up Header for the App
 | @author: Toufiquer Rahman<toufiquer.0@gmail.com>
-| @copyright: tecmart-next, May, 2024
+| @copyright: Toufiquer, May, 2024
 |-----------------------------------------
 */
+
+
 import Image from "next/image";
 
 import Link from "next/link";
@@ -26,11 +28,25 @@ const Header = () => {
         </div>
         <div className="flex items-center justify-end w-[30vw]">
           <Link
-            href="/examples-design"
+            href="/tools"
             className="px-2 hover:underline"
             title="Example Design"
           >
-            Design
+            Tools
+          </Link>
+          <Link
+            href="/examples-design/full-page"
+            className="px-2 hover:underline"
+            title="Example Design"
+          >
+            Page
+          </Link>
+          <Link
+            href="/examples-design/components"
+            className="px-2 hover:underline"
+            title="Example Design"
+          >
+            Components
           </Link>
           <Link href="/boilerplate" className="px-2 hover:underline">
             Boilerplate

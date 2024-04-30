@@ -2,10 +2,17 @@
 |-----------------------------------------
 | setting up Outlet for the App
 | @author: Toufiquer Rahman<toufiquer.0@gmail.com>
-| @copyright: tecmart-next, May, 2024
+| @copyright: Toufiquer, May, 2024
 |-----------------------------------------
 */
-const Outlet = ({ title }: { title?: string }) => {
-  return <main>{title ? title : "Outlet"}</main>;
+
+import  SignUpPage  from "@/app/examples-design/full-page/auth/with-border/signUp/page"
+
+const Outlet = ({ title,uiPath }: {uiPath?:string, title?: string }) => {
+  
+  let renderUI = <main>{title ? title : "Outlet"}</main>;
+  if (uiPath === "@/app/examples-design/full-page/auth/with-border/signUp/page")
+    renderUI = <SignUpPage />;
+  return renderUI;
 };
 export default Outlet;
