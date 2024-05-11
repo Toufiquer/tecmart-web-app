@@ -5,14 +5,16 @@
 | @copyright: Toufiquer, May, 2024
 |-----------------------------------------
 */
-import Header from "@/components/common/header";
-import Outlet from "@/components/common/outlet";
-import SideBar from "@/components/common/side-bar";
+
 import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
 } from "@/components/ui/resizable";
+import Header from "@/components/common/header";
+
+import ToolsOutlet from "./tools-outlet";
+import ToolsSidebar from "./tools-sidebar";
 
 export default function Page() {
   return (
@@ -20,11 +22,11 @@ export default function Page() {
       <Header />
       <ResizablePanelGroup direction="horizontal" className="min-h-[92vh]">
         <ResizablePanel defaultSize={30}>
-          <SideBar />
+          <ToolsSidebar />
         </ResizablePanel>
         <ResizableHandle withHandle />
         <ResizablePanel>
-          <Outlet title="Tools" />
+          <ToolsOutlet />
         </ResizablePanel>
       </ResizablePanelGroup>
     </main>

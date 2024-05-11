@@ -557,7 +557,7 @@ export const exampleToolsData: toolsPageInterface = {
           ],
         },
         {
-          id: "030---------------------------------",
+          id: "",
           title: "",
           documentation: [
             {
