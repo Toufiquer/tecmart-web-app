@@ -26,7 +26,23 @@ const ToolsSidebar = () => {
   return (
     <main>
       <div className="flex items-center justify-between space-x-2 border-slate-700 py-2 border-b px-6">
-        <Label htmlFor="airplane-mode">{isFilter ? "All" : "Important"}</Label>
+        <Label htmlFor="airplane-mode">
+          <div className="flex gap-1">
+            <p>
+              {isFilter ? "All" : "Important"}
+              <sub className=" text-[10px] font-normal">
+                {" "}
+                (
+                {
+                  data
+                    .filter((curr) => isFilter || curr.important)
+                    .filter((curr) => curr.id !== "").length
+                }
+                )
+              </sub>
+            </p>
+          </div>
+        </Label>
         <Switch
           id="airplane-mode"
           onClick={handleFilter}
