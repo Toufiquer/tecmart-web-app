@@ -22,9 +22,9 @@ import ToolsSidebar from "./tools-sidebar";
 
   export default function Page() {
     return (
-      <main className="bg-slate-900 text-white">
+      <main className="bg-slate-900 text-white min-h-screen">
         <Header />
-        <ResizablePanelGroup direction="horizontal" className="min-h-[92vh]">
+        <ResizablePanelGroup direction="horizontal" className="min-h-[90vh]">
           <ResizablePanel defaultSize={30}>
             <ToolsSidebar />
           </ResizablePanel>

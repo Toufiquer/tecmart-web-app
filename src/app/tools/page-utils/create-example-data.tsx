@@ -557,6 +557,58 @@ export const exampleToolsData: toolsPageInterface = {
           ],
         },
         {
+          id: "030",
+          title: "Copy To Clipboard",
+          documentation: [
+            {
+              id: "1",
+              url: "https://github.com/sudodoki/copy-to-clipboard#readme",
+              name: "Go Documentation",
+            },
+            {
+              id: "2",
+              url: "https://www.npmjs.com/package/copy-to-clipboard",
+              name: "Go NPM",
+            },
+          ],
+          description: [
+            "Simple module exposing copy function that will try to use execCommand with fallback to IE-specific clipboardData interface and finally, resort to usual prompt with proper text content and message.",
+          ],
+          code: [
+            { id: "1", npm: "npm i copy-to-clipboard" },
+            { id: "2", yarn: "yarn add copy-to-clipboard" },
+          ],
+        },
+        {
+          id: "031",
+          title: "Material UI",
+          documentation: [
+            {
+              id: "1",
+              url: "https://mui.com/material-ui/getting-started/installation/",
+              name: "Go Documentation",
+            },
+            {
+              id: "2",
+              url: "https://www.npmjs.com/package/@mui/material",
+              name: "Go NPM",
+            },
+          ],
+          description: [
+            "Install Material UI, the world's most popular React UI framework.",
+          ],
+          code: [
+            {
+              id: "1",
+              npm: "npm install @mui/material @emotion/react @emotion/styled",
+            },
+            {
+              id: "2",
+              yarn: "yarn add @mui/material @emotion/react @emotion/styled",
+            },
+          ],
+        },
+        {
           id: "",
           title: "",
           documentation: [

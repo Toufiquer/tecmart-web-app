@@ -11,7 +11,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 const SideBar = () => {
   return (
     <main>
-      <ScrollArea className="h-screen w-auto rounded-md p-4">
+      <ScrollArea className="h-[68vh] w-auto rounded-md p-4">
         {[1, 2, 3, 4, 5].map((curr) => (
           <div key={curr}>{curr}</div>
         ))}

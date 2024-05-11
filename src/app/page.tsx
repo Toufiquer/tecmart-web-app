@@ -18,7 +18,7 @@ import {
     return (
       <main className="bg-slate-900 text-white">
         <Header />
-        <ResizablePanelGroup direction="horizontal" className="min-h-[92vh]">
+        <ResizablePanelGroup direction="horizontal" className="min-h-[68vh]">
           <ResizablePanel defaultSize={30}>
             <SideBar />
           </ResizablePanel>

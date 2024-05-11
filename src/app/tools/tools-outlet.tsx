@@ -29,7 +29,7 @@ const ToolsOutlet = () => {
   };
   return (
     <main>
-      <ScrollArea className="w-full h-screen">
+      <ScrollArea className="w-full h-[90vh]">
         <div>
           <div className="pb-12 mb-12 pt-2">
             {data

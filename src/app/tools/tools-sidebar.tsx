@@ -49,7 +49,7 @@ const ToolsSidebar = () => {
           className="border border-slate-600"
         />
       </div>
-      <ScrollArea className="w-full h-screen">
+      <ScrollArea className="w-full h-[86vh]">
         <div className="pb-12 pt-2">
           {data
             .filter((curr) => isFilter || curr.important)
