@@ -21,12 +21,12 @@ export const exampleToolsData: toolsPageInterface = {
             {
               id: "1",
               url: "https://nextjs.org/",
-              name: "View Documentation",
+              name: "Go Documentation",
             },
             {
               id: "2",
               url: "https://www.npmjs.com/package/create-next-app",
-              name: "View NPM",
+              name: "Go NPM",
             },
           ],
           description: [
@@ -46,7 +46,7 @@ export const exampleToolsData: toolsPageInterface = {
             {
               id: "1",
               url: "https://www.w3schools.com/js/",
-              name: "View Documentation",
+              name: "Go Documentation",
             },
           ],
         },
@@ -57,7 +57,7 @@ export const exampleToolsData: toolsPageInterface = {
             {
               id: "1",
               url: "https://www.w3schools.com/react/default.asp",
-              name: "View Documentation",
+              name: "Go Documentation",
             },
           ],
         },
@@ -68,7 +68,7 @@ export const exampleToolsData: toolsPageInterface = {
             {
               id: "1",
               url: "https://www.w3schools.com/nodejs/nodejs_server.asp",
-              name: "View Documentation",
+              name: "Go Documentation",
             },
           ],
         },
@@ -79,7 +79,7 @@ export const exampleToolsData: toolsPageInterface = {
             {
               id: "1",
               url: "https://expressjs.com/",
-              name: "View Documentation",
+              name: "Go Documentation",
             },
           ],
         },
@@ -90,7 +90,7 @@ export const exampleToolsData: toolsPageInterface = {
             {
               id: "1",
               url: "https://www.w3schools.com/html/default.asp",
-              name: "View Documentation",
+              name: "Go Documentation",
             },
           ],
         },
@@ -101,7 +101,7 @@ export const exampleToolsData: toolsPageInterface = {
             {
               id: "1",
               url: "https://www.w3schools.com/css/default.asp",
-              name: "View Documentation",
+              name: "Go Documentation",
             },
           ],
         },
@@ -112,7 +112,7 @@ export const exampleToolsData: toolsPageInterface = {
             {
               id: "1",
               url: "https://vitejs.dev/",
-              name: "View Documentation",
+              name: "Go Documentation",
             },
           ],
         },
@@ -124,12 +124,12 @@ export const exampleToolsData: toolsPageInterface = {
             {
               id: "1",
               url: "https://react-hook-form.com/",
-              name: "View Documentation",
+              name: "Go Documentation",
             },
             {
               id: "2",
               url: "https://www.npmjs.com/package/react-hook-form",
-              name: "View NPM",
+              name: "Go NPM",
             },
           ],
           description: [
@@ -147,7 +147,7 @@ export const exampleToolsData: toolsPageInterface = {
           documentation: [
             {
               id: "1",
-              name: "View NPM ",
+              name: "Go NPM ",
               url: "https://www.npmjs.com/package/react-toastify",
             },
           ],
@@ -164,12 +164,12 @@ export const exampleToolsData: toolsPageInterface = {
             {
               id: "1",
               url: "https://redux.js.org/",
-              name: "View Documentation",
+              name: "Go Documentation",
             },
             {
               id: "2",
               url: "https://www.npmjs.com/package/redux",
-              name: "View NPM",
+              name: "Go NPM",
             },
           ],
           description: ["Store management with Caching mechanism"],
@@ -186,12 +186,12 @@ export const exampleToolsData: toolsPageInterface = {
             {
               id: "1",
               url: "https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS",
-              name: "View Documentation",
+              name: "Go Documentation",
             },
             {
               id: "2",
               url: "https://www.npmjs.com/package/cors",
-              name: "View NPM",
+              name: "Go NPM",
             },
           ],
           description: [
@@ -210,12 +210,12 @@ export const exampleToolsData: toolsPageInterface = {
             {
               id: "1",
               url: "https://zod.dev/",
-              name: "View Documentation",
+              name: "Go Documentation",
             },
             {
               id: "2",
               url: "https://www.npmjs.com/package/zod",
-              name: "View NPM",
+              name: "Go NPM",
             },
           ],
           description: [
@@ -234,12 +234,12 @@ export const exampleToolsData: toolsPageInterface = {
             {
               id: "1",
               url: "https://zod.dev/?id=table-of-contents",
-              name: "View Documentation",
+              name: "Go Documentation",
             },
             {
               id: "2",
               url: "https://www.npmjs.com/package/zod",
-              name: "View NPM",
+              name: "Go NPM",
             },
           ],
           description: [""],
@@ -256,12 +256,12 @@ export const exampleToolsData: toolsPageInterface = {
             {
               id: "1",
               url: "https://tanstack.com/query/latest",
-              name: "View Documentation",
+              name: "Go Documentation",
             },
             {
               id: "2",
               url: "https://www.npmjs.com/package/@tanstack/react-query",
-              name: "View NPM",
+              name: "Go NPM",
             },
           ],
           description: [
@@ -280,12 +280,12 @@ export const exampleToolsData: toolsPageInterface = {
             {
               id: "1",
               url: "https://reactnative.dev/",
-              name: "View Documentation",
+              name: "Go Documentation",
             },
             {
               id: "2",
               url: "https://www.npmjs.com/package/react-native",
-              name: "View NPM",
+              name: "Go NPM",
             },
           ],
           description: [
@@ -304,12 +304,12 @@ export const exampleToolsData: toolsPageInterface = {
             {
               id: "1",
               url: "https://www.electronjs.org/",
-              name: "View Documentation",
+              name: "Go Documentation",
             },
             {
               id: "2",
               url: "https://www.npmjs.com/package/electron",
-              name: "View NPM",
+              name: "Go NPM",
             },
           ],
           description: [
@@ -328,12 +328,12 @@ export const exampleToolsData: toolsPageInterface = {
             {
               id: "1",
               url: "",
-              name: "View Documentation",
+              name: "Go Documentation",
             },
             {
               id: "2",
               url: "",
-              name: "View NPM",
+              name: "Go NPM",
             },
           ],
           description: [
@@ -358,7 +358,7 @@ export const exampleToolsData: toolsPageInterface = {
             {
               id: "1",
               url: "https://firebase.google.com/docs/auth/web/firebaseui",
-              name: "View Documentation",
+              name: "Go Documentation",
             },
           ],
           description: ["Auth using Firebase"],
@@ -374,7 +374,7 @@ export const exampleToolsData: toolsPageInterface = {
             {
               id: "1",
               url: "https://tailwindcss.com/",
-              name: "View Document",
+              name: "Go Document",
             },
           ],
         },
@@ -385,7 +385,7 @@ export const exampleToolsData: toolsPageInterface = {
             {
               id: "1",
               url: "https://getbootstrap.com/",
-              name: "View Document",
+              name: "Document",
             },
           ],
         },
@@ -397,7 +397,7 @@ export const exampleToolsData: toolsPageInterface = {
             {
               id: "1",
               url: "https://ui.shadcn.com/docs",
-              name: "View Documentation",
+              name: "Go Documentation",
             },
           ],
           description: ["Build your component library"],
@@ -409,7 +409,7 @@ export const exampleToolsData: toolsPageInterface = {
             {
               id: "1",
               url: "https://daisyui.com/",
-              name: "View Documentation",
+              name: "Go Documentation",
             },
           ],
           description: ["The most popular component library for Tailwind CSS"],
@@ -422,12 +422,12 @@ export const exampleToolsData: toolsPageInterface = {
             {
               id: "1",
               url: "https://www.rabbitmq.com/",
-              name: "View Documentation",
+              name: "Go Documentation",
             },
             {
               id: "2",
               url: "https://www.npmjs.com/package/rabbitmq-client",
-              name: "View NPM",
+              name: "Go NPM",
             },
           ],
           description: [
@@ -448,12 +448,12 @@ export const exampleToolsData: toolsPageInterface = {
             {
               id: "1",
               url: "https://redis.io/",
-              name: "View Documentation",
+              name: "Go Documentation",
             },
             {
               id: "2",
               url: "https://www.npmjs.com/package/redis",
-              name: "View NPM",
+              name: "Go NPM",
             },
           ],
           description: ["SEE HOW FAST FEELS"],
@@ -470,12 +470,12 @@ export const exampleToolsData: toolsPageInterface = {
             {
               id: "1",
               url: "https://www.mongodb.com/docs/",
-              name: "View Documentation",
+              name: "Go Documentation",
             },
             {
               id: "2",
               url: "https://www.npmjs.com/package/mongodb",
-              name: "View NPM",
+              name: "Go NPM",
             },
           ],
           description: ["Database @ User friendly for JavaScript development"],
@@ -492,12 +492,12 @@ export const exampleToolsData: toolsPageInterface = {
             {
               id: "1",
               url: "https://dev.mysql.com/doc/",
-              name: "View Documentation",
+              name: "Go Documentation",
             },
             {
               id: "2",
               url: "https://www.npmjs.com/package/mysql",
-              name: "View NPM",
+              name: "Go NPM",
             },
           ],
           description: [
@@ -516,12 +516,12 @@ export const exampleToolsData: toolsPageInterface = {
             {
               id: "1",
               url: "https://pptr.dev/",
-              name: "View Documentation",
+              name: "Go Documentation",
             },
             {
               id: "2",
               url: "https://www.npmjs.com/package/puppeteer",
-              name: "View NPM",
+              name: "Go NPM",
             },
           ],
           description: [
@@ -540,12 +540,12 @@ export const exampleToolsData: toolsPageInterface = {
             {
               id: "1",
               url: "https://marmelab.com/react-admin/documentation.html",
-              name: "View Documentation",
+              name: "Go Documentation",
             },
             {
               id: "2",
               url: "https://www.npmjs.com/package/react-admin",
-              name: "View NPM",
+              name: "Go NPM",
             },
           ],
           description: [
@@ -563,12 +563,12 @@ export const exampleToolsData: toolsPageInterface = {
             {
               id: "1",
               url: "",
-              name: "View Documentation",
+              name: "Go Documentation",
             },
             {
               id: "2",
               url: "",
-              name: "View NPM",
+              name: "Go NPM",
             },
           ],
           description: [""],

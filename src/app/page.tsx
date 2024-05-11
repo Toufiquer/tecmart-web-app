@@ -5,7 +5,6 @@
 | @copyright: Toufiquer, May, 2024
 |-----------------------------------------
 */
-
 import Header from "@/components/common/header";
 import Outlet from "@/components/common/outlet";
 import SideBar from "@/components/common/side-bar";
@@ -15,19 +14,19 @@ import {
   ResizablePanelGroup,
 } from "@/components/ui/resizable";
 
-export default function Home() {
-  return (
-    <main className="bg-slate-900 text-white">
-      <Header />
-      <ResizablePanelGroup direction="horizontal" className="min-h-[92vh]">
-        <ResizablePanel defaultSize={30}>
-          <SideBar />
-        </ResizablePanel>
-        <ResizableHandle withHandle />
-        <ResizablePanel>
-          <Outlet />
-        </ResizablePanel>
-      </ResizablePanelGroup>
-    </main>
-  );
-}
+  export default function Home() {
+    return (
+      <main className="bg-slate-900 text-white">
+        <Header />
+        <ResizablePanelGroup direction="horizontal" className="min-h-[92vh]">
+          <ResizablePanel defaultSize={30}>
+            <SideBar />
+          </ResizablePanel>
+          <ResizableHandle withHandle />
+          <ResizablePanel>
+            <Outlet />
+          </ResizablePanel>
+        </ResizablePanelGroup>
+      </main>
+    );
+  }
