@@ -7,13 +7,13 @@
 */
 
 import Header from "@/components/common/header";
-import Outlet from "@/components/common/outlet";
-import SideBar from "@/components/common/side-bar";
 import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
 } from "@/components/ui/resizable";
+import BoilerplateSidebar from "./boilerplate-sidebar";
+import BoilerplateOutlet from "./boilerplate-outlet";
 
 export default function Page() {
   return (
@@ -21,11 +21,11 @@ export default function Page() {
       <Header />
       <ResizablePanelGroup direction="horizontal" className="min-h-[92vh]">
         <ResizablePanel defaultSize={30}>
-          <SideBar />
+          <BoilerplateSidebar />
         </ResizablePanel>
         <ResizableHandle withHandle />
         <ResizablePanel>
-          <Outlet title="Boilerplate" />
+          <BoilerplateOutlet />
         </ResizablePanel>
       </ResizablePanelGroup>
     </main>
