@@ -26,6 +26,7 @@ const navData = [
     title: "Example Components Design",
   },
   { id: "4", href: "/boilerplate", name: "Boilerplate", title: "Boilerplate" },
+  { id: "5", href: "/global", name: "Global", title: "Global Template" },
 ];
 
 const Header = () => {

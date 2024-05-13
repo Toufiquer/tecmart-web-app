@@ -10,7 +10,11 @@ import  SignUpPage  from "@/app/examples-design/full-page/auth/with-border/signU
 
 const Outlet = ({ title,uiPath }: {uiPath?:string, title?: string }) => {
   
-  let renderUI = <main>{title ? title : "Outlet"}</main>;
+  let renderUI = (
+    <main className="w-full min-h-screen flex items-center justify-center text-4xl ">
+      {title ? title : "Outlet"}
+    </main>
+  );
   if (uiPath === "@/app/examples-design/full-page/auth/with-border/signUp/page")
     renderUI = <SignUpPage />;
   return renderUI;
