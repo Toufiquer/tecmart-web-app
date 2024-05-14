@@ -20,7 +20,6 @@ const SiteNavLayout = () => {
   };
   return (
     <main className="w-full min-h-screen">
-      <div className="py-12 text-4xl text-center">Side Bar with child</div>
       <div
         className={`grid grid-cols-1 ${
           toggle ? "md:grid-cols-[253px_1fr]" : "md:grid-cols-[63px_1fr]"

@@ -10,7 +10,6 @@
 
 import Link from "next/link";
 import { ReactNode } from "react";
-
 import { Badge } from "@/components/ui/badge";
 import { LINKTYPE } from "./sidebar-data";
 import { SIDEBARTYPE } from "./sidebar-data";
@@ -37,6 +36,7 @@ const SidebarHoverItem = ({
     content,
     link = "/",
   } = data as SIDEBARTYPE;
+
   const cardContent = (
     <>
       <div className={`${content.length > 0 && "border-b"} min-py-2`}>
@@ -49,7 +49,7 @@ const SidebarHoverItem = ({
         )}
       </div>
       <div className="relative -right-6 top-0 z-50 w-full max-w-[230px]">
-        <div className="fixed left-[36px] top-[-30px] h-4 w-4 rotate-45 animate-none border-b border-l bg-[#fff]" />
+        {/* <div className="animated-div fixed left-[36px] top-[-30px] h-4 w-4 rotate-45 animate-none border-b border-transparent border-l bg-none" /> */}
         <div className="right-0 -ml-6 flex flex-col overflow-hidden">
           {content?.map((curr: LINKTYPE, index: number) => {
             return (
