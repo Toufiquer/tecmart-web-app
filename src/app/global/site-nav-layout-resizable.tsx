@@ -14,7 +14,7 @@ import {
   ResizablePanel,
   ResizablePanelGroup,
 } from "@/components/ui/resizable";
-import SiteNav from "../test/site-nav/site-nav";
+import SiteNav from "./site-nav/site-nav";
 import { useState } from "react";
 
 const SiteNavLayoutResizable = () => {

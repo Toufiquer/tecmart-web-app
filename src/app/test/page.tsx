@@ -5,8 +5,11 @@
 | @copyright: Toufiquer, May, 2024
 |-----------------------------------------
 */
-
-import SiteNavLayoutResizable from "../global/site-nav-layout-resizable";
-
-const Page = () => <SiteNavLayoutResizable />;
+const Page = () => {
+  return (
+    <main className="w-full h-screen flex items-center justify-center bg-slate-800 text-slate-300 font-semibold text-xl">
+      Test Page
+    </main>
+  );
+};
 export default Page;
