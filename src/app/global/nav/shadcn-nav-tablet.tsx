@@ -49,7 +49,7 @@ export function ShadCNNavTablet() {
                         black={true}
                         width={300}
                         height={300}
-                        className="w-[300px] h-[300px]"
+                        className="w-[300px]"
                       />
                     </div>
                     <div className="pb-2">

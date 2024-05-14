@@ -15,10 +15,10 @@ import {
   ResizablePanel,
   ResizablePanelGroup,
 } from "@/components/ui/resizable";
-import GlobalHeader from "./global-header";
 import SiteNavLayout from "./site-nav-layout";
 import SiteNav from "./site-nav/site-nav";
 import { useState } from "react";
+import Nav from "./nav/nav";
 
 export default function Page() {
   const [isOpen, setIsOpen] = useState(true);
@@ -36,7 +36,7 @@ export default function Page() {
       <div className=" border-0 border-y border-slate-700 py-12 text-sm text-center">
         Example of Navigation
       </div>
-      <GlobalHeader />
+      <Nav />
       <div className=" border-0 border-y border-slate-700 py-12 text-sm text-center">
         Example Side Bar with child [ResizableHandle]
       </div>
@@ -45,7 +45,7 @@ export default function Page() {
         className="min-h-[92vh]"
         onLayout={onLayout}
       >
-        <ResizablePanel defaultSize={30}>
+        <ResizablePanel defaultSize={16}>
           <SiteNav isOpen={isOpen} />
         </ResizablePanel>
         <ResizableHandle withHandle />
