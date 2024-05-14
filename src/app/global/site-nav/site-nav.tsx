@@ -19,7 +19,7 @@ const SiteNav = ({ isOpen = false }: { isOpen: boolean }) => {
   }, [isOpen]);
   return (
     <main>
-      <Sidebar toggle={toggle} handleToggle={handleToggle} />
+      <Sidebar toggle={toggle} handleToggle={handleToggle} isResizable={true} />
     </main>
   );
 };

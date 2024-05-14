@@ -29,12 +29,14 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 const Sidebar = ({
   toggle,
   handleToggle,
+  isResizable = false,
 }: {
+  isResizable?: boolean;
   toggle: boolean;
   handleToggle: () => void;
 }) => {
   return (
-    <div className="h-full">
+    <div className="h-screen relative">
       <div className="relative text-slate-600">
         <ScrollArea className="h-[calc(100vh_-_122px)]">
           {toggle ? (
@@ -78,29 +80,33 @@ const Sidebar = ({
           )}
         </ScrollArea>
 
-        {toggle ? (
-          <div
-            onClick={handleToggle}
-            className="bottom-0 left-0 block w-[253px] md:fixed"
-          >
-            <h3 className="flex w-full cursor-pointer items-center justify-start gap-4 border-t border-slate-200 bg-slate-50 py-4 text-[.8rem]">
-              <span className="ml-4">
-                <CgArrowLongLeft />
-              </span>
-              Collapsed View
-            </h3>
-          </div>
-        ) : (
-          <div
-            onClick={handleToggle}
-            className="bottom-0 left-0 block w-[63px] md:fixed"
-          >
-            <h3 className="flex w-full cursor-pointer items-center justify-center border-t border-slate-200 bg-slate-50 pb-[17px] pt-[18px]">
-              <span className="">
-                <CgArrowLongRight />
-              </span>
-            </h3>
-          </div>
+        {!isResizable && (
+          <>
+            {toggle ? (
+              <div
+                onClick={handleToggle}
+                className="bottom-[-60px] left-0 block w-[253px] md:absolute"
+              >
+                <h3 className="flex w-full cursor-pointer items-center justify-start gap-4 border-t border-slate-200 bg-slate-50 py-4 text-[.8rem]">
+                  <span className="ml-4">
+                    <CgArrowLongLeft />
+                  </span>
+                  Collapsed View
+                </h3>
+              </div>
+            ) : (
+              <div
+                onClick={handleToggle}
+                className="bottom-[-60px] left-0 block w-[63px] md:absolute"
+              >
+                <h3 className="flex w-full cursor-pointer items-center justify-center border-t border-slate-200 bg-slate-50 pb-[17px] pt-[18px]">
+                  <span className="">
+                    <CgArrowLongRight />
+                  </span>
+                </h3>
+              </div>
+            )}
+          </>
         )}
       </div>
     </div>
