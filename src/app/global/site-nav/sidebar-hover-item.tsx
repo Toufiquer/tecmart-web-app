@@ -88,7 +88,7 @@ const SidebarHoverItem = ({
           </div>
         </div>
       </HoverCardTrigger>
-      <HoverCardContent className=" -top-[45px] left-[43px] block animate-none rounded-lg p-0 py-2 text-[.8rem] md:absolute">
+      <HoverCardContent className=" -top-[45px] left-[30px] block animate-none rounded-lg p-0 py-2 text-[.8rem] md:absolute">
         {cardContent}
       </HoverCardContent>
     </HoverCard>

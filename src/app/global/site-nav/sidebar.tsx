@@ -29,9 +29,9 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 const Sidebar = ({
   toggle,
   handleToggle,
-  isResizable = false,
+  toggleButton = false,
 }: {
-  isResizable?: boolean;
+  toggleButton?: boolean;
   toggle: boolean;
   handleToggle: () => void;
 }) => {
@@ -80,7 +80,7 @@ const Sidebar = ({
           )}
         </ScrollArea>
 
-        {!isResizable && (
+        {!toggleButton && (
           <>
             {toggle ? (
               <div
