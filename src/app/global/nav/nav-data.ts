@@ -18,19 +18,19 @@ const navData = {
       {
         id: 1,
         title: "Introduction",
-        url: "/about#introduction",
+        url: "/",
         description: "We are a group of people to solve your problems",
       },
       {
         id: 2,
         title: "Installation",
-        url: "/about#installation",
+        url: "/",
         description: "We have more then three plan for your business",
       },
       {
         id: 3,
         title: "Installation",
-        url: "/about#installation",
+        url: "/",
         description: "We have more then three plan for your business",
       },
     ],
@@ -39,37 +39,37 @@ const navData = {
     groupTitle: "Services",
     data: [
       {
-        title: "Alert Dialog",
-        href: "/services",
+        title: "Supports",
+        href: "/",
         description:
           "A modal dialog that interrupts the user with important content and expects a response.",
       },
       {
-        title: "Hover Card",
-        href: "/services",
+        title: "Preview",
+        href: "/",
         description:
           "For sighted users to preview content available behind a link.",
       },
       {
-        title: "Progress",
-        href: "/services",
+        title: "Indicator",
+        href: "/",
         description:
           "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
       },
       {
-        title: "Scroll-area",
-        href: "/services",
+        title: "Content",
+        href: "/",
         description: "Visually or semantically separates content.",
       },
       {
         title: "Tabs",
-        href: "/services",
+        href: "/",
         description:
           "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
       },
       {
-        title: "Tooltip",
-        href: "/services",
+        title: "Information",
+        href: "/",
         description:
           "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
       },

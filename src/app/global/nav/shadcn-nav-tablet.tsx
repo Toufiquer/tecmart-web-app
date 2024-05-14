@@ -23,6 +23,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import Image from "next/image";
 import navData from "./nav-data";
+import NavImage from "./nav-image";
 
 const { services, about } = navData || {};
 const { fullName, description, links, groupTitle } = about || {};
@@ -44,12 +45,11 @@ export function ShadCNNavTablet() {
                     href="/about"
                   >
                     <div className="w-full h-full flex items-center justify-center">
-                      <Image
-                        src="/vercel.svg"
-                        alt="Logo for the website"
-                        width={100}
-                        height={100}
-                        className="w-auto h-auto"
+                      <NavImage
+                        black={true}
+                        width={300}
+                        height={300}
+                        className="w-[300px] h-[300px]"
                       />
                     </div>
                     <div className="pb-2">

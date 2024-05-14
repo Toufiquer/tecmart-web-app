@@ -34,8 +34,14 @@ const Header = () => {
     <div className="border-b w-full h-[8vh]">
       <div className="flex items-center justify-between pr-4">
         <div className="flex items-center justify-start w-[70vw]">
-          <div className=" px-4 py-1">
-            <Image width={40} height={40} alt="Logo" src="/profile.png"></Image>
+          <div className=" px-4 py-1 flex items-center justify-center mt-1">
+            <Image
+              width={40}
+              height={40}
+              alt="Logo"
+              src="/logo-white.svg"
+              className="text-white"
+            ></Image>
           </div>
           <Link
             href="/"
