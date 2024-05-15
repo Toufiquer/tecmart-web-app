@@ -6,12 +6,16 @@
 |-----------------------------------------
 */
 
-import Header from "@/components/common/header";
+
 import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
 } from "@/components/ui/resizable";
+import Header from "@/components/common/header";
+
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import BoilerplateSidebar from "./boilerplate-sidebar";
 import BoilerplateOutlet from "./boilerplate-outlet";
 
@@ -28,6 +32,8 @@ export default function Page() {
           <BoilerplateOutlet />
         </ResizablePanel>
       </ResizablePanelGroup>
+
+      <ToastContainer />
     </main>
   );
 }
