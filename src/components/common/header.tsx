@@ -12,7 +12,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 const navData = [
-  { id: "1", href: "/tools", name: "Tools", title: "Tools" },
+  { id: "1.1", href: "/doc", name: "Doc", title: "Doc" },
+  { id: "1.2", href: "/tools", name: "Tools", title: "Tools" },
   {
     id: "2",
     href: "/examples-design/full-page",
