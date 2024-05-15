@@ -26,6 +26,7 @@
     "react-hook-form": "^7.51.3",
     "react-icons": "^5.2.1",
     "react-resizable-panels": "^2.0.19",
+    "react-scrollspy": "^3.4.3",
     "react-toastify": "^10.0.5",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",

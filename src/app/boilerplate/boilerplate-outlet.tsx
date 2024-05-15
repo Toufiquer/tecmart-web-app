@@ -49,14 +49,16 @@ const BoilerplateOutlet = () => {
                   <h2 className="cursor-pointer mt-1 w-full border-slate-500 rounded-lg py-1 text-xl text-slate-200 ">
                     {idx + 1}. {curr.title}
                   </h2>
-                  <div className="text-sm text-slate-100">
-                    {curr.examplePath}
-                  </div>
+                  {curr.examplePath && (
+                    <div className="text-sm text-slate-100">
+                      example Path : {curr.examplePath}
+                    </div>
+                  )}
                   <div className="  mb-4">
                     <Accordion type="single" collapsible>
                       <AccordionItem value="item-1">
                         <AccordionTrigger>
-                          <p className="text-slate-200 text-sm">Basic Code </p>
+                          <p className="text-slate-200 text-sm">Basic Info </p>
                         </AccordionTrigger>
                         <AccordionContent>
                           <div className="text-slate-400 text-sm">
