@@ -10,6 +10,13 @@ export type singleBoilerPlateType = {
   id: string;
   title?: string;
   description?: string[];
+  examplePath?: string;
+  boilerPlate?: {
+    id: string;
+    name: string;
+    description: string;
+    content: { id: string; name: string; code: string[]; fileName: string }[];
+  }[];
   code?: { id: string; yarn?: string; npm?: string; Terminal?: string }[];
   documentation?: { id: string; url: string; name: string }[];
   important?: boolean;

@@ -32,7 +32,6 @@ const BoilerplateSidebar = () => {
             <p>
               {isFilter ? "All" : "Important"}
               <sub className=" text-[10px] font-normal">
-                {" "}
                 (
                 {
                   data
@@ -55,6 +54,7 @@ const BoilerplateSidebar = () => {
           {data
             .filter((curr) => isFilter || curr.important)
             .filter((curr) => curr.id !== "")
+            // .sort((a, b) => a.title?.localeCompare(b.title || "") || 1)
             .map((curr, idx) => (
               <div key={curr.id} className="px-4">
                 <h2 className="cursor-pointer mt-1 w-full border-slate-500 px-4 rounded-lg py-1 text-sm hover:border-b hover:bg-slate-800">

@@ -6,6 +6,19 @@
 |-----------------------------------------
 */
 
+
+
+  //   boilerPlate: [
+  //           {
+  //             id: "1",
+  //             name: "",
+  //             description: "",
+  //             content: [{ id: "1", name: "", code: "" }],
+  //           },
+  //         ],
+  // examplePath: "",
+            
+    
 import { boilerPageInterface } from "./type";
 
 export const exampleBoilerPlateData: boilerPageInterface = {
@@ -38,83 +51,29 @@ export const exampleBoilerPlateData: boilerPageInterface = {
             { id: "2", npm: "npx create-next-app@latest" },
             { id: "3", yarn: "yarn create next-app" },
           ],
-        },
-        {
-          id: "002",
-          title: "JAVASCRIPT",
-          documentation: [
+          boilerPlate: [
             {
               id: "1",
-              url: "https://www.w3schools.com/js/",
-              name: "Go Documentation",
+              name: "nextJs environment Setup",
+              description:
+                "You can configure your api key with the help of environment variables",
+              content: [
+                {
+                  id: "1",
+                  name: "Export",
+                  fileName: ".env.local",
+                  code: ["MONGOOSE_URI=exampleOfHash"],
+                },
+                {
+                  id: "1",
+                  name: "Import",
+                  fileName: "app.tsx | your file name",
+                  code: ["process.env.MONGOOSE_URI"],
+                },
+              ],
             },
           ],
-        },
-        {
-          id: "003",
-          title: "REACT",
-          documentation: [
-            {
-              id: "1",
-              url: "https://www.w3schools.com/react/default.asp",
-              name: "Go Documentation",
-            },
-          ],
-        },
-        {
-          id: "004",
-          title: "NODE",
-          documentation: [
-            {
-              id: "1",
-              url: "https://www.w3schools.com/nodejs/nodejs_server.asp",
-              name: "Go Documentation",
-            },
-          ],
-        },
-        {
-          id: "005",
-          title: "EXPRESS",
-          documentation: [
-            {
-              id: "1",
-              url: "https://expressjs.com/",
-              name: "Go Documentation",
-            },
-          ],
-        },
-        {
-          id: "006",
-          title: "HTML",
-          documentation: [
-            {
-              id: "1",
-              url: "https://www.w3schools.com/html/default.asp",
-              name: "Go Documentation",
-            },
-          ],
-        },
-        {
-          id: "007",
-          title: "CSS",
-          documentation: [
-            {
-              id: "1",
-              url: "https://www.w3schools.com/css/default.asp",
-              name: "Go Documentation",
-            },
-          ],
-        },
-        {
-          id: "008",
-          title: "VITE",
-          documentation: [
-            {
-              id: "1",
-              url: "https://vitejs.dev/",
-              name: "Go Documentation",
-            },
-          ],
+          examplePath: "src/example-design/",
         },
         {
           id: "009",
@@ -140,6 +99,60 @@ export const exampleBoilerPlateData: boilerPageInterface = {
             { id: "1", npm: "npm install react-hook-form" },
             { id: "2", yarn: "yarn add react-hook-form" },
           ],
+          boilerPlate: [
+            {
+              id: "1",
+              name: "Basic template",
+              description:
+                "The following code excerpt demonstrates a basic usage example",
+              content: [
+                {
+                  id: "1",
+                  name: "Import and Type",
+                  code: [
+                    `import { useForm, SubmitHandler } from "react-hook-form";`,
+                    `type Inputs = {`,
+                    `example: string,`,
+                    `exampleRequired: string`,
+                    `}`,
+                  ],
+                  fileName: "form.tsx",
+                },
+                {
+                  id: "2",
+                  name: "function",
+                  code: [
+                    `const {`,
+                    `register,`,
+                    `handleSubmit,`,
+                    `watch,`,
+                    `formState: { errors },`,
+                    `} = useForm<Inputs>();`,
+                    `const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data)`,
+                  ],
+                  fileName: "form.tsx",
+                },
+                {
+                  id: "4",
+                  name: "function",
+                  code: [
+                    `/* "handleSubmit" will validate your inputs before invoking "onSubmit" */`,
+                    `<form onSubmit={handleSubmit(onSubmit)}>`,
+                    `  {/* register your input into the hook by invoking the "register" function */}`,
+                    `  <input defaultValue="test" {...register("example")} />`,
+                    `  {/* include validation with required or other standard HTML validation rules */}`,
+                    `  <input {...register("exampleRequired", { required: true })} />`,
+                    `  {/* errors will return when field validation fails  */}`,
+                    `  {errors.exampleRequired && <span>This field is required</span>}`,
+                    `  <input type="submit" />`,
+                    `</form>`,
+                  ],
+                  fileName: "form.tsx",
+                },
+              ],
+            },
+          ],
+          examplePath: "",
         },
         {
           id: "010",

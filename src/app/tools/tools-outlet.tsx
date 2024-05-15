@@ -24,7 +24,7 @@ const ToolsOutlet = () => {
     (toolsStorage?.data && toolsStorage?.data[0]?.context) || "not found";
 
   const handleCopy = (data: string) => {
-    toast.success(`Copy, ${data}`, { autoClose: 1000 });
+    toast.success(`Copy, ${data}`, { autoClose: 1000, theme: "dark" });
     copy(data);
   };
   return (
@@ -35,6 +35,7 @@ const ToolsOutlet = () => {
             {data
               .filter((curr) => isFilter || curr.important)
               .filter((curr) => curr.id !== "")
+              .sort((a, b) => a.title?.localeCompare(b.title || "") || 1)
               .map((curr, idx) => (
                 <div key={curr.id} className="px-4 mb-12 pb-12">
                   <h2 className="cursor-pointer mt-1 w-full border-slate-500 px-4 rounded-lg py-1 text-xl text-slate-200 hover:border-b hover:bg-slate-800">
