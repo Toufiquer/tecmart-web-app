@@ -15,7 +15,7 @@ import { LuCopy } from "react-icons/lu";
 import { LuCopyCheck } from "react-icons/lu";
 import copy from "copy-to-clipboard";
 import { toast } from "react-toastify";
-import { Dispatch, SetStateAction, useEffect, useRef } from "react";
+import { Dispatch, SetStateAction } from "react";
 import SpyScrollWrapper from "./spy-scroll-wrapper";
 
 const ToolsOutlet = ({
