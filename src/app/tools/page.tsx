@@ -26,7 +26,11 @@ import ToolsSidebar from "./tools-sidebar";
         <Header />
         <ResizablePanelGroup direction="horizontal" className="min-h-[90vh]">
           <ResizablePanel defaultSize={30}>
-            <ToolsSidebar />
+            <div className="w-full h-screen relative">
+              <div className="sticky top-0">
+                <ToolsSidebar />
+              </div>
+            </div>
           </ResizablePanel>
           <ResizableHandle withHandle />
           <ResizablePanel>
