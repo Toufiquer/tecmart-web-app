@@ -1,0 +1,8 @@
+html {
+  scroll-padding-top: 0px; /* height of your navbar */
+  scroll-behavior: smooth scroll;
+}
+.active-scroll-spy { 
+    text-decoration: underline;
+  border-radius: 15px;
+}
