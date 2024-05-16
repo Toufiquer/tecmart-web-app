@@ -13,6 +13,7 @@ import "./test.css";
 import Link from "next/link";
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
+import { ScrollArea } from "@/components/ui/scroll-area";
 const Page = () => {
   const pathName = usePathname();
   console.log("pathName", pathName);
@@ -42,11 +43,16 @@ const Page = () => {
         <div className="border w-full min-h-screen">
           <ScrollSpy scrollThrottle={100} useBoxMethod={false}>
             <div id="dev-1" className="h-[120vh] border">
-              <h3>Dev 1</h3>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
-              dolores veritatis doloremque fugit. Soluta aperiam atque inventore
-              deleniti, voluptatibus non fuga eos magni natus vel, rerum
-              excepturi expedita. Tempore, vero!
+              <ScrollArea className="w-full h-screen">
+                <h3>Dev 1</h3>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+                dolores veritatis doloremque fugit. Soluta aperiam atque
+                inventore deleniti, voluptatibus non fuga eos magni natus vel,
+                rerum excepturi expedita. Tempore, vero!
+                <div className="border m-4 p-4 h-screen w-full"></div>
+                <div className="border m-4 p-4 h-screen w-full"></div>
+                <div className="border m-4 p-4 h-screen w-full"></div>
+              </ScrollArea>
             </div>
             <div id="dev-2" className="h-screen border">
               <h3>Dev 2</h3>
