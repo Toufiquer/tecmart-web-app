@@ -12,7 +12,8 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { useBoilerStorage } from "./page-utils/useBoilerPlateStorage";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
-const BoilerplateSidebar = () => {
+import Link from "next/link";
+const BoilerplateSidebar = ({ spyDiv }: { spyDiv: string }) => {
   const isFilter = useBoilerStorage((storage) => storage.isFilter);
   const setIsFilter = useBoilerStorage((storage) => storage.setIsFilter);
   const boilerStorage = useBoilerStorage(
@@ -57,9 +58,21 @@ const BoilerplateSidebar = () => {
             // .sort((a, b) => a.title?.localeCompare(b.title || "") || 1)
             .map((curr, idx) => (
               <div key={curr.id} className="px-4">
-                <h2 className="cursor-pointer mt-1 w-full border-slate-500 px-4 rounded-lg py-1 text-sm hover:border-b hover:bg-slate-800">
-                  {idx + 1}. {curr.title}
-                </h2>
+                <Link
+                  href={`#${curr.title
+                    ?.toLocaleLowerCase()
+                    .replace("-", "_")
+                    .replace(" ", "_")}`}
+                >
+                  <p
+                    className={`cursor-pointer mt-1 w-full border-slate-500 px-4 rounded-lg py-1 text-sm hover:border-b hover:bg-slate-800 ${
+                      spyDiv.toLocaleLowerCase() ===
+                        curr.title?.toLocaleLowerCase() && " bg-slate-800 "
+                    }`}
+                  >
+                    {idx + 1}. {curr.title}
+                  </p>
+                </Link>
               </div>
             ))}
         </div>

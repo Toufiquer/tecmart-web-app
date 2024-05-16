@@ -6,6 +6,7 @@
 |-----------------------------------------
 */
 
+"use client";
 
 import {
   ResizableHandle,
@@ -18,18 +19,21 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import BoilerplateSidebar from "./boilerplate-sidebar";
 import BoilerplateOutlet from "./boilerplate-outlet";
+import { useState } from "react";
 
+import "./style.css";
 export default function Page() {
+  const [spyDiv, setSpyDiv] = useState("");
   return (
     <main className="bg-slate-900 text-white">
       <Header />
       <ResizablePanelGroup direction="horizontal" className="min-h-[92vh]">
         <ResizablePanel defaultSize={30}>
-          <BoilerplateSidebar />
+          <BoilerplateSidebar spyDiv={spyDiv} />
         </ResizablePanel>
-        <ResizableHandle withHandle />
+        <ResizableHandle />
         <ResizablePanel>
-          <BoilerplateOutlet />
+          <BoilerplateOutlet setSpyDiv={setSpyDiv} />
         </ResizablePanel>
       </ResizablePanelGroup>
 
