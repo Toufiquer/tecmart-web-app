@@ -14,10 +14,10 @@ import {
   ResizablePanelGroup,
 } from "@/components/ui/resizable";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import RefDiv from "./ref-div";
+import SpyScrollWrapper from "./spy-scroll-wrapper";
 import { useState } from "react";
 import Link from "next/link";
-import "./test.css";
+import "./style.css";
 const divData = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 const SpyScrollPage = () => {
   const [spyDiv, setSpyDiv] = useState("");
@@ -42,7 +42,13 @@ const SpyScrollPage = () => {
         <ResizablePanel>
           <ScrollArea className="w-full h-screen">
             {divData.map((curr) => (
-              <RefDiv key={curr} refId={curr + ""} setSpyDiv={setSpyDiv} />
+              <SpyScrollWrapper
+                key={curr}
+                refId={curr + ""}
+                setSpyDiv={setSpyDiv}
+              >
+                <div className="h-screen">div {curr}</div>
+              </SpyScrollWrapper>
             ))}
           </ScrollArea>
         </ResizablePanel>

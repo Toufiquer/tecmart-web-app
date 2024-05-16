@@ -15,7 +15,7 @@ import { Label } from "@/components/ui/label";
 import Link from "next/link";
  
 
-const ToolsSidebar = () => {
+const ToolsSidebar = ({ spyDiv }: { spyDiv: string }) => {
   const isFilter = useToolsStorage((storage) => storage.isFilter);
   const setIsFilter = useToolsStorage((storage) => storage.setIsFilter);
   const toolsStorage = useToolsStorage((storage) => storage.toolsStorage);
@@ -65,7 +65,12 @@ const ToolsSidebar = () => {
                     .replace("-", "_")
                     .replace(" ", "_")}`}
                 >
-                  <p className="cursor-pointer mt-1 w-full border-slate-500 px-4 rounded-lg py-1 text-sm hover:border-b hover:bg-slate-800">
+                  <p
+                    className={`cursor-pointer mt-1 w-full border-slate-500 px-4 rounded-lg py-1 text-sm hover:border-b hover:bg-slate-800 ${
+                      spyDiv.toLocaleLowerCase() ===
+                        curr.title?.toLocaleLowerCase() && " bg-slate-800 "
+                    }`}
+                  >
                     {idx + 1}. {curr.title}
                   </p>
                 </Link>

@@ -1,6 +1,6 @@
 /*
 |-----------------------------------------
-| setting up RefDiv for the App
+| setting up SpyScrollWrapper for the App
 | @author: Toufiquer Rahman<toufiquer.0@gmail.com>
 | @copyright: Toufiquer, May, 2024
 |-----------------------------------------
@@ -10,10 +10,12 @@
 
 import { useRef, useEffect, Dispatch, SetStateAction } from "react";
 
-const RefDiv = ({
+const SpyScrollWrapper = ({
   refId,
+  children,
   setSpyDiv,
 }: {
+  children: React.ReactNode;
   refId: string;
   setSpyDiv: Dispatch<SetStateAction<string>>;
 }) => {
@@ -52,11 +54,9 @@ const RefDiv = ({
   }, [divRef]);
 
   return (
-    <main className="w-full min-h-screen text-white bg-slate-800">
-      <div id={refId} ref={divRef} className="border">
-        {refId}
-      </div>
-    </main>
+    <div id={refId} ref={divRef}>
+      {children}
+    </div>
   );
 };
-export default RefDiv;
+export default SpyScrollWrapper;
