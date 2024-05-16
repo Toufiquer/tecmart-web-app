@@ -17,7 +17,7 @@ export type singleToolsType = {
 
 export interface toolsPageInterface {
   pageName: string;
-  data: { context: singleToolsType[] }[];
+  data: { context: singleToolsType[]; exampleContext?: singleToolsType }[];
 }
 
 // Example Data

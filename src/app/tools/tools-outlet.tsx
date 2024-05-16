@@ -15,6 +15,7 @@ import { LuCopy } from "react-icons/lu";
 import { LuCopyCheck } from "react-icons/lu";
 import copy from "copy-to-clipboard";
 import { toast } from "react-toastify";
+ 
 
 const ToolsOutlet = () => {
   const toolsStorage = useToolsStorage((storage) => storage.toolsStorage);
@@ -37,7 +38,14 @@ const ToolsOutlet = () => {
               .filter((curr) => curr.id !== "")
               .sort((a, b) => a.title?.localeCompare(b.title || "") || 1)
               .map((curr, idx) => (
-                <div key={curr.id} className="px-4 mb-12 pb-12">
+                <div
+                  key={curr.id}
+                  id={`${curr.title
+                    ?.toLocaleLowerCase()
+                    .replace("-", "_")
+                    .replace(" ", "_")}`}
+                  className="px-4 mb-12 pb-12"
+                >
                   <h2 className="cursor-pointer mt-1 w-full border-slate-500 px-4 rounded-lg py-1 text-xl text-slate-200 hover:border-b hover:bg-slate-800">
                     {idx + 1}. {curr.title}
                   </h2>
