@@ -1,3 +1,23 @@
 * {
     scroll-behavior: smooth;
 }
+.code-block { 
+  padding: 10px;
+  border-radius: 3px;
+  font-family: monospace;
+  font-size: 14px;
+  /* overflow-x: auto; */
+}
+
+.keyword {
+  color: #905;
+}
+
+.string {
+  color: #00f;
+}
+
+.comment {
+  color: gray;
+  font-style: italic;
+}

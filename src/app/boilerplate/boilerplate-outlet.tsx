@@ -23,6 +23,7 @@ import {
 } from "@/components/ui/accordion";
 import { Dispatch, SetStateAction } from "react";
 import SpyScrollWrapper from "./spy-scroll-wrapper";
+import ViewCode from "./view-code";
 
 const BoilerplateOutlet = ({
   setSpyDiv,
@@ -171,20 +172,11 @@ const BoilerplateOutlet = ({
                               <div className="pl-2 text-slate-400 text-xs mb-1">
                                 {i.fileName}
                               </div>
-                              <div
-                                onClick={() =>
-                                  handleCopy(i.code.join(" ") || "")
-                                }
-                                className="w-full relative flex items-center justify-between bg-slate-950 p-2 text-sm rounded-lg cursor-pointer"
-                              >
-                                <code className="w-full flex flex-col gap-2">
-                                  {i.code.map((c) => (
-                                    <span key={c}>{c}</span>
-                                  ))}
-                                </code>
-                                <div className="top-4 absolute right-4">
-                                  <LuCopy />
-                                </div>
+                              <div className="w-full flex items-center justify-between bg-slate-900 p-2 text-sm rounded-lg">
+                                <ViewCode
+                                  data={i.code.join("")}
+                                  copyFn={handleCopy}
+                                />
                               </div>
                             </div>
                           ))}
