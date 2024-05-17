@@ -62,13 +62,22 @@ export const exampleBoilerPlateData: boilerPageInterface = {
                   id: "1",
                   name: "Export",
                   fileName: ".env.local",
-                  code: ["MONGOOSE_URI=exampleOfHash"],
+                  code: [
+                    `MONGOOSE_URI=exampleOfHash
+NEXT_PUBLIC_MONGOOSE_URI=exampleOfHash`,
+                  ],
                 },
                 {
-                  id: "2",
-                  name: "Import",
+                  id: "2.1",
+                  name: "Import (Backend)",
                   fileName: "app.tsx | your file name",
                   code: ["process.env.MONGOOSE_URI"],
+                },
+                {
+                  id: "2.2",
+                  name: "Import (Front-end)",
+                  fileName: "app.tsx | your file name",
+                  code: ["process.env.NEXT_PUBLIC_MONGOOSE_URI"],
                 },
                 {
                   id: "3",
