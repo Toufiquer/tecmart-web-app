@@ -18,12 +18,35 @@ const responseJson = (
   message: `${method} request successful invoke`,
 });
 
+interface ParsedUrl {
+  page?: number;
+  limit?: number;
+  s?: string;
+  basePath: string;
+}
+
+const parseUrl = (url: string): ParsedUrl => {
+  const parsedUrl = new URL(url);
+  const params: Record<string, string | number> = {};
+  parsedUrl.searchParams.forEach((value, key) => {
+    params[key] = value;
+  });
+  let result: ParsedUrl = {
+    page: +params.page,
+    limit: +params.limit,
+    s: params.s + "",
+    basePath: parsedUrl.pathname.split("/")[1],
+  };
+  return result;
+};
+
 /** Get api */
 /** requestApi: {} */
 /** responseApi: responseApiType */
 export async function GET(req: NextApiRequest, res: NextApiResponse) {
+  const query = parseUrl(req.url || "");
   return new Response(
-    JSON.stringify(responseJson(200, "Get", "Response Data"))
+    JSON.stringify(responseJson(200, "Get", "Response Data", query))
   );
 }
 
