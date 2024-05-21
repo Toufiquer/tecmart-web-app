@@ -152,7 +152,7 @@ const BoilerplateOutlet = ({
                     {curr.boilerPlate?.map((item) => (
                       <div
                         key={item.id}
-                        className="bg-gray-800 p-4 my-4 rounded-lg"
+                        className="bg-slate-900 p-4 my-4 rounded-lg"
                       >
                         <h2 className="text-xl uppercase text-slate-200">
                           {item.name}
@@ -164,7 +164,7 @@ const BoilerplateOutlet = ({
                           {item.content.map((i) => (
                             <div
                               key={i.id}
-                              className="relative my-2 mb-4 p-1 rounded-lg border border-slate-500"
+                              className="relative my-2 mb-4 p-1 mt-8"
                             >
                               <div className="pl-2 text-slate-300">
                                 {i.name}
@@ -172,7 +172,7 @@ const BoilerplateOutlet = ({
                               <div className="pl-2 text-slate-400 text-xs mb-1">
                                 {i.fileName}
                               </div>
-                              <div className="w-full flex items-center justify-between bg-slate-900 p-2 text-sm rounded-lg">
+                              <div className="w-full flex items-center justify-between p-2 pt-0 text-sm rounded-lg">
                                 <ViewCode
                                   data={i.code.join("")}
                                   copyFn={handleCopy}

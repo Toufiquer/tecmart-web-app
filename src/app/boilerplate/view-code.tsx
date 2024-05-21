@@ -15,12 +15,12 @@ const ViewCode = ({
   data: string;
 }) => {
   return (
-    <main className="p-1 relative w-full h-full">
+    <main className="relative w-full h-full max-w-4xl bg-slate-800 rounded-lg p-4 overflow-hidden">
       <pre className="cursor-edit text-slate-400">{data}</pre>
       <div
         onClick={() => copyFn(data)}
         title="copy"
-        className="absolute cursor-pointer rounded-lg h-full top-0 right-0 min-w-[50px] border-r border-l border-t border-b border-r-slate-800 text-slate-500 border-slate-600"
+        className="absolute cursor-pointer h-full top-0 right-0 min-w-[50px] border-l text-slate-500 border-slate-600"
       >
         <div className="pl-8 pr-2 pt-2">
           <LuCopy />

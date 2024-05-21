@@ -1357,6 +1357,668 @@ storage.clearAll()`,
           ],
           examplePath: "",
         },
+        {
+          id: "012",
+          important: true,
+          title: "REACT-ADMIN",
+          documentation: [
+            {
+              id: "1",
+              url: "https://marmelab.com/react-admin/documentation.html",
+              name: "Go Documentation",
+            },
+            {
+              id: "2",
+              url: "https://www.npmjs.com/package/react-admin",
+              name: "Go NPM",
+            },
+          ],
+          description: [
+            "A frontend Framework for building data-driven applications running in the browser on top of REST/GraphQL APIs, using ES6, React and Material Design. Previously named admin-on-rest. Open sourced and maintained by marmelab.",
+          ],
+          code: [
+            { id: "1", npm: "npm i react-admin" },
+            { id: "2", yarn: "yarn add react-admin" },
+          ],
+          boilerPlate: [
+            {
+              id: "1",
+              name: "Example of React-Admin",
+              description: "using json-placeholder for JSON data or backend",
+              content: [
+                {
+                  id: "1",
+                  name: "Create a  dataProvider",
+                  code: [
+                    `import queryString from "query-string";
+import { fetchUtils, RaRecord } from "react-admin";
+
+const apiUrl = "https://jsonplaceholder.typicode.com";
+const httpClient = fetchUtils.fetchJson;
+
+interface GetListParams {
+  pagination: { page: number; perPage: number };
+  sort: { field: string; order: "ASC" | "DESC" };
+  filter: any;
+  meta?: any;
+  id?: any;
+  ids?: any;
+  data?: any;
+  target?: any;
+}
+interface GetListResult {
+  data: RaRecord[];
+  total?: number;
+  // if using partial pagination
+  pageInfo?: {
+    hasNextPage?: boolean;
+    hasPreviousPage?: boolean;
+  };
+}
+
+const dataProvider = {
+  
+  getList: async (
+    resource: string,
+    params: GetListParams
+  ): Promise<GetListResult> => {
+    const { page, perPage } = params.pagination;
+    const { field, order } = params.sort;
+    const query = {
+      // sort: JSON.stringify([field, order]),
+      // range: JSON.stringify([(page - 1) * perPage, page * perPage - 1]),
+      _start: JSON.stringify((page - 1) * perPage),
+      _end: JSON.stringify((page - 1) * perPage + perPage),
+      // filter: JSON.stringify(params.filter),
+    };
+    let totalCount = 0;
+    await fetch(\`\${apiUrl}/\${resource}\`)
+      .then((res) => res.json())
+      .then((d) => (totalCount = d.length));
+    const url = \`\${apiUrl}/\${resource}?\${queryString.stringify(query)}\`;
+    const { json, headers } = await httpClient(url);
+
+    return {
+      data: json,
+      total: parseInt(
+        headers.get("content-range")?.split("/").pop() ||
+          \`\${totalCount}\` ||
+          json.length,
+        10
+      ),
+    };
+  },
+
+
+  getOne: async (
+    resource: string,
+    params: GetListParams
+  ): Promise<GetListResult> => {
+    const url = \`\${apiUrl}/\${resource}/\${params.id}\`;
+    const { json } = await httpClient(url);
+    return { data: json };
+  },
+
+
+  getMany: async (
+    resource: string,
+    params: GetListParams
+  ): Promise<GetListResult> => {
+    const query = {
+      filter: JSON.stringify({ ids: params.ids }),
+    };
+    const url = \`\${apiUrl}/\${resource}?\${query}\`;
+    const { json } = await httpClient(url);
+    return { data: json };
+  },
+
+
+  getManyReference: async (
+    resource: string,
+    params: GetListParams
+  ): Promise<GetListResult> => {
+    const { page, perPage } = params.pagination;
+    const { field, order } = params.sort;
+    const query = {
+      sort: JSON.stringify([field, order]),
+      range: JSON.stringify([(page - 1) * perPage, page * perPage - 1]),
+      filter: JSON.stringify({
+        ...params.filter,
+        [params.target]: params.id,
+      }),
+    };
+    const url = \`\${apiUrl}/\${resource}?\${query}\`;
+    const { json, headers } = await httpClient(url);
+    return {
+      data: json,
+      total: parseInt(headers.get("content-range")?.split("/").pop() || "", 10),
+    };
+  },
+
+
+
+  create: async (
+    resource: string,
+    params: GetListParams
+  ): Promise<GetListResult> => {
+    console.log("create", params.data); // Create a new users
+    const { json } = await httpClient(\`\${apiUrl}/\${resource}\`, {
+      method: "POST",
+      body: JSON.stringify(params.data),
+    });
+    return { data: json };
+  },
+
+
+
+  update: async (
+    resource: string,
+    params: GetListParams
+  ): Promise<GetListResult> => {
+    const url = \`\${apiUrl}/\${resource}/\${params.id}\`;
+    const { json } = await httpClient(url, {
+      method: "PUT",
+      body: JSON.stringify(params.data),
+    });
+    return { data: json };
+  },
+
+
+
+  updateMany: async (
+    resource: string,
+    params: GetListParams
+  ): Promise<GetListResult> => {
+    const query = {
+      filter: JSON.stringify({ id: params.ids }),
+    };
+    const url = \`\${apiUrl}/\${resource}?\${query}\`;
+    const { json } = await httpClient(url, {
+      method: "PUT",
+      body: JSON.stringify(params.data),
+    });
+    return { data: json };
+  },
+
+
+
+  delete: async (
+    resource: string,
+    params: GetListParams
+  ): Promise<GetListResult> => {
+    const url = \`\${apiUrl}/\${resource}/\${params.id}\`;
+    const { json } = await httpClient(url, {
+      method: "DELETE",
+    });
+    return { data: json };
+  },
+
+
+
+  deleteMany: async (
+    resource: string,
+    params: GetListParams
+  ): Promise<GetListResult> => {
+    const query = {
+      filter: JSON.stringify({ id: params.ids }),
+    };
+    const url = \`\${apiUrl}/\${resource}?\${query}\`;
+    const { json } = await httpClient(url, {
+      method: "DELETE",
+      body: JSON.stringify(params.data),
+    });
+    return { data: json };
+  },
+};
+
+
+export default dataProvider;
+`,
+                  ],
+                  fileName: "",
+                },
+                {
+                  id: "2",
+                  name: "Create a  layout",
+                  code: [
+                    `
+import { Layout } from "react-admin";
+import DashboardMenu from "./single-page-menu";
+
+import { globalStyle } from "./style";
+import DashboardAppBar from "./single-page-app-bar";
+
+const DashboardLayout = (props: any) => (
+  <Layout
+    appBar={DashboardAppBar}
+    {...props}
+    menu={DashboardMenu}
+    sx={{
+      "& .RaLayout-appFrame": {
+        ...globalStyle.background_dark,
+        ...globalStyle.text_color,
+      },
+      "& .RaLayout-contentWithSidebar": {
+        ...globalStyle.background_dark,
+        ...globalStyle.text_color,
+      },
+      "& .RaLayout-content": {
+        ...globalStyle.background_dark,
+        ...globalStyle.text_color,
+      },
+    }}
+  />
+);
+export default DashboardLayout;`,
+                  ],
+                  fileName: "",
+                },
+                {
+                  id: "3",
+                  name: "Create a app or Applications",
+                  code: [
+                    `<Admin dataProvider={dataProvider} layout={DashboardLayout}>
+  <Resource
+    icon={PeopleAltIcon}
+    name="users"
+    create={UserCreate}
+    list={UserList}
+    edit={EditUser}
+    recordRepresentation="name"
+  /> 
+</Admin>`,
+                  ],
+                  fileName: "",
+                },
+                {
+                  id: "4",
+                  name: "Create a user-ui",
+                  code: [
+                    `import {
+  Create,
+  SimpleForm,
+  TextInput,
+  DateInput,
+  required,
+} from "react-admin";
+import { RichTextInput } from "ra-input-rich-text";
+import { globalStyle } from "./style";
+
+const CreateUser = () => {
+  return (
+    <Create
+      sx={{
+        label: {
+          ...globalStyle.text_color_dark,
+        },
+        "& .RaCreate-main": {
+          ...globalStyle.background_dark,
+        },
+        ".css-qmvuda-MuiToolbar-root-RaToolbar-root.RaToolbar-desktopToolbar": {
+          ...globalStyle.background_dark,
+        },
+        "& .RaCreate-noActions": {
+          ...globalStyle.background_dark,
+        },
+        "& .RaCreate-card": {
+          ...globalStyle.background_dark,
+        },
+        ".MuiInputBase-root.MuiFilledInput-root.
+        MuiFilledInput-underline.MuiInputBase-colorPrimary.
+        MuiInputBase-fullWidth.MuiInputBase-formControl.MuiInputBase-sizeSmall.
+        css-1lm524j-MuiInputBase-root-MuiFilledInput-root ":
+          { ...globalStyle.text_color },
+      }}
+    >
+      <SimpleForm>
+        <TextInput source="name" validate={[required()]} fullWidth />
+        <TextInput source="username" validate={[required()]} fullWidth />
+        <TextInput source="email" validate={[required()]} fullWidth />
+        <TextInput source="address.street" validate={[required()]} fullWidth />
+        <TextInput source="phone" validate={[required()]} fullWidth />
+        <TextInput source="website" validate={[required()]} fullWidth />
+        <TextInput source="company.name" validate={[required()]} fullWidth />
+      </SimpleForm>
+    </Create>
+  );
+};
+export default CreateUser;`,
+                  ],
+                  fileName: "",
+                },
+                {
+                  id: "5",
+                  name: "Create a List to view users",
+                  code: [
+                    `import {
+  CreateButton,
+  DatagridConfigurable,
+  useListContext,
+  ExportButton,
+  FilterButton,
+  List,
+  SelectColumnsButton,
+  TopToolbar,
+  SearchInput,
+  Datagrid,
+  TextField,
+  TextInput,
+  Pagination,
+} from "react-admin";
+const PostPagination = () => (
+  <Pagination
+    rowsPerPageOptions={[2, 4, 5, 6, 10, 25, 50, 100]}
+    className={\`bg-[#363B7B] text-slate-200 rounded-b-lg py-8\`}
+  />
+);
+
+import { globalStyle } from "./style";
+
+const ListActions = () => (
+  <TopToolbar>
+    <SelectColumnsButton />
+    <FilterButton />
+    <CreateButton />
+    <ExportButton />
+  </TopToolbar>
+);
+
+const postFilters = [
+  <SearchInput source="q" alwaysOn />,
+  <TextInput label="Title" source="title" defaultValue="Hello, World!" />,
+];
+
+const UserList = () => {
+  return (
+    <List
+      pagination={<PostPagination />}
+      sx={{
+        "svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.
+        MuiSelect-icon.MuiTablePagination-selectIcon.MuiSelect-iconStandard.
+        css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon":
+          { ...globalStyle.text_color }, /// pagination icon
+        ".MuiToolbar-root.MuiToolbar-gutters.MuiToolbar-regular.MuiTablePagination-toolbar.css-78c6dr-MuiToolbar-root-MuiTablePagination-toolbar":
+          { ...globalStyle.text_color }, /// pagination
+        ".MuiInputBase-root.MuiFilledInput-root.MuiFilledInput-underline.
+        MuiInputBase-colorPrimary.MuiInputBase-formControl.
+        MuiInputBase-sizeSmall.MuiInputBase-adornedEnd.
+        MuiInputBase-hiddenLabel.css-1y6feam-MuiInputBase-root-MuiFilledInput-root":
+          {
+            ...globalStyle.background_dark,
+            ...globalStyle.text_color,
+            borderBottom: "1px solid white",
+            width: " 100%",
+          }, // search input
+        ".css-lxhw8h-MuiFormControl-root-MuiTextField-root-RaResettableTextField-root-RaSearchInput-root .RaResettableTextField-visibleClearIcon":
+          {
+            ...globalStyle.background_dark,
+            ...globalStyle.text_color,
+          }, //search icon
+        "svg.MuiSvgIcon-root.MuiSvgIcon-colorDisabled.MuiSvgIcon-fontSizeMedium.css-1db085k-MuiSvgIcon-root":
+          {
+            ...globalStyle.background_dark,
+            ...globalStyle.text_color,
+          }, //search icon
+        "& .RaList-actions": {
+          ...globalStyle.p8,
+          ...globalStyle.background_dark,
+        },
+        "& .RaList-content": {
+          ...globalStyle.background_light,
+        },
+        "svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.
+        MuiPaginationItem-icon.
+        css-tnzq9a-MuiSvgIcon-root-MuiPaginationItem-icon":
+          { ...globalStyle.text_color }, // pagination style
+        ".MuiPaginationItem-root.MuiPaginationItem-sizeSmall.
+        MuiPaginationItem-text.
+        MuiPaginationItem-circular.MuiPaginationItem-ellipsis.
+        css-1hfyor7-MuiPaginationItem-root":
+          { ...globalStyle.text_color }, // pagination style
+        "button.MuiButtonBase-root.MuiPaginationItem-root.
+        MuiPaginationItem-sizeSmall.
+        MuiPaginationItem-text.MuiPaginationItem-circular.
+        MuiPaginationItem-page.
+        css-1ba2zw7-MuiButtonBase-root-MuiPaginationItem-root":
+          { ...globalStyle.text_color }, // pagination style
+        "button.MuiButtonBase-root.MuiPaginationItem-root.
+        MuiPaginationItem-sizeSmall.
+        MuiPaginationItem-text.MuiPaginationItem-circular.
+        Mui-selected.MuiPaginationItem-page.
+        css-1ba2zw7-MuiButtonBase-root-MuiPaginationItem-root":
+          {
+            ...globalStyle.text_color,
+            ...globalStyle.background_color_IndigoCent_dark,
+          }, // pagination style
+      }}
+      actions={<ListActions />}
+      filters={postFilters}
+    >
+      <Datagrid
+        rowClick="show"
+        sx={{
+          "& .RaDatagrid-root": {
+            ...globalStyle.text_color,
+          },
+          "& .RaDatagrid-rowCell": {
+            ...globalStyle.py12,
+            ...globalStyle.border_color,
+            ...globalStyle.background_light,
+          }, // each row cell
+          "& .MuiCheckbox-root": {
+            ...globalStyle.border_color,
+            ...globalStyle.text_color_dark,
+            ...globalStyle.background_light,
+          }, // active header (checkbox)
+          "span.MuiButtonBase-root.MuiCheckbox-root.
+          MuiCheckbox-colorPrimary.MuiCheckbox-sizeMedium.
+          PrivateSwitchBase-root.MuiCheckbox-root.
+          MuiCheckbox-colorPrimary.MuiCheckbox-sizeMedium.
+          MuiCheckbox-root.MuiCheckbox-colorPrimary.
+          MuiCheckbox-sizeMedium.select-all.
+          css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root":
+            {
+              ...globalStyle.background_banner,
+              ...globalStyle.py8,
+            }, // title bar
+          "td.MuiTableCell-root.MuiTableCell-body.
+          MuiTableCell-sizeSmall.column-id.
+          RaDatagrid-rowCell.css-dsuxgy-MuiTableCell-root":
+            {
+              ...globalStyle.py26,
+            },
+          "& .RaDatagrid-tableWrapper .Mui-active": {
+            ...globalStyle.background_banner,
+            ...globalStyle.text_color_dark,
+            ...globalStyle.font_bold,
+            ...globalStyle.font_size16,
+          }, // active header (Text)
+          "& .RaDatagrid-tableWrapper .
+          css-1qgma8u-MuiButtonBase-root-MuiTableSortLabel-root:hover":
+            {
+              ...globalStyle.text_color,
+              ...globalStyle.font_bold,
+              ...globalStyle.font_size16,
+            }, // active header (Text:hover)
+          "& .RaDatagrid-tableWrapper .Mui-active .MuiTableSortLabel-icon": {
+            ...globalStyle.background_banner,
+            ...globalStyle.text_color_dark,
+          }, // active header (Icon)
+          "td.MuiTableCell-root.MuiTableCell-body.
+          MuiTableCell-paddingCheckbox.MuiTableCell-sizeSmall.
+          css-2u8re1-MuiTableCell-root":
+            {
+              ...globalStyle.border_color,
+              ...globalStyle.background_light,
+            }, // icon (Checkbox)
+          "& .RaDatagrid-headerCell": {
+            ...globalStyle.background_banner,
+            ...globalStyle.text_color_dark,
+            ...globalStyle.font_size16,
+          },
+        }}
+      >
+        <TextField source="id" color={globalStyle.text_color_dark} />
+        <TextField source="name" color={globalStyle.text_color_dark} />
+        <TextField source="username" color={globalStyle.text_color_dark} />
+        <TextField source="email" color={globalStyle.text_color_dark} />
+        <TextField
+          source="address.street"
+          color={globalStyle.text_color_dark}
+        />
+        <TextField source="phone" color={globalStyle.text_color_dark} />
+        <TextField source="website" color={globalStyle.text_color_dark} />
+        <TextField source="company.name" color={globalStyle.text_color_dark} />
+      </Datagrid>
+    </List>
+  );
+};
+export default UserList;
+`,
+                  ],
+                  fileName: "",
+                },
+                {
+                  id: "6",
+                  name: "Create a Edit UI to edit the user",
+                  code: [
+                    `import { Edit, SimpleForm, TextInput, required } from "react-admin";
+import { globalStyle } from "./style";
+const EditUser = () => {
+  return (
+    <Edit
+      sx={{
+        label: {
+          ...globalStyle.text_color_dark,
+        },
+        ".css-qmvuda-MuiToolbar-root-RaToolbar-root.RaToolbar-desktopToolbar": {
+          ...globalStyle.background_dark,
+        },
+        "& .RaEdit-main": {
+          ...globalStyle.background_dark,
+        },
+        "& .RaEdit-noActions": {
+          ...globalStyle.background_dark,
+        },
+        "& .RaEdit-card": {
+          ...globalStyle.background_dark,
+        },
+        ".MuiInputBase-root.MuiFilledInput-root.
+        MuiFilledInput-underline.MuiInputBase-colorPrimary.
+        MuiInputBase-fullWidth.MuiInputBase-formControl.
+        MuiInputBase-sizeSmall.css-1lm524j-MuiInputBase-root-MuiFilledInput-root ":
+          { ...globalStyle.text_color },
+      }}
+    >
+      <SimpleForm>
+        <TextInput source="name" validate={[required()]} fullWidth />
+        <TextInput source="username" validate={[required()]} fullWidth />
+        <TextInput source="email" validate={[required()]} fullWidth />
+        <TextInput source="address.street" validate={[required()]} fullWidth />
+        <TextInput source="phone" validate={[required()]} fullWidth />
+        <TextInput source="website" validate={[required()]} fullWidth />
+        <TextInput source="company.name" validate={[required()]} fullWidth />
+      </SimpleForm>
+    </Edit>
+  );
+};
+export default EditUser;`,
+                  ],
+                  fileName: "",
+                },
+              ],
+            },
+          ],
+          examplePath: "",
+        },
+        {
+          id: "013",
+          title: "Observation",
+          documentation: [],
+          description: ["It's a function who observes ui or a component"],
+          code: [],
+          boilerPlate: [
+            {
+              id: "1",
+              name: "Observation api",
+              description: "",
+              content: [
+                {
+                  id: "1",
+                  name: "create a useRef(), and write this function inside useEffect",
+                  code: [
+                    `  console.log("RefDiv", refId);
+  const divRef = useRef(null);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        console.log("");
+        console.log("");
+        console.log("");
+        console.log("");
+        if (entry.isIntersecting) {
+          // Element is visible
+
+          console.log("Div is visible");
+          console.log("ref Id :", refId);
+          setSpyDiv(refId);
+        } else {
+          // Element is not visible
+          console.log("Div is not visible");
+          console.log("ref Id :", refId);
+        }
+      },
+      { threshold: 0.02 }
+    );
+
+    if (divRef.current) {
+      observer.observe(divRef.current);
+    }
+
+    return () => {
+      observer.disconnect(); // Cleanup on unmount
+    };
+  }, [divRef]);
+`,
+                  ],
+                  fileName: "",
+                },
+              ],
+            },
+          ],
+          examplePath: "",
+        },
+        {
+          id: "",
+          title: "",
+          documentation: [
+            {
+              id: "1",
+              url: "",
+              name: "Go Documentation",
+            },
+            {
+              id: "2",
+              url: "",
+              name: "Go NPM",
+            },
+          ],
+          description: [""],
+          code: [
+            { id: "1", npm: "" },
+            { id: "2", yarn: "yarn add " },
+          ],
+          boilerPlate: [
+            {
+              id: "1",
+              name: "",
+              description: "",
+              content: [{ id: "1", name: "", code: [""], fileName: "" }],
+            },
+          ],
+          examplePath: "",
+        },
       ],
     },
   ],
