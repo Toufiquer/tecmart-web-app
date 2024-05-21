@@ -37,11 +37,11 @@ const SpyScrollWrapper = ({
           setSpyDiv(refId);
         } else {
           // Element is not visible
-          //   console.log("Div is not visible");
-          //   console.log("ref Id :", refId);
+          console.log("Div is not visible");
+          console.log("ref Id :", refId);
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.02 }
     );
 
     if (divRef.current) {

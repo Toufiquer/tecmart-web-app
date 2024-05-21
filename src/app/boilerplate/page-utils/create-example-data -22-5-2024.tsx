@@ -6,16 +6,19 @@
 |-----------------------------------------
 */
 
-//   boilerPlate: [
-//           {
-//             id: "1",
-//             name: "",
-//             description: "",
-//             content: [{ id: "1", name: "", code: [""], fileName: "" }],
-//           },
-//         ],
-// examplePath: "",
 
+
+  //   boilerPlate: [
+  //           {
+  //             id: "1",
+  //             name: "",
+  //             description: "",
+  //             content: [{ id: "1", name: "", code: [""], fileName: "" }],
+  //           },
+  //         ],
+  // examplePath: "",
+            
+    
 import { boilerPageInterface } from "./type";
 
 export const exampleBoilerPlateData: boilerPageInterface = {

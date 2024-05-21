@@ -24,6 +24,7 @@ import { useState } from "react";
 import "./style.css";
 export default function Page() {
   const [spyDiv, setSpyDiv] = useState("");
+  console.log("spyDiv", spyDiv);
   return (
     <main className="bg-slate-900 text-white">
       <Header />
