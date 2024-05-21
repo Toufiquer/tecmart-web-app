@@ -277,7 +277,7 @@ export async function DELETE(
           examplePath: "src/example-design/",
         },
         {
-          id: "009",
+          id: "002",
           important: true,
           title: "REACT-HOOK-FORM",
           documentation: [
@@ -321,7 +321,9 @@ type Inputs = { example: string; exampleRequired: string };
                   id: "2",
                   name: "function",
                   code: [
-                    `const {
+                    `"use client"
+
+const {
   register,
   handleSubmit,
   watch,
@@ -355,7 +357,7 @@ const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
           examplePath: "",
         },
         {
-          id: "013",
+          id: "003",
           important: true,
           title: "ZOD",
           documentation: [
@@ -461,6 +463,894 @@ const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
                     `type newItemFormSchema = z.infer<typeof newItemSchema>;`,
                   ],
                   fileName: "where you create from",
+                },
+                {
+                  id: "4",
+                  name: "Create Schema ",
+                  code: [
+                    `const email = z.string().email({
+  message: "Invalid email format. Please enter a valid email address.",
+});
+
+const mobileNumber = z.string().regex(/^\+(?:[0-9] ?){6,14}$/, {
+  message:
+    "Invalid phone number. Please enter a valid mobile number in international format (+ddd nnnnnnnnnn).",
+});
+
+const country = ["UK", "USA", "Bangladesh"];
+const nationality = z.enum(["UK", "USA", "Bangladesh"], {
+  message:
+    "Invalid nationality. Please choose a valid nationality from the list (UK, USA, Bangladesh).",
+});
+
+enum Gender {
+  Male = "Male",
+  Female = "Female",
+  Others = "Others",
+}
+
+const gender = z.enum(["Male", "Female", "Others"], {
+  message:
+    "Invalid gender. Please choose a valid gender option (Male, Female, Others).",
+});
+
+export const newItemSchema = z.object({
+  firstName: z
+    .string({
+      invalid_type_error: "Item must be a string",
+      required_error: "Item is required",
+    })
+    .min(3, "Minimum 3 characters")
+    .max(120, "Maximum 120 characters")
+    .trim(),
+  lastName: z
+    .string({
+      invalid_type_error: "Item must be a string",
+      required_error: "Item is required",
+    })
+    .min(3, "Minimum 3 characters")
+    .max(120, "Maximum 120 characters")
+    .trim(),
+  email,
+  gender,
+  mobileNumber,
+  nationality,
+  address: z
+    .string({
+      invalid_type_error: "Item must be a string",
+      required_error: "Item is required",
+    })
+    .min(3, "Minimum 3 characters")
+    .max(320, "Maximum320 characters")
+    .trim(),
+});`,
+                  ],
+                  fileName: "where you create from",
+                },
+                {
+                  id: "4",
+                  name: "Validate with zod",
+                  code: [
+                    `<p className="text-sm text-rose-400">
+  {errors.firstName.message}
+</p>`,
+                  ],
+                  fileName: "where you create from",
+                },
+              ],
+            },
+          ],
+          examplePath: "",
+        },
+        {
+          id: "004",
+          title: "REACT-TOAST",
+          documentation: [
+            {
+              id: "1",
+              name: "Go NPM ",
+              url: "https://www.npmjs.com/package/react-toastify",
+            },
+          ],
+          code: [
+            { id: "1", npm: "npm i react-toastify" },
+            { id: "2", yarn: "yarn add react-toastify" },
+          ],
+          boilerPlate: [
+            {
+              id: "1",
+              name: "React-Toastify",
+              description:
+                "React-Toastify allows you to add notifications to your app with ease. No more nonsense!",
+              content: [
+                {
+                  id: "2",
+                  name: "Import ",
+                  code: [
+                    `import React from 'react';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';`,
+                  ],
+                  fileName: "App.tsx",
+                },
+                {
+                  id: "3",
+                  name: "Write down to your App Component",
+                  code: [`<ToastContainer autoClose={5000} theme="dark"/>`],
+                  fileName: "App.tsx",
+                },
+                {
+                  id: "4",
+                  name: "Import",
+                  code: [`import { ToastContainer } from 'react-toastify';`],
+                  fileName: "",
+                },
+                {
+                  id: "5",
+                  name: "invoke function normal",
+                  code: [
+                    ` const notify = () => toast("message_text",{autoClose: {5000}});`,
+                  ],
+                  fileName: "",
+                },
+                {
+                  id: "6",
+                  name: "invoke function success",
+                  code: [
+                    ` const notify = () => toast.success("message_text",{autoClose: {5000}});`,
+                  ],
+                  fileName: "",
+                },
+                {
+                  id: "7",
+                  name: "invoke function warning",
+                  code: [
+                    ` const notify = () => toast.warning("message_text",{autoClose: {5000}});`,
+                  ],
+                  fileName: "",
+                },
+              ],
+            },
+          ],
+          examplePath: "arc/App.tsx",
+        },
+        {
+          id: "005",
+          important: true,
+          title: "REDUX",
+          documentation: [
+            {
+              id: "1",
+              url: "https://redux.js.org/",
+              name: "Go Documentation",
+            },
+            {
+              id: "2",
+              url: "https://www.npmjs.com/package/redux",
+              name: "Go NPM",
+            },
+          ],
+          description: ["Store management with Caching mechanism"],
+          code: [
+            { id: "1", npm: "npm i react-hook-form" },
+            { id: "2", yarn: "yarn add react-hook-form" },
+          ],
+          boilerPlate: [
+            {
+              id: "1",
+              name: "Redux toolkit query ",
+              description: "You can use rtk query to cache and manage store",
+              content: [
+                {
+                  id: "1",
+                  name: "Create a global store",
+                  code: [
+                    `import {configureStore} from '@reduxjs/toolkit';
+import {apiSlice} from './../features/api/apiSlice';
+import usersSlice from './../features/users/usersSlice';
+import {TypedUseSelectorHook, useSelector} from 'react-redux';
+import blogSlice from '../features/blog/blogSlice';
+
+export const store = configureStore({
+    reducer: {
+        [apiSlice.reducerPath]: apiSlice.reducer,
+        users: usersSlice,
+        blogs: blogSlice,
+    },
+
+    devTools: process.env.NODE_ENV !== 'production',
+    middleware: getDefaultMiddleware =>
+    getDefaultMiddleware().concat(apiSlice.middleware),
+});
+
+export type RootState = ReturnType<typeof store.getState>;
+export type appDispatch = typeof store.dispatch;
+export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;`,
+                  ],
+                  fileName: "src/redux/app/store.ts",
+                },
+                {
+                  id: "2",
+                  name: "Create a global Provider and export it",
+                  code: [
+                    `'use client';
+
+import {store} from '@/redux/app/store';
+import {ReactNode} from 'react';
+import {Provider} from 'react-redux';
+
+export function ReduxProvider({children}: {children: ReactNode}) {
+return <Provider store={store}>{children}</Provider>;
+}`,
+                  ],
+                  fileName: "src/redux/provider.tsx",
+                },
+                {
+                  id: "3",
+                  name: "Import App Provider",
+                  code: ["import {ReduxProvider} from '@/redux/provider';"],
+                  fileName: "App.tsx",
+                },
+
+                {
+                  id: "4",
+                  name: "Wrap App Provider",
+                  code: [" <ReduxProvider>{children}</ReduxProvider>"],
+                  fileName: "App.tsx",
+                },
+                {
+                  id: "5",
+                  name: "Create api Slice",
+                  code: [
+                    `import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react';
+export const apiSlice = createApi({
+    reducerPath: 'api',
+    baseQuery: fetchBaseQuery({
+        baseUrl: 'http://localhost:3000/api',
+        prepareHeaders: async (headers, {getState, endpoint}) => {
+            const token = getState()?.auth?.accessToken;
+            if (token) {
+                headers.set('Authorization', \`Bearer \${token}\`);
+            }
+                return headers;
+            },
+        }),
+    endpoints: builder => ({}),
+});`,
+                  ],
+                  fileName: "App.tsx",
+                },
+                {
+                  id: "6",
+                  name: "Create thunk function using createApi [for post]",
+                  code: [
+                    `import {current} from '@reduxjs/toolkit';
+import {apiSlice} from '../api/apiSlice';
+import {initSinglePostDataType} from '@/app/post/page';
+
+
+export const postsApi = apiSlice.injectEndpoints({
+
+  endpoints: builder => ({
+    // endpoints here
+
+
+    getPosts: builder.query({
+      query: () => \`/posts\`,
+    }),
+
+
+    getPost: builder.query({
+      query: id => \`/posts/\${id}\`,
+    }),
+
+    updatePost: builder.mutation({
+      query: ({id, data}) => ({
+        url: \`/posts/\${id}\`,
+        method: 'PATCH',
+        body: data,
+      }),
+
+      async onQueryStarted(arg, {queryFulfilled, dispatch}) {
+        // optimistic cache update start
+        const patchResult1 = dispatch(
+          apiSlice.util.updateQueryData(
+            'getPosts',
+            undefined,
+            (draft: initSinglePostDataType[]) => {
+              const newValue = draft.map(curr => {
+                if (curr.id === parseInt(arg.id)) {
+                  return {...curr, ...arg.data};
+                } else {
+                  return curr;
+                }
+              });
+              Object.assign(draft, newValue);
+            },
+          ),
+        );
+        // optimistic cache update end
+        try {
+          const query = await queryFulfilled;
+        } catch {
+          patchResult1.undo();
+        }
+      },
+    }),
+
+
+    editPost: builder.mutation({
+      query: arg => ({
+        url: \`/posts/\${arg.id}\`,
+        method: 'PATCH',
+        body: arg,
+      }),
+
+      async onQueryStarted(arg, {queryFulfilled, dispatch}) {
+        console.log(' patch query started', arg);
+        const patchResult = dispatch(
+          apiSlice.util.updateQueryData('getPosts', {}, draft => {
+            console.log('post draft : ', JSON.stringify(draft));
+            const others = draft.map(curr => {
+              let result = {...curr};
+              if (parseInt(curr.id) === parseInt(arg.id)) {
+                result.title = arg.title;
+              }
+              return result;
+            });
+            Object.assign(draft, others);
+          }),
+        );
+        try {
+          await queryFulfilled;
+        } catch {
+          patchResult.undo();
+        }
+
+        try {
+          const query = await queryFulfilled;
+          // pessimistic cache update start
+          // if (query?.data?.id) {
+          //   dispatch(
+          //     apiSlice.util.updateQueryData(
+          //       'getPosts',
+          //       {},
+          //       (draft: initSinglePostDataType[]) => {
+          //         const newValue = draft.map(curr => {
+          //           if (+curr.id === +arg.id) {
+          //             return {...query?.data};
+          //           } else {
+          //             return curr;
+          //           }
+          //         });
+          //         Object.assign(draft, newValue);
+          //       },
+          //     ),
+          //   );
+          // }
+          // pessimistic cache update end
+        } catch {
+          patchResult.undo();
+        }
+      },
+    }),
+
+
+    deletePost: builder.mutation({
+      query: id => ({
+        url: \`/posts/$\{id}\`,
+        method: 'DELETE',
+      }),
+
+      async onQueryStarted(arg, {dispatch, queryFulfilled}) {
+        const patchResult = dispatch(
+          apiSlice.util.updateQueryData('getPosts', {}, draft => {
+            const others = draft.filter(curr => {
+              return parseInt(curr.id) !== parseInt(arg);
+            });
+            Object.assign(draft, others);
+          }),
+        );
+        try {
+          await queryFulfilled;
+        } catch {
+          patchResult.undo();
+        }
+      },
+    }),
+
+
+    addPost: builder.mutation({
+      query: data => ({
+        url: \`/posts\`,
+        method: 'POST',
+        body: data,
+      }),
+
+      async onQueryStarted(arg, {queryFulfilled, dispatch}) {
+        console.log('rtk , arg: ', arg);
+        dispatch(
+          apiSlice.util.updateQueryData('getPosts', {}, draft => {
+            draft.push({title: arg.title, id: 120});
+          }),
+        );
+        try {
+          await queryFulfilled;
+          // pessimistic cache update end
+        } catch {}
+      },
+    }),
+  }),
+});
+
+
+export const {
+  useGetPostsQuery,
+  useGetPostQuery,
+  useEditPostMutation,
+  useUpdatePostMutation,
+  useDeletePostMutation,
+  useAddPostMutation,
+} = postsApi;
+`,
+                  ],
+                  fileName: "src/redux/features/post/postApi.tsx",
+                },
+                {
+                  id: "7",
+                  name: "Create apiSlice using createSlice [for post]",
+                  code: [
+                    `import {createSlice} from '@reduxjs/toolkit';
+
+const initialState = {};
+
+const postsSlice = createSlice({
+  name: 'posts',  
+  initialState,  
+  reducers: {},  
+});
+
+export const {} = postsSlice.actions;
+export default postsSlice.reducer;
+
+// Must update store for using this slice, without updating it doesn't work properly`,
+                  ],
+                  fileName: "src/redux/features/post/postSlice.tsx",
+                },
+              ],
+            },
+          ],
+          examplePath: "",
+        },
+        {
+          id: "006",
+          important: true,
+          title: "ZUSTAND",
+          documentation: [
+            {
+              id: "1",
+              url: "https://zod.dev/?id=table-of-contents",
+              name: "Go Documentation",
+            },
+            {
+              id: "2",
+              url: "https://www.npmjs.com/package/zod",
+              name: "Go NPM",
+            },
+          ],
+          description: [""],
+          code: [
+            { id: "1", npm: "npm i zod" },
+            { id: "2", yarn: "yarn add zod" },
+          ],
+          boilerPlate: [
+            {
+              id: "1",
+              name: "ZuStand Template",
+              description: "state management",
+              content: [
+                {
+                  id: "1",
+                  name: "demo code ",
+                  code: [
+                    `import { create } from "zustand";
+
+const useStore = create((set) => ({
+  count: 1,
+  inc: () => set((state) => ({ count: state.count + 1 })),
+}));
+
+function Counter() {
+  const { count, inc } = useStore();
+  return (
+    <div>
+      <span>{count}</span>
+      <button onClick={inc}>one up</button>
+    </div>
+  );
+}
+`,
+                  ],
+                  fileName: "global-store.tsx",
+                },
+              ],
+            },
+          ],
+          examplePath: "",
+        },
+        {
+          id: "007",
+          important: true,
+          title: "TANSTACK",
+          documentation: [
+            {
+              id: "1",
+              url: "https://tanstack.com/query/latest",
+              name: "Go Documentation",
+            },
+            {
+              id: "2",
+              url: "https://www.npmjs.com/package/@tanstack/react-query",
+              name: "Go NPM",
+            },
+          ],
+          description: [
+            "Powerful asynchronous state management for TS/JS, React, Solid, Vue, Svelte and Angular",
+          ],
+          code: [
+            { id: "1", npm: "npm i @tanstack/react-query" },
+            { id: "2", yarn: "yarn add @tanstack/react-query" },
+          ],
+          boilerPlate: [
+            {
+              id: "1",
+              name: "A demo with tanStack Query",
+              description: "",
+              content: [
+                {
+                  id: "1",
+                  name: "",
+                  code: [
+                    `import {
+  QueryClient,
+  QueryClientProvider,
+  useQuery,
+} from "@tanstack/react-query";
+
+const queryClient = new QueryClient();
+
+export default function App() {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <Example />
+    </QueryClientProvider>
+  );
+}
+
+function Example() {
+  const { isPending, error, data } = useQuery({
+    queryKey: ["repoData"],
+    queryFn: () =>
+      fetch("https://api.github.com/repos/TanStack/query").then((res) =>
+        res.json()
+      ),
+  });
+
+  if (isPending) return "Loading...";
+  if (error) return "An error has occurred: " + error.message;
+
+  return (
+    <div>
+      <h1>{data.name}</h1> <p>{data.description}</p>
+      <strong>👀 {data.subscribers_count}</strong>
+      <strong>✨ {data.stargazers_count}</strong>
+      <strong>🍴 {data.forks_count}</strong>
+    </div>
+  );
+}
+`,
+                  ],
+                  fileName: "",
+                },
+              ],
+            },
+          ],
+          examplePath: "",
+        },
+        {
+          id: "008",
+          important: true,
+          title: "Async Storage",
+          documentation: [
+            {
+              id: "1",
+              url: "",
+              name: "Go Documentation",
+            },
+            {
+              id: "2",
+              url: "",
+              name: "Go NPM",
+            },
+          ],
+          description: [
+            "AsyncStorage is an unencrypted, asynchronous, persistent, key-value storage system that is global to the app. It should be used instead of LocalStorage.",
+          ],
+          code: [
+            {
+              id: "1",
+              npm: "npm i @react-native-async-storage/async-storage",
+            },
+            {
+              id: "2",
+              yarn: "yarn add @react-native-async-storage/async-storage",
+            },
+          ],
+          boilerPlate: [
+            {
+              id: "1",
+              name: "AsyncStorage",
+              description: "example of code ",
+              content: [
+                {
+                  id: "1",
+                  name: "",
+                  code: [
+                    `import {AsyncStorage} from 'react-native';
+
+await AsyncStorage.setItem('data')
+
+await AsyncStorage.getItem('data')`,
+                  ],
+                  fileName: "",
+                },
+              ],
+            },
+          ],
+          examplePath: "",
+        },
+        {
+          id: "009",
+          important: true,
+          title: "MongoDB & Mongoose",
+          documentation: [
+            {
+              id: "1",
+              url: "https://www.mongodb.com/docs/",
+              name: "Go Documentation",
+            },
+            {
+              id: "2",
+              url: "https://www.npmjs.com/package/mongodb",
+              name: "Go NPM",
+            },
+          ],
+          description: ["Database @ User friendly for JavaScript development"],
+          code: [
+            { id: "1", npm: "npm i mongodb" },
+            { id: "2", yarn: "yarn add mongodb" },
+          ],
+          boilerPlate: [
+            {
+              id: "1",
+              name: "Next Backend Api with mongoose ",
+              description: "",
+              content: [
+                {
+                  id: "1",
+                  name: "Full api",
+                  code: [
+                    `import dbConnect from "@/lib/dbConnect";
+import Rtk, { IRtk } from "@/models/Rtk";
+
+import type { NextApiRequest, NextApiResponse } from "next";
+
+export async function GET(req: NextApiRequest, res: NextApiResponse) {
+  await dbConnect();
+
+  const data: IRtk[] = await Rtk.find({});
+  const result = { data, message: "get request invoked successfully" };
+  return new Response(JSON.stringify(result));
+}
+
+export async function POST(
+  req: NextApiRequest & { json: () => void },
+  res: NextApiResponse
+) {
+  await dbConnect();
+
+  const result = await req.json();
+
+  const rtk: IRtk = await Rtk.create(result);
+  return new Response(
+    JSON.stringify({
+      data: result,
+      result: rtk,
+      message: "Post request successful invoke",
+    })
+  );
+}
+
+/* it can change all data */
+export async function PUT(
+  req: NextApiRequest & { json: () => { id: string; data: any } },
+  res: NextApiResponse
+) {
+  await dbConnect();
+  const result = await req.json();
+  const rtk: IRtk = await Rtk.updateOne(
+    { _id: result.id },
+    { name: result.title }
+  );
+  return new Response(
+    JSON.stringify({
+      data: result,
+      result: rtk,
+      message: "Put request successful invoke",
+    })
+  );
+}
+
+/*  only change particular data not change all data */
+export async function PATCH(
+  req: NextApiRequest & { json: () => void },
+  res: NextApiResponse
+) {
+  await dbConnect();
+
+  const result = await req.json();
+
+  const rtk: IRtk = await Rtk.updateOne(
+    { _id: result.id },
+    { name: result.title }
+  );
+  return new Response(
+    JSON.stringify({
+      data: result,
+      result: rtk,
+      message: "Patch request successful invoke",
+    })
+  );
+}
+
+export async function DELETE(
+  req: NextApiRequest & { json: () => void },
+  res: NextApiResponse
+) {
+  await dbConnect();
+
+  const result = await req.json();
+  const rtk: IRtk = await Rtk.deleteOne({ _id: result.id });
+  return new Response(
+    JSON.stringify({
+      data: result,
+      result: rtk,
+      message: "Patch request successful invoke",
+    })
+  );
+}
+`,
+                  ],
+                  fileName: "route.ts",
+                },
+              ],
+            },
+          ],
+          examplePath: "",
+        },
+        {
+          id: "010",
+          title: "Copy To Clipboard",
+          documentation: [
+            {
+              id: "1",
+              url: "https://github.com/sudodoki/copy-to-clipboard#readme",
+              name: "Go Documentation",
+            },
+            {
+              id: "2",
+              url: "https://www.npmjs.com/package/copy-to-clipboard",
+              name: "Go NPM",
+            },
+          ],
+          description: [
+            "Simple module exposing copy function that will try to use execCommand with fallback to IE-specific clipboardData interface and finally, resort to usual prompt with proper text content and message.",
+          ],
+          code: [
+            { id: "1", npm: "npm i copy-to-clipboard" },
+            { id: "2", yarn: "yarn add copy-to-clipboard" },
+          ],
+          boilerPlate: [
+            {
+              id: "1",
+              name: "demo code ",
+              description: "",
+              content: [
+                {
+                  id: "1",
+                  name: "",
+                  code: [
+                    `import copy from 'copy-to-clipboard';
+
+copy('Text');`,
+                  ],
+                  fileName: "your-page.tsx",
+                },
+              ],
+            },
+          ],
+          examplePath: "",
+        },
+        {
+          id: "011",
+          title: "MMKV",
+          documentation: [
+            {
+              id: "1",
+              url: "https://github.com/ammarahm-ed/react-native-mmkv-storage#readme",
+              name: "Go Documentation",
+            },
+            {
+              id: "2",
+              url: "https://www.npmjs.com/package/react-native-mmkv-storage",
+              name: "Go NPM",
+            },
+          ],
+          description: ["Fast Storage for react Native"],
+          code: [
+            { id: "1", npm: "npm i react-native-mmkv-storage" },
+            { id: "2", yarn: "yarn add react-native-mmkv-storage" },
+          ],
+          boilerPlate: [
+            {
+              id: "1",
+              name: "Create store",
+              description: "",
+              content: [
+                {
+                  id: "1",
+                  name: "Create a store",
+                  code: [
+                    `import { MMKV } from 'react-native-mmkv'
+
+export const storage = new MMKV({
+  id: \`user-\${userId}-storage\`,
+  path: \`\${USER_DIRECTORY}/storage\`,
+  encryptionKey: 'hunter2'
+})`,
+                  ],
+                  fileName: "your-file.tsx",
+                },
+                {
+                  id: "2",
+                  name: "update store ",
+                  code: [
+                    `Set
+storage.set('user.name', 'Marc')
+storage.set('user.age', 21)
+storage.set('is-mmkv-fast-asf', true)
+
+
+Get
+const username = storage.getString('user.name') // 'Marc'
+const age = storage.getNumber('user.age') // 21
+const isMmkvFastAsf = storage.getBoolean('is-mmkv-fast-asf') // true
+
+
+Keys
+// checking if a specific key exists
+const hasUsername = storage.contains('user.name')
+
+// getting all keys
+const keys = storage.getAllKeys() // ['user.name', 'user.age', 'is-mmkv-fast-asf']
+
+// delete a specific key + value
+storage.delete('user.name')
+
+// delete all keys
+storage.clearAll()`,
+                  ],
+                  fileName: "your-file.tsx",
                 },
               ],
             },
