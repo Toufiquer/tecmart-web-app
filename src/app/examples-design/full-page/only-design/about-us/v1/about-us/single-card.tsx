@@ -25,10 +25,10 @@ const SingleCard = () => {
       <Card>
         <CardHeader className="pb-0">
           <CardTitle>
-            <Avatar className="h-auto w-[100px]">
+            <Avatar className="h-auto w-[80px]">
               <AvatarImage
                 src="https://github.com/shadcn.png"
-                className="w-[100px]"
+                className="w-[80px]"
               />
               <AvatarFallback>Avatar</AvatarFallback>
             </Avatar>
