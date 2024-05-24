@@ -12,7 +12,6 @@ import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Input } from "@/components/ui/input";
 import {
   Select,
   SelectContent,
@@ -24,6 +23,8 @@ import { RiMastercardFill, RiVisaFill } from "react-icons/ri";
 import { FaCcDiscover } from "react-icons/fa";
 import { SiAmericanexpress } from "react-icons/si";
 
+const commonInputStyle =
+  "w-full focus:outline-none py-2 text-sm text-gray-900 border border-gray-300 bg-white focus:ring-slate-400 focus:border-slate-400 ps-2 rounded-lg";
 const PaymentMethod = () => {
   const [payment, setPayment] = useState("creditCard");
   return (
@@ -31,8 +32,8 @@ const PaymentMethod = () => {
       <h2 className="mb-2 font-semibold">
         <span className="py-4 pr-4 text-2xl font-bold">Payment Method</span>
       </h2>
-      <div className="flex flex-col">
-        <div className="mb-4 flex justify-between">
+      <div className="flex flex-col w-full flex-wrap">
+        <div className="mb-4 flex flex-col md:flex-row justify-between">
           <div className="flex items-center gap-2">
             <div
               onClick={() => setPayment("creditCard")}
@@ -82,18 +83,25 @@ const PaymentMethod = () => {
 
         <div className="mb-4 mt-2 flex w-full flex-col">
           <div className="text sm font-semibold">Card number</div>
-          <Input type="text" placeholder="Card number" className="w-full" />
+          <input
+            type="text"
+            placeholder="Card number"
+            className={commonInputStyle}
+          />
         </div>
       </div>
       <div className="mb-4 mt-2 flex flex-col">
         <div className="text sm font-semibold">Full name</div>
-        <Input type="text" placeholder="Full name" className="w-full" />
+        <input
+          type="text"
+          placeholder="Full name"
+          className={commonInputStyle}
+        />
       </div>
-      <div className="flex w-full">
-        <div className="flex w-full flex-col">
+      <div className="flex w-full  flex-col md:flex-row ">
+        <div className="flex flex-col w-full">
           <div className="flex w-full font-semibold">Expires on</div>
           <div className="flex w-full gap-2">
-            {" "}
             <Select>
               <SelectTrigger className="w-[180px]">
                 <SelectValue placeholder="Month" />
@@ -137,12 +145,15 @@ const PaymentMethod = () => {
             </Select>
           </div>
         </div>
-        <div className="ml-2 flex w-full flex-col">
+        <div className="md:ml-2 mt-2 md:mt-0 flex w-full flex-col">
           <div className="text sm font-semibold">CVC</div>
-          <Input type="number" placeholder="CVC Number" className="w-full" />
+          <input
+            type="number"
+            placeholder="CVC Number"
+            className={commonInputStyle}
+          />
         </div>
       </div>
-
       <div className="items-top mb-6 mt-8 flex space-x-2">
         <Checkbox />
         <div className="grid gap-1.5 leading-none">
@@ -152,12 +163,14 @@ const PaymentMethod = () => {
         </div>
       </div>
       <div className="flex w-full gap-4">
-        <Button className="w-full" variant="default">
-          Pay &#163;695.2
-        </Button>
-        <Button className="min-w-[200px]" variant="outline">
-          Save Order and Exit
-        </Button>
+        <div className="gap-2 flex-col md:flex-row flex w-full">
+          <Button className="w-full" variant="default">
+            Pay &#163;695.2
+          </Button>
+          <Button className="min-w-[200px]" variant="outline">
+            Save Order and Exit
+          </Button>
+        </div>
       </div>
     </main>
   );

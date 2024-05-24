@@ -16,7 +16,7 @@ const CheckoutPage = () => {
     <section className="bg-blue-50">
       <Header />
       <div className="max-w-7xl mx-auto">
-        <div className="px-6">
+        <div className="px-3 md:px-6">
           <h2 className="pb-8 pt-12 text-3xl font-bold">Check out</h2>
           <div className="grid grid-cols-1 xl:grid-cols-[1fr_600px]">
             <div className="flex flex-col">

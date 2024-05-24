@@ -36,7 +36,7 @@ export const categoryLink: LINKTYPE[] = [
   { id: 5, name: "Shipping Info", link: "/checkout" },
   { id: 6, name: "Be a vendor", link: "/checkout" },
   { id: 7, name: "Tracker order", link: "/checkout" },
-  { id: 7, name: "Checkout", link: "/checkout" },
+  { id: 8, name: "Checkout", link: "/checkout" },
 ];
 
 const distributedLink = (link: LINKTYPE[], viewItem: number = 2) => {
@@ -71,6 +71,16 @@ const DropDownMenu = ({ data }: { data: LINKTYPE[] }) => (
   </DropdownMenu>
 );
 
+export const Mobile = ({ className }: { className: string }) => {
+  const { dropdownLink } = distributedLink(categoryLink, 0);
+  return (
+    <div className={`${className}`}>
+      <div className="flex gap-4">
+        {dropdownLink.length > 0 && <DropDownMenu data={dropdownLink} />}
+      </div>
+    </div>
+  );
+};
 export const Tablet768 = ({ className }: { className: string }) => {
   const { viewLink, dropdownLink } = distributedLink(categoryLink);
   return (
