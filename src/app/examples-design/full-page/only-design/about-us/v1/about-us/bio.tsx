@@ -8,7 +8,7 @@
 const Bio = () => {
   return (
     <main className="my-12 flex w-full flex-col items-center justify-center">
-      <div className="flex gap-20">
+      <div className="flex w-full flex-wrap items-center justify-center gap-20">
         <div className="flex flex-col justify-center gap-4">
           <h2 className="text-center text-5xl font-semibold">7</h2>
           <p className="text-center text-sm text-slate-800">
