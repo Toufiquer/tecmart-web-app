@@ -12,6 +12,7 @@ export type singleExampleDataType = {
   path: string;
   version: string;
   urlPath: string;
+  cli?: string[];
   component: JSX.Element;
 };
 export type exampleDataType = {
@@ -21,6 +22,7 @@ export type exampleDataType = {
 };
 import V1_Help_Center_Page from "./only-design/help-center/v1/help-center/page";
 import V1_About_Us_Page from "./only-design/about-us/v1/about-us/page";
+import V1_Checkout_Page from "./only-design/checkout/v1/checkout/page";
 export const exampleData: exampleDataType[] = [
   {
     id: "1",
@@ -49,6 +51,27 @@ export const exampleData: exampleDataType[] = [
         urlPath:
           "http://localhost:3000/examples-design/full-page/only-design/about-us/v1/about-us",
         component: <V1_About_Us_Page />,
+      },
+    ],
+  },
+  {
+    id: "3",
+    pageName: "Checkout",
+    children: [
+      {
+        id: "1",
+        name: "Checkout",
+        version: "v1",
+        cli: [
+          "npx shadcn-ui@latest add checkbox",
+          "npx shadcn-ui@latest add dropdown-menu",
+          "npx shadcn-ui@latest add select",
+          "npx shadcn-ui@latest add input",
+        ],
+        path: "@/examples-design/full-page/only-design/checkout/v1/checkout",
+        urlPath:
+          "http://localhost:3000/examples-design/full-page/only-design/checkout/v1/checkout",
+        component: <V1_Checkout_Page />,
       },
     ],
   },
