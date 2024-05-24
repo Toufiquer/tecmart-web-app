@@ -27,6 +27,7 @@ import V1_Checkout_Page from "./only-design/checkout/v1/checkout/page";
 import V1_Contact_Us_Page from "./only-design/contact-us/v1/contact-us/page";
 import V1_Create_an_event_Page from "./only-design/create-an-event/v1/create-an-event/page";
 import V1_Event_Details_Page from "./only-design/event-details/v1/event-details/page";
+import V1_FAQ_Page from "./only-design/faq/v1/faq/page";
 export const exampleData: exampleDataType[] = [
   {
     id: "1",
@@ -146,6 +147,26 @@ export const exampleData: exampleDataType[] = [
         urlPath:
           "http://localhost:3000/examples-design/full-page/only-design/event-details/v1/event-details",
         component: <V1_Event_Details_Page />,
+      },
+    ],
+  },
+  {
+    id: "7",
+    pageName: "Frequently asked questions",
+    children: [
+      {
+        id: "1",
+        name: "Frequently asked questions",
+        version: "v1",
+        cli: [
+          "npx shadcn-ui@latest add input",
+          "npx shadcn-ui@latest add accordion",
+          "npx shadcn-ui@latest add button",
+        ],
+        path: "@/examples-design/full-page/only-design/faq/v1/faq",
+        urlPath:
+          "http://localhost:3000/examples-design/full-page/only-design/faq/v1/faq",
+        component: <V1_FAQ_Page />,
       },
     ],
   },

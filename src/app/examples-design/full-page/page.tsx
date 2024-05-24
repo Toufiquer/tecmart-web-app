@@ -61,7 +61,7 @@ export default function Page() {
                 <Button className="hover:underline">View Full Demo</Button>
               </Link>
             </div>
-            {currentUI.cli && currentUI.doc && (
+            {(currentUI.cli || currentUI.doc) && (
               <Accordion type="single" collapsible>
                 <AccordionItem value="item-1">
                   <AccordionTrigger className="px-4">
