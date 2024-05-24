@@ -13,20 +13,23 @@ import {
   ResizablePanel,
   ResizablePanelGroup,
 } from "@/components/ui/resizable";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-  export default function Home() {
-    return (
-      <main className="bg-slate-900 text-white">
-        <Header />
-        <ResizablePanelGroup direction="horizontal" className="min-h-[92vh]">
-          <ResizablePanel defaultSize={30}>
-            <SideBar />
-          </ResizablePanel>
-          <ResizableHandle withHandle />
-          <ResizablePanel>
-            <Outlet />
-          </ResizablePanel>
-        </ResizablePanelGroup>
-      </main>
-    );
-  }
+export default function Home() {
+  return (
+    <main className="bg-slate-900 text-white">
+      <Header />
+      <ResizablePanelGroup direction="horizontal" className="min-h-[92vh]">
+        <ResizablePanel defaultSize={30}>
+          <SideBar />
+        </ResizablePanel>
+        <ResizableHandle withHandle />
+        <ResizablePanel>
+          <Outlet />
+        </ResizablePanel>
+      </ResizablePanelGroup>
+      <ToastContainer />
+    </main>
+  );
+}

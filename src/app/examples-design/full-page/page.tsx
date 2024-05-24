@@ -23,9 +23,12 @@ import Link from "next/link";
 import { toast } from "react-toastify";
 import copy from "copy-to-clipboard";
 import { LuCopy } from "react-icons/lu";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 export default function Page() {
   const [currentUI, setCurrentUI] = useState(exampleData[0].children[0]);
   const handleCopy = (data: string) => {
+    console.log("click", data);
     toast.success(`Copy, ${data}`, { autoClose: 1000, theme: "dark" });
     copy(data);
   };
@@ -71,6 +74,8 @@ export default function Page() {
           </div>
         </ResizablePanel>
       </ResizablePanelGroup>
+
+      <ToastContainer />
     </main>
   );
 }
