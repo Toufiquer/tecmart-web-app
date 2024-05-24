@@ -7,7 +7,7 @@
 */
 import Image from "next/image";
 
-const imageClass = "h-auto object-cover rounded-lg border border-slate-300";
+const imageClass = "h-auto object-cover rounded-lg";
 const Pictures = () => {
   return (
     <main className="mx-auto flex w-full flex-col">
@@ -15,7 +15,7 @@ const Pictures = () => {
         <Image
           priority={false}
           quality={75}
-          src="https://i.ibb.co/XXNVBY7/image-with-people.png"
+          src="https://i.ibb.co/Dgw6Jw5/singer.jpg"
           width={250}
           height={80}
           className={`${imageClass} w-full`}
@@ -24,7 +24,7 @@ const Pictures = () => {
         <Image
           priority={false}
           quality={75}
-          src="https://i.ibb.co/XXNVBY7/image-with-people.png"
+          src="https://i.ibb.co/6yyzzFZ/music.jpg"
           width={180}
           height={80}
           className={`${imageClass} w-full lg:w-auto`}
@@ -33,7 +33,7 @@ const Pictures = () => {
         <Image
           priority={false}
           quality={75}
-          src="https://i.ibb.co/XXNVBY7/image-with-people.png"
+          src="https://i.ibb.co/4d24FSL/music-2.jpg"
           width={250}
           height={80}
           className={`${imageClass} w-full`}
@@ -44,7 +44,7 @@ const Pictures = () => {
         <Image
           priority={false}
           quality={75}
-          src="https://i.ibb.co/XXNVBY7/image-with-people.png"
+          src="https://i.ibb.co/4d24FSL/music-2.jpg"
           width={250}
           height={80}
           className={`${imageClass} w-full`}
@@ -53,7 +53,7 @@ const Pictures = () => {
         <Image
           priority={false}
           quality={75}
-          src="https://i.ibb.co/XXNVBY7/image-with-people.png"
+          src="https://i.ibb.co/6yyzzFZ/music.jpg"
           width={250}
           height={80}
           className={`${imageClass} w-full`}
@@ -62,7 +62,7 @@ const Pictures = () => {
         <Image
           priority={false}
           quality={75}
-          src="https://i.ibb.co/XXNVBY7/image-with-people.png"
+          src="https://i.ibb.co/4d24FSL/music-2.jpg"
           width={250}
           height={80}
           className={`${imageClass} w-full`}
