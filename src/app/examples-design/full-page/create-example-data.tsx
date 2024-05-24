@@ -20,8 +20,7 @@ export type exampleDataType = {
   children: singleExampleDataType[];
 };
 import V1_Help_Center_Page from "./only-design/help-center/v1/help-center/page";
-import V2_Help_Center_Page from "./only-design/help-center/v2/help-center/page";
-import V3_Help_Center_Page from "./only-design/help-center/v3/help-center/page";
+import V1_About_Us_Page from "./only-design/about-us/v1/about-us/page";
 export const exampleData: exampleDataType[] = [
   {
     id: "1",
@@ -36,23 +35,20 @@ export const exampleData: exampleDataType[] = [
           "http://localhost:3000/examples-design/full-page/only-design/help-center/v1/help-center",
         component: <V1_Help_Center_Page />,
       },
+    ],
+  },
+  {
+    id: "2",
+    pageName: "About Us",
+    children: [
       {
-        id: "2",
-        name: "Help Center",
-        version: "v2",
-        path: "@/examples-design/full-page/only-design/help-center/v2/help-center",
+        id: "1",
+        name: "About us",
+        version: "v1",
+        path: "@/examples-design/full-page/only-design/about-us/v1/about-us",
         urlPath:
-          "http://localhost:3000/examples-design/full-page/only-design/help-center/v2/help-center",
-        component: <V2_Help_Center_Page />,
-      },
-      {
-        id: "3",
-        name: "Help Center",
-        version: "v3",
-        path: "@/examples-design/full-page/only-design/help-center/v3/help-center",
-        urlPath:
-          "http://localhost:3000/examples-design/full-page/only-design/help-center/v3/help-center",
-        component: <V3_Help_Center_Page />,
+          "http://localhost:3000/examples-design/full-page/only-design/about-us/v1/about-us",
+        component: <V1_About_Us_Page />,
       },
     ],
   },

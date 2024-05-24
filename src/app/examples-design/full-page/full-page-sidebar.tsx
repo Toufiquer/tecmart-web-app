@@ -47,7 +47,9 @@ const FullPageSidebar = ({
                       >
                         <p
                           className={`hover:underline cursor-pointer ${
-                            currentUI.id === item.id && " underline "
+                            currentUI.id === item.id &&
+                            currentUI.name === item.name &&
+                            " underline "
                           }`}
                         >
                           {idx + 1}. {item.version} - {item.name}

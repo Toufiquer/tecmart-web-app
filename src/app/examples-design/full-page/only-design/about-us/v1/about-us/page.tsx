@@ -5,9 +5,19 @@
 | @copyright: Toufiquer, May, 2024
 |-----------------------------------------
 */
+import Bio from "./bio";
+import Header from "./header";
+import OurTeam from "./our-team";
+import Pictures from "./pictures";
+
 const Page = () => {
   return (
-    <main className="bg-slate-800 text-white flex items-center justify-center w-full h-screen">Help center v2</main>
+    <main className="mx-auto max-w-[1200px] p-4">
+      <Header />
+      <Pictures />
+      <Bio />
+      <OurTeam />
+    </main>
   );
 };
 export default Page;
