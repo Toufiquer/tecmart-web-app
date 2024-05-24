@@ -20,8 +20,15 @@ import { exampleData } from "./create-example-data";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { toast } from "react-toastify";
+import copy from "copy-to-clipboard";
+import { LuCopy } from "react-icons/lu";
 export default function Page() {
   const [currentUI, setCurrentUI] = useState(exampleData[0].children[0]);
+  const handleCopy = (data: string) => {
+    toast.success(`Copy, ${data}`, { autoClose: 1000, theme: "dark" });
+    copy(data);
+  };
   return (
     <main className="bg-slate-900 text-white">
       <Header />
@@ -45,6 +52,21 @@ export default function Page() {
                 <Button className="hover:underline">View Full Demo</Button>
               </Link>
             </div>
+            {currentUI.cli && currentUI.cli?.length > 0 && (
+              <div className="p-4 flex flex-col gap-2">
+                {currentUI.cli.map((cliItem) => (
+                  <div
+                    onClick={() => handleCopy(cliItem)}
+                    className="w-full flex items-center justify-between bg-slate-800 p-4 rounded-lg cursor-pointer"
+                  >
+                    <p>{cliItem}</p>
+                    <div className="">
+                      <LuCopy />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
             <div className="py-4">{currentUI.component}</div>
           </div>
         </ResizablePanel>

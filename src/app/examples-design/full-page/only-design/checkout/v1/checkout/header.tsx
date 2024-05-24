@@ -69,7 +69,7 @@ const Header = () => {
             </DropdownMenuContent>
           </DropdownMenu>
           <Mobile className="block md:hidden" />
-          <Tablet768 className="md:block hidden" />
+          <Tablet768 className="md:block hidden lg:hidden" />
           <Laptop1040 className="hidden lg:block xl:hidden" />
           <Laptop1440 className="hidden xl:block " />
         </div>

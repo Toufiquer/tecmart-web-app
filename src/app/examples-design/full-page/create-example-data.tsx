@@ -32,6 +32,7 @@ export const exampleData: exampleDataType[] = [
         id: "1",
         name: "Help Center",
         version: "v1",
+        cli: ["npx shadcn-ui@latest add accordion"],
         path: "@/examples-design/full-page/only-design/help-center/v1/help-center",
         urlPath:
           "http://localhost:3000/examples-design/full-page/only-design/help-center/v1/help-center",
@@ -47,6 +48,10 @@ export const exampleData: exampleDataType[] = [
         id: "1",
         name: "About us",
         version: "v1",
+        cli: [
+          "npx shadcn-ui@latest add avatar",
+          "npx shadcn-ui@latest add card",
+        ],
         path: "@/examples-design/full-page/only-design/about-us/v1/about-us",
         urlPath:
           "http://localhost:3000/examples-design/full-page/only-design/about-us/v1/about-us",
