@@ -26,6 +26,7 @@ import V1_About_Us_Page from "./only-design/about-us/v1/about-us/page";
 import V1_Checkout_Page from "./only-design/checkout/v1/checkout/page";
 import V1_Contact_Us_Page from "./only-design/contact-us/v1/contact-us/page";
 import V1_Create_an_event_Page from "./only-design/create-an-event/v1/create-an-event/page";
+import V1_Event_Details_Page from "./only-design/event-details/v1/event-details/page";
 export const exampleData: exampleDataType[] = [
   {
     id: "1",
@@ -129,6 +130,22 @@ export const exampleData: exampleDataType[] = [
         urlPath:
           "http://localhost:3000/examples-design/full-page/only-design/create-an-event/v1/create-an-event",
         component: <V1_Create_an_event_Page />,
+      },
+    ],
+  },
+  {
+    id: "6",
+    pageName: "Event details",
+    children: [
+      {
+        id: "1",
+        name: "Event details",
+        version: "v1",
+        cli: [],
+        path: "@/examples-design/full-page/only-design/event-details/v1/event-details",
+        urlPath:
+          "http://localhost:3000/examples-design/full-page/only-design/event-details/v1/event-details",
+        component: <V1_Event_Details_Page />,
       },
     ],
   },
