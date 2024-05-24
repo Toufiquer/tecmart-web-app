@@ -49,7 +49,7 @@ export default function Page() {
             setCurrentUI={setCurrentUI}
           />
         </ResizablePanel>
-        <ResizableHandle withHandle />
+        <ResizableHandle />
         <ResizablePanel defaultSize={80}>
           <div className="w-full flex flex-col gap-4">
             <div className="py-4 border-b flex items-center justify-between">
