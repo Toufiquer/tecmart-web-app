@@ -15,6 +15,12 @@ import {
   ResizablePanelGroup,
 } from "@/components/ui/resizable";
 import FullPageSidebar from "./full-page-sidebar";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 import { exampleData } from "./create-example-data";
 import { useState } from "react";
@@ -55,21 +61,50 @@ export default function Page() {
                 <Button className="hover:underline">View Full Demo</Button>
               </Link>
             </div>
-            {currentUI.cli && currentUI.cli?.length > 0 && (
-              <div className="p-4 flex flex-col gap-2">
-                {currentUI.cli.map((cliItem) => (
-                  <div
-                    onClick={() => handleCopy(cliItem)}
-                    className="w-full flex items-center justify-between bg-slate-800 p-4 rounded-lg cursor-pointer"
-                  >
-                    <p>{cliItem}</p>
-                    <div className="">
-                      <LuCopy />
-                    </div>
+            <Accordion type="single" collapsible>
+              <AccordionItem value="item-1">
+                <AccordionTrigger className="px-4">
+                  View Documentation and Installation
+                </AccordionTrigger>
+                <AccordionContent>
+                  <div>
+                    {currentUI.doc && currentUI.doc?.length > 0 && (
+                      <div className="p-4 flex flex-col gap-2">
+                        <small className="text-xs">Documentation</small>
+                        {currentUI.doc.map((docItem) => (
+                          <Link
+                            title="Open the documentation"
+                            target="_blank"
+                            href={docItem}
+                            key={docItem}
+                            className="w-full flex items-center justify-between bg-slate-800 p-4 rounded-lg cursor-pointer"
+                          >
+                            <p>{docItem}</p>
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                    {currentUI.cli && currentUI.cli?.length > 0 && (
+                      <div className="p-4 flex flex-col gap-2">
+                        <small className="text-xs">Installation</small>
+                        {currentUI.cli.map((cliItem) => (
+                          <div
+                            onClick={() => handleCopy(cliItem)}
+                            className="w-full flex items-center justify-between bg-slate-800 p-4 rounded-lg cursor-pointer"
+                          >
+                            <p>{cliItem}</p>
+                            <div className="">
+                              <LuCopy />
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    )}
                   </div>
-                ))}
-              </div>
-            )}
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+            <div className="py-4 pb-8 text-center ">Example of Page</div>
             <div className="py-4">{currentUI.component}</div>
           </div>
         </ResizablePanel>

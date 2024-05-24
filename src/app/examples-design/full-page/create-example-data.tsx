@@ -13,6 +13,7 @@ export type singleExampleDataType = {
   version: string;
   urlPath: string;
   cli?: string[];
+  doc?: string[];
   component: JSX.Element;
 };
 export type exampleDataType = {
@@ -24,6 +25,7 @@ import V1_Help_Center_Page from "./only-design/help-center/v1/help-center/page";
 import V1_About_Us_Page from "./only-design/about-us/v1/about-us/page";
 import V1_Checkout_Page from "./only-design/checkout/v1/checkout/page";
 import V1_Contact_Us_Page from "./only-design/contact-us/v1/contact-us/page";
+import V1_Create_an_event_Page from "./only-design/create-an-event/v1/create-an-event/page";
 export const exampleData: exampleDataType[] = [
   {
     id: "1",
@@ -99,6 +101,34 @@ export const exampleData: exampleDataType[] = [
         urlPath:
           "http://localhost:3000/examples-design/full-page/only-design/contact-us/v1/contact-us",
         component: <V1_Contact_Us_Page />,
+      },
+    ],
+  },
+  {
+    id: "5",
+    pageName: "Create an event",
+    children: [
+      {
+        id: "1",
+        name: "Create an event",
+        version: "v1",
+        cli: [
+          "yarn add date-fns",
+          "npx shadcn-ui@latest add radio-group",
+          "npx shadcn-ui@latest add select",
+          "npx shadcn-ui@latest add label",
+          "npx shadcn-ui@latest add input",
+          "npx shadcn-ui@latest add textarea",
+          "npx shadcn-ui@latest add button",
+          "npx shadcn-ui@latest add checkbox",
+          "npx shadcn-ui@latest add calendar",
+          "npx shadcn-ui@latest add popover",
+        ],
+        doc: ["https://ui.shadcn.com/docs/components/date-picker"],
+        path: "@/examples-design/full-page/only-design/create-an-event/v1/create-an-event",
+        urlPath:
+          "http://localhost:3000/examples-design/full-page/only-design/create-an-event/v1/create-an-event",
+        component: <V1_Create_an_event_Page />,
       },
     ],
   },
