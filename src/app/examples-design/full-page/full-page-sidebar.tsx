@@ -42,7 +42,9 @@ const FullPageSidebar = ({
             <div key={curr.id}>
               <Accordion type="single" collapsible>
                 <AccordionItem value="item-1">
-                  <AccordionTrigger>{curr.pageName}</AccordionTrigger>
+                  <AccordionTrigger>
+                    {parentIdx + 1}. {curr.pageName}
+                  </AccordionTrigger>
                   <AccordionContent>
                     <div className="w-full flex flex-col gap-2 pl-2">
                       {curr.children.map((item, idx) => (
