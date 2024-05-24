@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/accordion";
 import { Dispatch, SetStateAction } from "react";
 import { exampleDataType, singleExampleDataType } from "./create-example-data";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 const FullPageSidebar = ({
   data,
@@ -32,44 +33,46 @@ const FullPageSidebar = ({
   };
   return (
     <main>
-      <div className="w-full flex flex-col gap-2 p-2">
-        {data
-          .sort(
-            (a: { pageName: string }, b: { pageName: string }) =>
-              a.pageName?.localeCompare(b.pageName || "") || 1
-          )
-          .map((curr: exampleDataType, parentIdx: number) => (
-            <div key={curr.id}>
-              <Accordion type="single" collapsible>
-                <AccordionItem value="item-1">
-                  <AccordionTrigger>
-                    {parentIdx + 1}. {curr.pageName}
-                  </AccordionTrigger>
-                  <AccordionContent>
-                    <div className="w-full flex flex-col gap-2 pl-2">
-                      {curr.children.map((item, idx) => (
-                        <div
-                          key={item.id}
-                          onClick={() => handleSetUI(parentIdx, item.id)}
-                        >
-                          <p
-                            className={`hover:underline cursor-pointer ${
-                              currentUI.id === item.id &&
-                              currentUI.name === item.name &&
-                              " underline "
-                            }`}
+      <ScrollArea className="w-full h-screen">
+        <div className="w-full flex flex-col gap-2 p-2">
+          {data
+            .sort(
+              (a: { pageName: string }, b: { pageName: string }) =>
+                a.pageName?.localeCompare(b.pageName || "") || 1
+            )
+            .map((curr: exampleDataType, parentIdx: number) => (
+              <div key={curr.id}>
+                <Accordion type="single" collapsible>
+                  <AccordionItem value="item-1">
+                    <AccordionTrigger>
+                      {parentIdx + 1}. {curr.pageName}
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <div className="w-full flex flex-col gap-2 pl-2">
+                        {curr.children.map((item, idx) => (
+                          <div
+                            key={item.id}
+                            onClick={() => handleSetUI(parentIdx, item.id)}
                           >
-                            {idx + 1}. {item.version} - {item.name}
-                          </p>
-                        </div>
-                      ))}
-                    </div>
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
-            </div>
-          ))}
-      </div>
+                            <p
+                              className={`hover:underline cursor-pointer ${
+                                currentUI.id === item.id &&
+                                currentUI.name === item.name &&
+                                " underline "
+                              }`}
+                            >
+                              {idx + 1}. {item.version} - {item.name}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+              </div>
+            ))}
+        </div>
+      </ScrollArea>
     </main>
   );
 };
