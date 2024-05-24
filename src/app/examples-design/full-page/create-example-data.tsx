@@ -28,6 +28,7 @@ import V1_Contact_Us_Page from "./only-design/contact-us/v1/contact-us/page";
 import V1_Create_an_event_Page from "./only-design/create-an-event/v1/create-an-event/page";
 import V1_Event_Details_Page from "./only-design/event-details/v1/event-details/page";
 import V1_FAQ_Page from "./only-design/faq/v1/faq/page";
+import V1_Forgot_Password_Page from "./only-design/forgot-password/v1/forgot-password/page";
 export const exampleData: exampleDataType[] = [
   {
     id: "1",
@@ -167,6 +168,25 @@ export const exampleData: exampleDataType[] = [
         urlPath:
           "http://localhost:3000/examples-design/full-page/only-design/faq/v1/faq",
         component: <V1_FAQ_Page />,
+      },
+    ],
+  },
+  {
+    id: "8",
+    pageName: "Forget Password",
+    children: [
+      {
+        id: "1",
+        name: "Forget Password",
+        version: "v1",
+        cli: [
+          "npx shadcn-ui@latest add input",
+          "npx shadcn-ui@latest add button",
+        ],
+        path: "@/examples-design/full-page/only-design/forgot-password/v1/forgot-password",
+        urlPath:
+          "http://localhost:3000/examples-design/full-page/only-design/forgot-password/v1/forgot-password",
+        component: <V1_Forgot_Password_Page />,
       },
     ],
   },
