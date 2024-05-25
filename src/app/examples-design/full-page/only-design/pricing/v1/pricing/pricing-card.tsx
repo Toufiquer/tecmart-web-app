@@ -31,7 +31,7 @@ const PricingCard = () => {
           <Image
             priority={false}
             quality={75}
-            src="/dots-lg.svg"
+            src="https://i.ibb.co/GvCk10P/dots-lg.png"
             width={200}
             height={200}
             className="mx-auto h-auto w-[200px]"
@@ -42,7 +42,7 @@ const PricingCard = () => {
           <Image
             priority={false}
             quality={75}
-            src="/footer-circle.png"
+            src="https://i.ibb.co/CsJXRZh/footer-circle.png"
             width={200}
             height={100}
             className="invisible h-auto w-[200px] overflow-visible p-4 xl:visible"
