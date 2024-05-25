@@ -33,6 +33,7 @@ import V1_Forgot_Password_Page from "./only-design/forgot-password/v1/forgot-pas
 import V1_Help_Details_Page from "./only-design/help-details/v1/help-details/page";
 import V1_Sign_In_Page from "./only-design/sign-in/v1/sign-in/page";
 import V2_Sign_In_Page from "./only-design/sign-in/v2/sign-in/page";
+import V3_Sign_In_Page from "./only-design/sign-in/v3/sign-in/page";
 import V1_Sign_Up_Page from "./only-design/sign-up/v1/sign-up/page";
 import V2_Sign_Up_Page from "./only-design/sign-up/v2/sign-up/page";
 export const exampleData: exampleDataType[] = [
@@ -264,6 +265,20 @@ export const exampleData: exampleDataType[] = [
         urlPath:
           "http://localhost:3000/examples-design/full-page/only-design/sign-in/v2/sign-in",
         component: <V2_Sign_In_Page />,
+      },
+      {
+        id: "3",
+        name: "Sign In",
+        version: "v3",
+        cli: [
+          "npx shadcn-ui@latest add button",
+          "npx shadcn-ui@latest add checkbox",
+          "npx shadcn-ui@latest add input",
+        ],
+        path: "@/examples-design/full-page/only-design/sign-in/v3/sign-in",
+        urlPath:
+          "http://localhost:3000/examples-design/full-page/only-design/sign-in/v3/sign-in",
+        component: <V3_Sign_In_Page />,
       },
     ],
   },
