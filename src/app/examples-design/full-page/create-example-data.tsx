@@ -49,7 +49,12 @@ export const exampleData: exampleDataType[] = [
         id: "2",
         name: "Help Center",
         version: "v2",
-        cli: ["npx shadcn-ui@latest add accordion"],
+        cli: [
+          "npx shadcn-ui@latest add accordion",
+          "npx shadcn-ui@latest add input",
+          "npx shadcn-ui@latest add button",
+          "npx shadcn-ui@latest add card",
+        ],
         path: "@/examples-design/full-page/only-design/help-center/v2/help-center",
         urlPath:
           "http://localhost:3000/examples-design/full-page/only-design/help-center/v2/help-center",

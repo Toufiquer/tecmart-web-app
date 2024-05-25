@@ -13,11 +13,11 @@ import PopularArticle from "./popular-article";
 
 const Page = () => {
   return (
-    <main className="bg-slate-700 py-12">
+    <main className="py-12">
       <Header />
       <div className="max-w-7xl mx-auto">
         <div className="mx-auto mb-12 mt-[545px] w-full max-w-[1200px] px-4 lg:mt-0">
-          <div className="mb-4 text-center text-3xl font-bold text-slate-100">
+          <div className="mb-4 text-center text-3xl font-bold text-slate-700">
             Frequently Asked Questions
           </div>
           <div className="w-full border-b" />

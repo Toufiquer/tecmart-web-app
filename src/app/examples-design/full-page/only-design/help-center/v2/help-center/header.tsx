@@ -14,7 +14,7 @@ import CardBox from "./card-box";
 
 const Header = () => {
   return (
-    <header className="mb-[230px] mt-8 min-h-screen text-white">
+    <header className="mb-[230px] mt-8 min-h-screen text-slate-700">
       <div className="text-center">
         <div className="">
           <div className="flex w-full items-center justify-center">

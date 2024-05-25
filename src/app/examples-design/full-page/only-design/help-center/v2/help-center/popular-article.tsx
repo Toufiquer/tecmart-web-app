@@ -10,7 +10,7 @@ import SingleCard from "./single-card";
 const PopularArticle = () => {
   return (
     <>
-      <div className="mb-8 mt-12 text-center text-3xl font-bold text-slate-100">
+      <div className="mb-8 mt-12 text-center text-3xl font-bold text-slate-700">
         Popular Article
       </div>
       <main className="mx-auto mb-12 flex w-full max-w-[1100px] flex-wrap lg:flex-row">
