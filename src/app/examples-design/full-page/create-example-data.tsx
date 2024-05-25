@@ -36,6 +36,7 @@ import V2_Sign_In_Page from "./only-design/sign-in/v2/sign-in/page";
 import V3_Sign_In_Page from "./only-design/sign-in/v3/sign-in/page";
 import V1_Sign_Up_Page from "./only-design/sign-up/v1/sign-up/page";
 import V2_Sign_Up_Page from "./only-design/sign-up/v2/sign-up/page";
+import V3_Sign_Up_Page from "./only-design/sign-up/v3/sign-up/page";
 export const exampleData: exampleDataType[] = [
   {
     id: "1",
@@ -313,6 +314,20 @@ export const exampleData: exampleDataType[] = [
         urlPath:
           "http://localhost:3000/examples-design/full-page/only-design/sign-up/v2/sign-up",
         component: <V2_Sign_Up_Page />,
+      },
+      {
+        id: "3",
+        name: "Sign Up",
+        version: "v3",
+        cli: [
+          "npx shadcn-ui@latest add button",
+          "npx shadcn-ui@latest add checkbox",
+          "npx shadcn-ui@latest add input",
+        ],
+        path: "@/examples-design/full-page/only-design/sign-up/v3/sign-up",
+        urlPath:
+          "http://localhost:3000/examples-design/full-page/only-design/sign-up/v3/sign-up",
+        component: <V3_Sign_Up_Page />,
       },
     ],
   },
