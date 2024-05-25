@@ -40,6 +40,8 @@ import V3_Sign_Up_Page from "./only-design/sign-up/v3/sign-up/page";
 import V1_Maintenance_Page from "./only-design/maintenance/v1/maintenance/page";
 import V1_Pricing_Page from "./only-design/pricing/v1/pricing/page";
 import V1_Privacy_Policy_Page from "./only-design/privacy-policy/v1/privacy-policy/page";
+import V1_Privacy_Page from "./only-design/privacy/v1/privacy/page";
+import V1_Products_Page from "./only-design/products/v1/products/page";
 export const exampleData: exampleDataType[] = [
   {
     id: "1",
@@ -378,6 +380,38 @@ export const exampleData: exampleDataType[] = [
         urlPath:
           "http://localhost:3000/examples-design/full-page/only-design/privacy-policy/v1/privacy-policy",
         component: <V1_Privacy_Policy_Page />,
+      },
+    ],
+  },
+  {
+    id: "15",
+    pageName: "Privacy",
+    children: [
+      {
+        id: "1",
+        name: "Privacy",
+        version: "v1",
+
+        path: "@/examples-design/full-page/only-design/privacy/v1/privacy",
+        urlPath:
+          "http://localhost:3000/examples-design/full-page/only-design/privacy/v1/privacy",
+        component: <V1_Privacy_Page />,
+      },
+    ],
+  },
+  {
+    id: "16",
+    pageName: "Products",
+    children: [
+      {
+        id: "1",
+        name: "Products",
+        version: "v1",
+
+        path: "@/examples-design/full-page/only-design/products/v1/products",
+        urlPath:
+          "http://localhost:3000/examples-design/full-page/only-design/products/v1/products",
+        component: <V1_Products_Page />,
       },
     ],
   },
