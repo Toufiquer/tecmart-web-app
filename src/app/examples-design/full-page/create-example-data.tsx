@@ -22,6 +22,7 @@ export type exampleDataType = {
   children: singleExampleDataType[];
 };
 import V1_Help_Center_Page from "./only-design/help-center/v1/help-center/page";
+import V2_Help_Center_Page from "./only-design/help-center/v2/help-center/page";
 import V1_About_Us_Page from "./only-design/about-us/v1/about-us/page";
 import V1_Checkout_Page from "./only-design/checkout/v1/checkout/page";
 import V1_Contact_Us_Page from "./only-design/contact-us/v1/contact-us/page";
@@ -43,6 +44,16 @@ export const exampleData: exampleDataType[] = [
         urlPath:
           "http://localhost:3000/examples-design/full-page/only-design/help-center/v1/help-center",
         component: <V1_Help_Center_Page />,
+      },
+      {
+        id: "2",
+        name: "Help Center",
+        version: "v2",
+        cli: ["npx shadcn-ui@latest add accordion"],
+        path: "@/examples-design/full-page/only-design/help-center/v2/help-center",
+        urlPath:
+          "http://localhost:3000/examples-design/full-page/only-design/help-center/v2/help-center",
+        component: <V2_Help_Center_Page />,
       },
     ],
   },
