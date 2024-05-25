@@ -1,0 +1,147 @@
+/*
+|-----------------------------------------
+| setting up profile order data for the App
+| @author: Toufiquer Rahman<toufiquer.0@gmail.com>
+| @copyright: DaaUK, September, 2023
+|-----------------------------------------
+*/
+import { ORDERITEM } from "./ORDERTYPE";
+
+export const orders: ORDERITEM[] = [
+  {
+    id: 1,
+    orderNumber: 2453,
+    status: "SHIPPED",
+    deliveryMethod: "Cash on delivery",
+    deliveryDate: "Dec 12, 12:56 PM",
+    total: 87,
+  },
+  {
+    id: 2,
+    orderNumber: 2452,
+    status: "READY TO PICKUP",
+    deliveryMethod: "Free shipping",
+    deliveryDate: "Dec 9, 2:28PM",
+    total: 7264,
+  },
+  {
+    id: 3,
+    orderNumber: 2451,
+    status: "PARTIALLY FULFILLED",
+    deliveryMethod: "Local pickup",
+    deliveryDate: "Dec 4, 12:56 PM",
+    total: 375,
+  },
+  {
+    id: 4,
+    orderNumber: 2450,
+    status: "CANCELED",
+    deliveryMethod: "Standard shipping",
+    deliveryDate: "Dec 1, 4:07 AM",
+    total: 657,
+  },
+  {
+    id: 5,
+    orderNumber: 2449,
+    status: "FULFILLED",
+    deliveryMethod: "Express",
+    deliveryDate: "Nov 28, 7:28 PM",
+    total: 9562,
+  },
+  {
+    id: 6,
+    orderNumber: 2448,
+    status: "UNFULFILLED",
+    deliveryMethod: "Local delivery",
+    deliveryDate: "Nov 24, 10:16 AM",
+    total: 256,
+  },
+  {
+    id: 7,
+    orderNumber: 2447,
+    status: "SHIPPED",
+    deliveryMethod: "Cash on delivery",
+    deliveryDate: "Nov 21, 12:56 PM",
+    total: 123,
+  },
+  {
+    id: 8,
+    orderNumber: 2446,
+    status: "READY TO PICKUP",
+    deliveryMethod: "Free shipping",
+    deliveryDate: "Nov 18, 2:28PM",
+    total: 4567,
+  },
+  {
+    id: 9,
+    orderNumber: 2445,
+    status: "PARTIALLY FULFILLED",
+    deliveryMethod: "Local pickup",
+    deliveryDate: "Nov 15, 12:56 PM",
+    total: 890,
+  },
+  {
+    id: 10,
+    orderNumber: 2444,
+    status: "CANCELED",
+    deliveryMethod: "Standard shipping",
+    deliveryDate: "Nov 12, 4:07 AM",
+    total: 1347,
+  },
+  {
+    id: 11,
+    orderNumber: 2443,
+    status: "FULFILLED",
+    deliveryMethod: "Express",
+    deliveryDate: "Nov 9, 7:28 PM",
+    total: 18762,
+  },
+  {
+    id: 12,
+    orderNumber: 2442,
+    status: "UNFULFILLED",
+    deliveryMethod: "Local delivery",
+    deliveryDate: "Nov 6, 10:16 AM",
+    total: 567,
+  },
+  {
+    id: 13,
+    orderNumber: 2441,
+    status: "SHIPPED",
+    deliveryMethod: "Cash on delivery",
+    deliveryDate: "Nov 3, 12:56 PM",
+    total: 908,
+  },
+  {
+    id: 14,
+    orderNumber: 2450,
+    status: "CANCELED",
+    deliveryMethod: "Standard shipping",
+    deliveryDate: "Dec 1, 4:07 AM",
+    total: 657,
+  },
+  {
+    id: 15,
+    orderNumber: 2449,
+    status: "FULFILLED",
+    deliveryMethod: "Express",
+    deliveryDate: "Nov 28, 7:28 PM",
+    total: 9562,
+  },
+  {
+    id: 16,
+    orderNumber: 2448,
+    status: "UNFULFILLED",
+    deliveryMethod: "Local delivery",
+    deliveryDate: "Nov 24, 10:16 AM",
+    total: 256,
+  },
+  {
+    id: 17,
+    orderNumber: 2447,
+    status: "SHIPPED",
+    deliveryMethod: "Cash on delivery",
+    deliveryDate: "Nov 21, 12:56 PM",
+    total: 123,
+  },
+];
