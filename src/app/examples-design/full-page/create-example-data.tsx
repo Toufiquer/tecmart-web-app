@@ -39,6 +39,7 @@ import V2_Sign_Up_Page from "./only-design/sign-up/v2/sign-up/page";
 import V3_Sign_Up_Page from "./only-design/sign-up/v3/sign-up/page";
 import V1_Maintenance_Page from "./only-design/maintenance/v1/maintenance/page";
 import V1_Pricing_Page from "./only-design/pricing/v1/pricing/page";
+import V1_Privacy_Policy_Page from "./only-design/privacy-policy/v1/privacy-policy/page";
 export const exampleData: exampleDataType[] = [
   {
     id: "1",
@@ -361,6 +362,22 @@ export const exampleData: exampleDataType[] = [
         urlPath:
           "http://localhost:3000/examples-design/full-page/only-design/pricing/v1/pricing",
         component: <V1_Pricing_Page />,
+      },
+    ],
+  },
+  {
+    id: "14",
+    pageName: "Privacy Policy",
+    children: [
+      {
+        id: "1",
+        name: "Privacy Policy",
+        version: "v1",
+
+        path: "@/examples-design/full-page/only-design/privacy-policy/v1/privacy-policy",
+        urlPath:
+          "http://localhost:3000/examples-design/full-page/only-design/privacy-policy/v1/privacy-policy",
+        component: <V1_Privacy_Policy_Page />,
       },
     ],
   },
