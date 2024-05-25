@@ -10,7 +10,7 @@ import FAQAccordion from "./faq-accordion";
 import Header from "./header";
 import ContactTicket from "./contact-ticket";
 import PopularArticle from "./popular-article";
-
+import "./page.css";
 const Page = () => {
   return (
     <main className="py-12">

@@ -13,7 +13,7 @@ const CardItem = ({ data }: { data: DATAITEM }) => (
   <Card className="mx-auto min-w-[300px] max-w-[320px]">
     <CardHeader>
       <CardTitle>
-        <div className="daauk-flex-center gap-2 text-3xl font-bold">
+        <div className="flex items-center justify-start w-full gap-2 text-3xl font-bold">
           {data.img}
           {data.name}
         </div>

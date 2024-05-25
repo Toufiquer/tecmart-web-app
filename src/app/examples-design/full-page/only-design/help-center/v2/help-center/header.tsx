@@ -14,11 +14,11 @@ import CardBox from "./card-box";
 
 const Header = () => {
   return (
-    <header className="mb-[230px] mt-8 min-h-screen text-slate-700">
+    <header className="mb-[230px] mt-8 min-h-screen text-white">
       <div className="text-center">
         <div className="">
           <div className="flex w-full items-center justify-center">
-            <div className="daauk-help-img mx-auto mb-12 h-[580px] w-full min-w-[760px] max-w-[1200px] rounded-3xl">
+            <div className="help-center-bg-img mx-auto mb-12 h-[580px] w-full min-w-[760px] max-w-[1200px] rounded-3xl">
               <div className=" h-full w-full rounded-3xl backdrop-blur">
                 <div className="pt-32 ">
                   <div className="max-w-7xl mx-auto">
