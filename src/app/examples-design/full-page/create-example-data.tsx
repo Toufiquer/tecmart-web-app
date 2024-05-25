@@ -37,6 +37,7 @@ import V3_Sign_In_Page from "./only-design/sign-in/v3/sign-in/page";
 import V1_Sign_Up_Page from "./only-design/sign-up/v1/sign-up/page";
 import V2_Sign_Up_Page from "./only-design/sign-up/v2/sign-up/page";
 import V3_Sign_Up_Page from "./only-design/sign-up/v3/sign-up/page";
+import V1_Maintenance_Page from "./only-design/maintenance/v1/maintenance/page";
 export const exampleData: exampleDataType[] = [
   {
     id: "1",
@@ -234,7 +235,6 @@ export const exampleData: exampleDataType[] = [
       },
     ],
   },
-
   {
     id: "10",
     pageName: "Sign In",
@@ -328,6 +328,22 @@ export const exampleData: exampleDataType[] = [
         urlPath:
           "http://localhost:3000/examples-design/full-page/only-design/sign-up/v3/sign-up",
         component: <V3_Sign_Up_Page />,
+      },
+    ],
+  },
+  {
+    id: "12",
+    pageName: "Maintenance",
+    children: [
+      {
+        id: "1",
+        name: "Maintenance",
+        version: "v1",
+
+        path: "@/examples-design/full-page/only-design/maintenance/v1/maintenance",
+        urlPath:
+          "http://localhost:3000/examples-design/full-page/only-design/maintenance/v1/maintenance",
+        component: <V1_Maintenance_Page />,
       },
     ],
   },
