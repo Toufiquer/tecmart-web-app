@@ -45,7 +45,12 @@ const FullPageSidebar = ({
                 <Accordion type="single" collapsible>
                   <AccordionItem value="item-1">
                     <AccordionTrigger>
-                      {parentIdx + 1}. {curr.pageName}
+                      <div className="flex items-center justify-start gap-1">
+                        {parentIdx + 1}. {curr.pageName}
+                        <small className="text-xs mt-4 text-slate-400">
+                          ({curr.children.length})
+                        </small>
+                      </div>
                     </AccordionTrigger>
                     <AccordionContent>
                       <div className="w-full flex flex-col gap-2 pl-2">

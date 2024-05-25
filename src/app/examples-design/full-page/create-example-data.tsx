@@ -31,6 +31,10 @@ import V1_Event_Details_Page from "./only-design/event-details/v1/event-details/
 import V1_FAQ_Page from "./only-design/faq/v1/faq/page";
 import V1_Forgot_Password_Page from "./only-design/forgot-password/v1/forgot-password/page";
 import V1_Help_Details_Page from "./only-design/help-details/v1/help-details/page";
+import V1_Sign_In_Page from "./only-design/sign-in/v1/sign-in/page";
+import V2_Sign_In_Page from "./only-design/sign-in/v2/sign-in/page";
+import V1_Sign_Up_Page from "./only-design/sign-up/v1/sign-up/page";
+import V2_Sign_Up_Page from "./only-design/sign-up/v2/sign-up/page";
 export const exampleData: exampleDataType[] = [
   {
     id: "1",
@@ -189,6 +193,25 @@ export const exampleData: exampleDataType[] = [
     ],
   },
   {
+    id: "8",
+    pageName: "Forget Password",
+    children: [
+      {
+        id: "1",
+        name: "Forget Password",
+        version: "v1",
+        cli: [
+          "npx shadcn-ui@latest add input",
+          "npx shadcn-ui@latest add button",
+        ],
+        path: "@/examples-design/full-page/only-design/forgot-password/v1/forgot-password",
+        urlPath:
+          "http://localhost:3000/examples-design/full-page/only-design/forgot-password/v1/forgot-password",
+        component: <V1_Forgot_Password_Page />,
+      },
+    ],
+  },
+  {
     id: "9",
     pageName: "Help Details",
     children: [
@@ -209,22 +232,72 @@ export const exampleData: exampleDataType[] = [
       },
     ],
   },
+
   {
-    id: "8",
-    pageName: "Forget Password",
+    id: "10",
+    pageName: "Sign In",
     children: [
       {
         id: "1",
-        name: "Forget Password",
+        name: "Sign In",
         version: "v1",
-        cli: [
-          "npx shadcn-ui@latest add input",
-          "npx shadcn-ui@latest add button",
+        cli: ["yarn add react-hook-form", "yarn add zod"],
+        doc: [
+          "https://react-hook-form.com",
+          "https://www.npmjs.com/package/zod",
         ],
-        path: "@/examples-design/full-page/only-design/forgot-password/v1/forgot-password",
+        path: "@/examples-design/full-page/only-design/sign-in/v1/sign-in",
         urlPath:
-          "http://localhost:3000/examples-design/full-page/only-design/forgot-password/v1/forgot-password",
-        component: <V1_Forgot_Password_Page />,
+          "http://localhost:3000/examples-design/full-page/only-design/sign-in/v1/sign-in",
+        component: <V1_Sign_In_Page />,
+      },
+      {
+        id: "2",
+        name: "Sign In",
+        version: "v2",
+        cli: ["yarn add react-hook-form", "yarn add zod"],
+        doc: [
+          "https://react-hook-form.com",
+          "https://www.npmjs.com/package/zod",
+        ],
+        path: "@/examples-design/full-page/only-design/sign-in/v2/sign-in",
+        urlPath:
+          "http://localhost:3000/examples-design/full-page/only-design/sign-in/v2/sign-in",
+        component: <V2_Sign_In_Page />,
+      },
+    ],
+  },
+  {
+    id: "11",
+    pageName: "Sign Up",
+    children: [
+      {
+        id: "1",
+        name: "Sign Up",
+        version: "v1",
+        cli: ["yarn add react-hook-form", "yarn add zod"],
+        doc: [
+          "https://react-hook-form.com",
+          "https://www.npmjs.com/package/zod",
+        ],
+        path: "@/examples-design/full-page/only-design/sign-up/v1/sign-up",
+        urlPath:
+          "http://localhost:3000/examples-design/full-page/only-design/sign-up/v1/sign-up",
+        component: <V1_Sign_Up_Page />,
+      },
+      {
+        id: "2",
+        name: "Sign Up",
+        version: "v2",
+        cli: ["yarn add react-hook-form", "yarn add zod"],
+        doc: [
+          "https://react-hook-form.com",
+          "https://www.npmjs.com/package/zod",
+        ],
+        path: "@/examples-design/full-page/only-design/sign-up/v2/sign-up",
+        urlPath:
+          "http://localhost:3000/examples-design/full-page/only-design/sign-up/v2/sign-up",
+        component: <V2_Sign_Up_Page />,
       },
     ],
   },
