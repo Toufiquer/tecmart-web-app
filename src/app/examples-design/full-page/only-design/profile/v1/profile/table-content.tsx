@@ -40,7 +40,9 @@ const TableContent = () => {
             active === "orders" ? activeClass : inActiveClass
           } ${buttonStyle}`}
         >
-          <FaHotel /> Orders ({orders.length})
+          <div className="flex items-center justify-center gap-2">
+            <FaHotel /> Orders ({orders.length})
+          </div>
         </div>
         <div
           onKeyUp={handleKeyUp}
@@ -51,7 +53,9 @@ const TableContent = () => {
             active === "reviews" ? activeClass : inActiveClass
           } ${buttonStyle}`}
         >
-          <FaHotel /> Reviews ({reviews.length})
+          <div className="flex items-center justify-center gap-2">
+            <FaHotel /> Reviews ({reviews.length})
+          </div>
         </div>
         <div
           onKeyUp={handleKeyUp}
@@ -62,7 +66,9 @@ const TableContent = () => {
             active === "wishlist" ? activeClass : inActiveClass
           } ${buttonStyle}`}
         >
-          <FaHotel /> Wishlist ({wishlist.length})
+          <div className="flex items-center justify-center gap-2">
+            <FaHotel /> Wishlist ({wishlist.length})
+          </div>
         </div>
         <div
           onKeyUp={handleKeyUp}
@@ -73,7 +79,9 @@ const TableContent = () => {
             active === "store" ? activeClass : inActiveClass
           } ${buttonStyle}`}
         >
-          <FaHotel /> Store
+          <div className="flex items-center justify-center gap-2">
+            <FaHotel /> Store
+          </div>
         </div>
         <div
           onKeyUp={handleKeyUp}
@@ -84,7 +92,9 @@ const TableContent = () => {
             active === "personalInfo" ? activeClass : inActiveClass
           } ${buttonStyle}`}
         >
-          <FaHotel /> Personal info
+          <div className="flex items-center justify-center gap-2">
+            <FaHotel /> Personal info
+          </div>
         </div>
       </div>
       {active === "orders" && <OrderTable />}
