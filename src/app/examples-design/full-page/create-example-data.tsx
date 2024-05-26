@@ -44,6 +44,7 @@ import V1_Privacy_Policy_Page from "./only-design/privacy-policy/v1/privacy-poli
 import V1_Privacy_Page from "./only-design/privacy/v1/privacy/page";
 import V1_Products_Page from "./only-design/products/v1/products/page";
 import V1_Profile_Page from "./only-design/profile/v1/profile/page";
+import V2_Profile_Page from "./only-design/profile/v2/profile/page";
 import V1_Public_Page from "./only-design/public/v1/public/page";
 import V1_Account_Page from "./only-design/account/v1/account/page";
 import V1_Cart_Page from "./only-design/cart/v1/cart/page";
@@ -436,6 +437,15 @@ export const exampleData: exampleDataType[] = [
         path: "@/app/examples-design/full-page/only-design/profile/v1/profile",
         urlPath: "/examples-design/full-page/only-design/profile/v1/profile",
         component: <V1_Profile_Page />,
+      },
+      {
+        id: "2",
+        name: "Profile",
+        version: "v2",
+
+        path: "@/app/examples-design/full-page/only-design/profile/v2/profile",
+        urlPath: "/examples-design/full-page/only-design/profile/v2/profile",
+        component: <V2_Profile_Page />,
       },
     ],
   },
