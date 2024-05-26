@@ -56,6 +56,8 @@ import V1_Terms_And_Condition_Page from "./only-design/terms-and-conditions/v1/t
 import V1_Terms_Of_Service_Page from "./only-design/terms-of-service/v1/terms-of-service/page";
 import V1_Dashboard_Page from "./only-design/dashboard/v1/dashboard/page";
 import V1_Payment_Details_Page from "./only-design/payment-details/v1/payment-details/page";
+import V1_Order_History_Page from "./only-design/order-history/v1/order-history/page";
+import V1_Wishlist_Page from "./only-design/wishlist/v1/wishlist/page";
 export const exampleData: exampleDataType[] = [
   {
     id: "1",
@@ -611,6 +613,37 @@ export const exampleData: exampleDataType[] = [
         urlPath:
           "/examples-design/full-page/only-design/payment-details/v1/payment-details",
         component: <V1_Payment_Details_Page />,
+      },
+    ],
+  },
+  {
+    id: "27",
+    pageName: "Order History",
+    children: [
+      {
+        id: "1",
+        name: "Order History",
+        version: "v1",
+
+        path: "@/app/examples-design/full-page/only-design/order-history/v1/order-history",
+        urlPath:
+          "/examples-design/full-page/only-design/order-history/v1/order-history",
+        component: <V1_Order_History_Page />,
+      },
+    ],
+  },
+  {
+    id: "28",
+    pageName: "Wishlist",
+    children: [
+      {
+        id: "1",
+        name: "Wishlist",
+        version: "v1",
+
+        path: "@/app/examples-design/full-page/only-design/wishlist/v1/wishlist",
+        urlPath: "/examples-design/full-page/only-design/wishlist/v1/wishlist",
+        component: <V1_Wishlist_Page />,
       },
     ],
   },
