@@ -53,6 +53,7 @@ import V1_Single_Product_Page from "./only-design/single-product/v1/single-produ
 import V1_Refund_Page from "./only-design/refund/v1/refund/page";
 import V1_Terms_And_Condition_Page from "./only-design/terms-and-conditions/v1/terms-and-conditions/page";
 import V1_Terms_Of_Service_Page from "./only-design/terms-of-service/v1/terms-of-service/page";
+import V1_Dashboard_Page from "./only-design/dashboard/v1/dashboard/page";
 export const exampleData: exampleDataType[] = [
   {
     id: "1",
@@ -567,6 +568,22 @@ export const exampleData: exampleDataType[] = [
         urlPath:
           "/examples-design/full-page/only-design/terms-of-service/v1/terms-of-service",
         component: <V1_Terms_Of_Service_Page />,
+      },
+    ],
+  },
+  {
+    id: "25",
+    pageName: "Dashboard",
+    children: [
+      {
+        id: "1",
+        name: "Dashboard",
+        version: "v1",
+
+        path: "@/app/examples-design/full-page/only-design/dashboard/v1/dashboard",
+        urlPath:
+          "/examples-design/full-page/only-design/dashboard/v1/dashboard",
+        component: <V1_Dashboard_Page />,
       },
     ],
   },
