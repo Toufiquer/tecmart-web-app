@@ -44,6 +44,10 @@ import V1_Privacy_Page from "./only-design/privacy/v1/privacy/page";
 import V1_Products_Page from "./only-design/products/v1/products/page";
 import V1_Profile_Page from "./only-design/profile/v1/profile/page";
 import V1_Public_Page from "./only-design/public/v1/public/page";
+import V1_Account_Page from "./only-design/account/v1/account/page";
+import V1_Cart_Page from "./only-design/cart/v1/cart/page";
+import V1_Category_Page from "./only-design/category/v1/category/page";
+import V1_Single_Product_Page from "./only-design/single-product/v1/single-product/page";
 export const exampleData: exampleDataType[] = [
   {
     id: "1",
@@ -445,6 +449,70 @@ export const exampleData: exampleDataType[] = [
         urlPath:
           "http://localhost:3000/examples-design/full-page/only-design/public/v1/public",
         component: <V1_Public_Page />,
+      },
+    ],
+  },
+  {
+    id: "19",
+    pageName: "Account",
+    children: [
+      {
+        id: "1",
+        name: "Account",
+        version: "v1",
+
+        path: "@/examples-design/full-page/only-design/account/v1/account",
+        urlPath:
+          "http://localhost:3000/examples-design/full-page/only-design/account/v1/account",
+        component: <V1_Account_Page />,
+      },
+    ],
+  },
+  {
+    id: "20",
+    pageName: "Cart",
+    children: [
+      {
+        id: "1",
+        name: "Cart",
+        version: "v1",
+
+        path: "@/examples-design/full-page/only-design/cart/v1/cart",
+        urlPath:
+          "http://localhost:3000/examples-design/full-page/only-design/cart/v1/cart",
+        component: <V1_Cart_Page />,
+      },
+    ],
+  },
+  {
+    id: "21",
+    pageName: "Category",
+    children: [
+      {
+        id: "1",
+        name: "Category",
+        version: "v1",
+
+        path: "@/examples-design/full-page/only-design/category/v1/category",
+        urlPath:
+          "http://localhost:3000/examples-design/full-page/only-design/category/v1/category",
+        component: <V1_Category_Page />,
+      },
+    ],
+  },
+  {
+    id: "21",
+    pageName: "Single Product",
+    children: [
+      {
+        id: "1",
+        name: "Single Product",
+        version: "v1",
+
+        path: "@/examples-design/full-page/only-design/single-product/v1/single-product",
+        urlPath:
+          "http://localhost:3000/examples-design/full-page/only-design/single-product/v1/single-product",
+        component: <V1_Single_Product_Page />,
       },
     ],
   },
