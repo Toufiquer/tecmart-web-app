@@ -46,6 +46,7 @@ import V1_Profile_Page from "./only-design/profile/v1/profile/page";
 import V1_Public_Page from "./only-design/public/v1/public/page";
 import V1_Account_Page from "./only-design/account/v1/account/page";
 import V1_Cart_Page from "./only-design/cart/v1/cart/page";
+import V2_Cart_Page from "./only-design/cart/v2/cart/page";
 import V1_Category_Page from "./only-design/category/v1/category/page";
 import V1_Single_Product_Page from "./only-design/single-product/v1/single-product/page";
 import V1_Refund_Page from "./only-design/refund/v1/refund/page";
@@ -61,9 +62,9 @@ export const exampleData: exampleDataType[] = [
         name: "Help Center",
         version: "v1",
         cli: ["npx shadcn-ui@latest add accordion"],
-        path: "@/examples-design/full-page/only-design/help-center/v1/help-center",
+        path: "@/app/examples-design/full-page/only-design/help-center/v1/help-center",
         urlPath:
-          "http://localhost:3000/examples-design/full-page/only-design/help-center/v1/help-center",
+          "/examples-design/full-page/only-design/help-center/v1/help-center",
         component: <V1_Help_Center_Page />,
       },
       {
@@ -76,9 +77,9 @@ export const exampleData: exampleDataType[] = [
           "npx shadcn-ui@latest add button",
           "npx shadcn-ui@latest add card",
         ],
-        path: "@/examples-design/full-page/only-design/help-center/v2/help-center",
+        path: "@/app/examples-design/full-page/only-design/help-center/v2/help-center",
         urlPath:
-          "http://localhost:3000/examples-design/full-page/only-design/help-center/v2/help-center",
+          "/examples-design/full-page/only-design/help-center/v2/help-center",
         component: <V2_Help_Center_Page />,
       },
     ],
@@ -95,9 +96,8 @@ export const exampleData: exampleDataType[] = [
           "npx shadcn-ui@latest add avatar",
           "npx shadcn-ui@latest add card",
         ],
-        path: "@/examples-design/full-page/only-design/about-us/v1/about-us",
-        urlPath:
-          "http://localhost:3000/examples-design/full-page/only-design/about-us/v1/about-us",
+        path: "@/app/examples-design/full-page/only-design/about-us/v1/about-us",
+        urlPath: "/examples-design/full-page/only-design/about-us/v1/about-us",
         component: <V1_About_Us_Page />,
       },
     ],
@@ -116,9 +116,8 @@ export const exampleData: exampleDataType[] = [
           "npx shadcn-ui@latest add select",
           "npx shadcn-ui@latest add input",
         ],
-        path: "@/examples-design/full-page/only-design/checkout/v1/checkout",
-        urlPath:
-          "http://localhost:3000/examples-design/full-page/only-design/checkout/v1/checkout",
+        path: "@/app/examples-design/full-page/only-design/checkout/v1/checkout",
+        urlPath: "/examples-design/full-page/only-design/checkout/v1/checkout",
         component: <V1_Checkout_Page />,
       },
     ],
@@ -137,9 +136,9 @@ export const exampleData: exampleDataType[] = [
           "npx shadcn-ui@latest add input",
           "npx shadcn-ui@latest add label",
         ],
-        path: "@/examples-design/full-page/only-design/contact-us/v1/contact-us",
+        path: "@/app/examples-design/full-page/only-design/contact-us/v1/contact-us",
         urlPath:
-          "http://localhost:3000/examples-design/full-page/only-design/contact-us/v1/contact-us",
+          "/examples-design/full-page/only-design/contact-us/v1/contact-us",
         component: <V1_Contact_Us_Page />,
       },
     ],
@@ -165,9 +164,9 @@ export const exampleData: exampleDataType[] = [
           "npx shadcn-ui@latest add popover",
         ],
         doc: ["https://ui.shadcn.com/docs/components/date-picker"],
-        path: "@/examples-design/full-page/only-design/create-an-event/v1/create-an-event",
+        path: "@/app/examples-design/full-page/only-design/create-an-event/v1/create-an-event",
         urlPath:
-          "http://localhost:3000/examples-design/full-page/only-design/create-an-event/v1/create-an-event",
+          "/examples-design/full-page/only-design/create-an-event/v1/create-an-event",
         component: <V1_Create_an_event_Page />,
       },
     ],
@@ -181,9 +180,9 @@ export const exampleData: exampleDataType[] = [
         name: "Event details",
         version: "v1",
         cli: [],
-        path: "@/examples-design/full-page/only-design/event-details/v1/event-details",
+        path: "@/app/examples-design/full-page/only-design/event-details/v1/event-details",
         urlPath:
-          "http://localhost:3000/examples-design/full-page/only-design/event-details/v1/event-details",
+          "/examples-design/full-page/only-design/event-details/v1/event-details",
         component: <V1_Event_Details_Page />,
       },
     ],
@@ -201,9 +200,8 @@ export const exampleData: exampleDataType[] = [
           "npx shadcn-ui@latest add accordion",
           "npx shadcn-ui@latest add button",
         ],
-        path: "@/examples-design/full-page/only-design/faq/v1/faq",
-        urlPath:
-          "http://localhost:3000/examples-design/full-page/only-design/faq/v1/faq",
+        path: "@/app/examples-design/full-page/only-design/faq/v1/faq",
+        urlPath: "/examples-design/full-page/only-design/faq/v1/faq",
         component: <V1_FAQ_Page />,
       },
     ],
@@ -220,9 +218,9 @@ export const exampleData: exampleDataType[] = [
           "npx shadcn-ui@latest add input",
           "npx shadcn-ui@latest add button",
         ],
-        path: "@/examples-design/full-page/only-design/forgot-password/v1/forgot-password",
+        path: "@/app/examples-design/full-page/only-design/forgot-password/v1/forgot-password",
         urlPath:
-          "http://localhost:3000/examples-design/full-page/only-design/forgot-password/v1/forgot-password",
+          "/examples-design/full-page/only-design/forgot-password/v1/forgot-password",
         component: <V1_Forgot_Password_Page />,
       },
     ],
@@ -241,9 +239,9 @@ export const exampleData: exampleDataType[] = [
           "npx shadcn-ui@latest add card",
           "npx shadcn-ui@latest add alert",
         ],
-        path: "@/examples-design/full-page/only-design/help-details/v1/help-details",
+        path: "@/app/examples-design/full-page/only-design/help-details/v1/help-details",
         urlPath:
-          "http://localhost:3000/examples-design/full-page/only-design/help-details/v1/help-details",
+          "/examples-design/full-page/only-design/help-details/v1/help-details",
         component: <V1_Help_Details_Page />,
       },
     ],
@@ -261,9 +259,8 @@ export const exampleData: exampleDataType[] = [
           "https://react-hook-form.com",
           "https://www.npmjs.com/package/zod",
         ],
-        path: "@/examples-design/full-page/only-design/sign-in/v1/sign-in",
-        urlPath:
-          "http://localhost:3000/examples-design/full-page/only-design/sign-in/v1/sign-in",
+        path: "@/app/examples-design/full-page/only-design/sign-in/v1/sign-in",
+        urlPath: "/examples-design/full-page/only-design/sign-in/v1/sign-in",
         component: <V1_Sign_In_Page />,
       },
       {
@@ -275,9 +272,8 @@ export const exampleData: exampleDataType[] = [
           "https://react-hook-form.com",
           "https://www.npmjs.com/package/zod",
         ],
-        path: "@/examples-design/full-page/only-design/sign-in/v2/sign-in",
-        urlPath:
-          "http://localhost:3000/examples-design/full-page/only-design/sign-in/v2/sign-in",
+        path: "@/app/examples-design/full-page/only-design/sign-in/v2/sign-in",
+        urlPath: "/examples-design/full-page/only-design/sign-in/v2/sign-in",
         component: <V2_Sign_In_Page />,
       },
       {
@@ -289,9 +285,8 @@ export const exampleData: exampleDataType[] = [
           "npx shadcn-ui@latest add checkbox",
           "npx shadcn-ui@latest add input",
         ],
-        path: "@/examples-design/full-page/only-design/sign-in/v3/sign-in",
-        urlPath:
-          "http://localhost:3000/examples-design/full-page/only-design/sign-in/v3/sign-in",
+        path: "@/app/examples-design/full-page/only-design/sign-in/v3/sign-in",
+        urlPath: "/examples-design/full-page/only-design/sign-in/v3/sign-in",
         component: <V3_Sign_In_Page />,
       },
     ],
@@ -309,9 +304,8 @@ export const exampleData: exampleDataType[] = [
           "https://react-hook-form.com",
           "https://www.npmjs.com/package/zod",
         ],
-        path: "@/examples-design/full-page/only-design/sign-up/v1/sign-up",
-        urlPath:
-          "http://localhost:3000/examples-design/full-page/only-design/sign-up/v1/sign-up",
+        path: "@/app/examples-design/full-page/only-design/sign-up/v1/sign-up",
+        urlPath: "/examples-design/full-page/only-design/sign-up/v1/sign-up",
         component: <V1_Sign_Up_Page />,
       },
       {
@@ -323,9 +317,8 @@ export const exampleData: exampleDataType[] = [
           "https://react-hook-form.com",
           "https://www.npmjs.com/package/zod",
         ],
-        path: "@/examples-design/full-page/only-design/sign-up/v2/sign-up",
-        urlPath:
-          "http://localhost:3000/examples-design/full-page/only-design/sign-up/v2/sign-up",
+        path: "@/app/examples-design/full-page/only-design/sign-up/v2/sign-up",
+        urlPath: "/examples-design/full-page/only-design/sign-up/v2/sign-up",
         component: <V2_Sign_Up_Page />,
       },
       {
@@ -337,9 +330,8 @@ export const exampleData: exampleDataType[] = [
           "npx shadcn-ui@latest add checkbox",
           "npx shadcn-ui@latest add input",
         ],
-        path: "@/examples-design/full-page/only-design/sign-up/v3/sign-up",
-        urlPath:
-          "http://localhost:3000/examples-design/full-page/only-design/sign-up/v3/sign-up",
+        path: "@/app/examples-design/full-page/only-design/sign-up/v3/sign-up",
+        urlPath: "/examples-design/full-page/only-design/sign-up/v3/sign-up",
         component: <V3_Sign_Up_Page />,
       },
     ],
@@ -353,9 +345,9 @@ export const exampleData: exampleDataType[] = [
         name: "Maintenance",
         version: "v1",
 
-        path: "@/examples-design/full-page/only-design/maintenance/v1/maintenance",
+        path: "@/app/examples-design/full-page/only-design/maintenance/v1/maintenance",
         urlPath:
-          "http://localhost:3000/examples-design/full-page/only-design/maintenance/v1/maintenance",
+          "/examples-design/full-page/only-design/maintenance/v1/maintenance",
         component: <V1_Maintenance_Page />,
       },
     ],
@@ -369,9 +361,8 @@ export const exampleData: exampleDataType[] = [
         name: "Pricing",
         version: "v1",
 
-        path: "@/examples-design/full-page/only-design/pricing/v1/pricing",
-        urlPath:
-          "http://localhost:3000/examples-design/full-page/only-design/pricing/v1/pricing",
+        path: "@/app/examples-design/full-page/only-design/pricing/v1/pricing",
+        urlPath: "/examples-design/full-page/only-design/pricing/v1/pricing",
         component: <V1_Pricing_Page />,
       },
     ],
@@ -385,9 +376,9 @@ export const exampleData: exampleDataType[] = [
         name: "Privacy Policy",
         version: "v1",
 
-        path: "@/examples-design/full-page/only-design/privacy-policy/v1/privacy-policy",
+        path: "@/app/examples-design/full-page/only-design/privacy-policy/v1/privacy-policy",
         urlPath:
-          "http://localhost:3000/examples-design/full-page/only-design/privacy-policy/v1/privacy-policy",
+          "/examples-design/full-page/only-design/privacy-policy/v1/privacy-policy",
         component: <V1_Privacy_Policy_Page />,
       },
     ],
@@ -401,9 +392,8 @@ export const exampleData: exampleDataType[] = [
         name: "Privacy",
         version: "v1",
 
-        path: "@/examples-design/full-page/only-design/privacy/v1/privacy",
-        urlPath:
-          "http://localhost:3000/examples-design/full-page/only-design/privacy/v1/privacy",
+        path: "@/app/examples-design/full-page/only-design/privacy/v1/privacy",
+        urlPath: "/examples-design/full-page/only-design/privacy/v1/privacy",
         component: <V1_Privacy_Page />,
       },
     ],
@@ -416,9 +406,8 @@ export const exampleData: exampleDataType[] = [
         id: "1",
         name: "Products",
         version: "v1",
-        path: "@/examples-design/full-page/only-design/products/v1/products",
-        urlPath:
-          "http://localhost:3000/examples-design/full-page/only-design/products/v1/products",
+        path: "@/app/examples-design/full-page/only-design/products/v1/products",
+        urlPath: "/examples-design/full-page/only-design/products/v1/products",
         component: <V1_Products_Page />,
       },
     ],
@@ -432,9 +421,8 @@ export const exampleData: exampleDataType[] = [
         name: "Profile",
         version: "v1",
 
-        path: "@/examples-design/full-page/only-design/profile/v1/profile",
-        urlPath:
-          "http://localhost:3000/examples-design/full-page/only-design/profile/v1/profile",
+        path: "@/app/examples-design/full-page/only-design/profile/v1/profile",
+        urlPath: "/examples-design/full-page/only-design/profile/v1/profile",
         component: <V1_Profile_Page />,
       },
     ],
@@ -448,9 +436,8 @@ export const exampleData: exampleDataType[] = [
         name: "Public",
         version: "v1",
 
-        path: "@/examples-design/full-page/only-design/public/v1/public",
-        urlPath:
-          "http://localhost:3000/examples-design/full-page/only-design/public/v1/public",
+        path: "@/app/examples-design/full-page/only-design/public/v1/public",
+        urlPath: "/examples-design/full-page/only-design/public/v1/public",
         component: <V1_Public_Page />,
       },
     ],
@@ -464,9 +451,8 @@ export const exampleData: exampleDataType[] = [
         name: "Account",
         version: "v1",
 
-        path: "@/examples-design/full-page/only-design/account/v1/account",
-        urlPath:
-          "http://localhost:3000/examples-design/full-page/only-design/account/v1/account",
+        path: "@/app/examples-design/full-page/only-design/account/v1/account",
+        urlPath: "/examples-design/full-page/only-design/account/v1/account",
         component: <V1_Account_Page />,
       },
     ],
@@ -480,10 +466,18 @@ export const exampleData: exampleDataType[] = [
         name: "Cart",
         version: "v1",
 
-        path: "@/examples-design/full-page/only-design/cart/v1/cart",
-        urlPath:
-          "http://localhost:3000/examples-design/full-page/only-design/cart/v1/cart",
+        path: "@/app/examples-design/full-page/only-design/cart/v1/cart",
+        urlPath: "/examples-design/full-page/only-design/cart/v1/cart",
         component: <V1_Cart_Page />,
+      },
+      {
+        id: "2",
+        name: "Cart",
+        version: "v2",
+
+        path: "@/app/examples-design/full-page/only-design/cart/v2/cart",
+        urlPath: "/examples-design/full-page/only-design/cart/v2/cart",
+        component: <V2_Cart_Page />,
       },
     ],
   },
@@ -496,9 +490,8 @@ export const exampleData: exampleDataType[] = [
         name: "Category",
         version: "v1",
 
-        path: "@/examples-design/full-page/only-design/category/v1/category",
-        urlPath:
-          "http://localhost:3000/examples-design/full-page/only-design/category/v1/category",
+        path: "@/app/examples-design/full-page/only-design/category/v1/category",
+        urlPath: "/examples-design/full-page/only-design/category/v1/category",
         component: <V1_Category_Page />,
       },
     ],
@@ -512,9 +505,9 @@ export const exampleData: exampleDataType[] = [
         name: "Single Product",
         version: "v1",
 
-        path: "@/examples-design/full-page/only-design/single-product/v1/single-product",
+        path: "@/app/examples-design/full-page/only-design/single-product/v1/single-product",
         urlPath:
-          "http://localhost:3000/examples-design/full-page/only-design/single-product/v1/single-product",
+          "/examples-design/full-page/only-design/single-product/v1/single-product",
         component: <V1_Single_Product_Page />,
       },
     ],
@@ -528,9 +521,8 @@ export const exampleData: exampleDataType[] = [
         name: "Refund",
         version: "v1",
 
-        path: "@/examples-design/full-page/only-design/refund/v1/refund",
-        urlPath:
-          "http://localhost:3000/examples-design/full-page/only-design/refund/v1/refund",
+        path: "@/app/examples-design/full-page/only-design/refund/v1/refund",
+        urlPath: "/examples-design/full-page/only-design/refund/v1/refund",
         component: <V1_Refund_Page />,
       },
     ],
@@ -544,9 +536,9 @@ export const exampleData: exampleDataType[] = [
         name: "Terms and Conditions",
         version: "v1",
 
-        path: "@/examples-design/full-page/only-design/terms-and-conditions/v1/terms-and-conditions",
+        path: "@/app/examples-design/full-page/only-design/terms-and-conditions/v1/terms-and-conditions",
         urlPath:
-          "http://localhost:3000/examples-design/full-page/only-design/terms-and-conditions/v1/terms-and-conditions",
+          "/examples-design/full-page/only-design/terms-and-conditions/v1/terms-and-conditions",
         component: <V1_Terms_And_Condition_Page />,
       },
     ],
@@ -560,9 +552,9 @@ export const exampleData: exampleDataType[] = [
         name: "Terms of Service",
         version: "v1",
 
-        path: "@/examples-design/full-page/only-design/terms-of-service/v1/terms-of-service",
+        path: "@/app/examples-design/full-page/only-design/terms-of-service/v1/terms-of-service",
         urlPath:
-          "http://localhost:3000/examples-design/full-page/only-design/terms-of-service/v1/terms-of-service",
+          "/examples-design/full-page/only-design/terms-of-service/v1/terms-of-service",
         component: <V1_Terms_Of_Service_Page />,
       },
     ],
