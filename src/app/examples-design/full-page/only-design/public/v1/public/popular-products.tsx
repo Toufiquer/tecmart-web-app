@@ -49,7 +49,7 @@ const CreateItem = ({ url, idx }: { idx: number; url: string }) => (
       <Image
         height={200}
         width={120}
-        src={`/${url}`}
+        src={url}
         alt="Slider"
         className="h-auto w-full rounded-lg"
       />
@@ -131,16 +131,15 @@ const PopularProducts = () => {
       </div>
       <div className="flex w-full flex-wrap justify-center gap-4 xl:justify-between">
         {[
-          "1.png",
-          "1.png",
-          "1.png",
-          "1.png",
-          "1.png",
-          "1.png",
-          "1.png",
-          "1.png",
-          "1.png",
-          "1.png",
+          "https://i.ibb.co/xLbNqc4/1.png",
+          "https://i.ibb.co/CQ5PcKh/2.png",
+          "https://i.ibb.co/bL4F59C/3.png",
+          "https://i.ibb.co/xLbNqc4/1.png",
+          "https://i.ibb.co/CQ5PcKh/2.png",
+          "https://i.ibb.co/bL4F59C/3.png",
+          "https://i.ibb.co/xLbNqc4/1.png",
+          "https://i.ibb.co/CQ5PcKh/2.png",
+          "https://i.ibb.co/bL4F59C/3.png",
         ].map((curr, idx) => (
           <CreateItem url={curr} idx={idx} />
         ))}

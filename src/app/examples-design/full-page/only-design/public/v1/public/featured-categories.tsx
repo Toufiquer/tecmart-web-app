@@ -17,7 +17,7 @@ const CreateLink = ({ url }: { url: string }) => (
     <Image
       height={200}
       width={120}
-      src={`/${url}`}
+      src={url}
       alt="Slider"
       className="h-auto w-full rounded-lg"
     />
@@ -42,12 +42,22 @@ const FeaturedCategories = () => {
         </div>
       </div>
       <div className="flex w-full gap-4 md:hidden">
-        {["1.png", "1.png"].map((curr) => (
+        {[
+          "https://i.ibb.co/xLbNqc4/1.png",
+          "https://i.ibb.co/CQ5PcKh/2.png",
+        ].map((curr) => (
           <CreateLink url={curr} />
         ))}
       </div>
       <div className="hidden w-full gap-4 md:flex">
-        {["1.png", "1.png", "1.png", "1.png", "1.png", "1.png"].map((curr) => (
+        {[
+          "https://i.ibb.co/xLbNqc4/1.png",
+          "https://i.ibb.co/CQ5PcKh/2.png",
+          "https://i.ibb.co/bL4F59C/3.png",
+          "https://i.ibb.co/xLbNqc4/1.png",
+          "https://i.ibb.co/CQ5PcKh/2.png",
+          "https://i.ibb.co/bL4F59C/3.png",
+        ].map((curr) => (
           <CreateLink url={curr} />
         ))}
       </div>

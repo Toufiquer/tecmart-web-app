@@ -56,7 +56,7 @@ const CreateItem = ({ url, idx }: { idx: number; url: string }) => (
       <Image
         height={200}
         width={120}
-        src={`/${url}`}
+        src={url}
         alt="Slider"
         className="h-auto w-full rounded-lg"
       />
@@ -134,16 +134,15 @@ const ItemsGrid = () => {
     <div className="mb-12 flex w-full flex-col py-4">
       <div className="grid w-full grid-cols-1 flex-wrap justify-center gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:justify-between">
         {[
-          "1.png",
-          "1.png",
-          "1.png",
-          "1.png",
-          "1.png",
-          "1.png",
-          "1.png",
-          "1.png",
-          "1.png",
-          "1.png",
+          "https://i.ibb.co/xLbNqc4/1.png",
+          "https://i.ibb.co/CQ5PcKh/2.png",
+          "https://i.ibb.co/bL4F59C/3.png",
+          "https://i.ibb.co/xLbNqc4/1.png",
+          "https://i.ibb.co/CQ5PcKh/2.png",
+          "https://i.ibb.co/bL4F59C/3.png",
+          "https://i.ibb.co/xLbNqc4/1.png",
+          "https://i.ibb.co/CQ5PcKh/2.png",
+          "https://i.ibb.co/bL4F59C/3.png",
         ].map((curr, idx) => (
           <CreateItem key={idx} url={curr} idx={idx} />
         ))}

@@ -5,40 +5,39 @@
 | @copyright: DaaUK, October, 2023
 |-----------------------------------------
 */
-import {
-  iconAiOutlineCodeSandbox,
-  iconAiOutlineGift,
-  iconBiRefresh,
-  iconBsClock,
-} from "@/components/common/react-icons";
+
+import { AiOutlineCodeSandbox, AiOutlineGift } from "react-icons/ai";
+import { BiRefresh } from "react-icons/bi";
+import { BsClock } from "react-icons/bs";
 
 const data = [
   {
     id: 1,
     title: "10 minute grocery now",
-    details: "Get your order delivered to your doorstep at the earliest from FreshCart pickup stores near you.",
-    icon: iconBsClock,
+    details:
+      "Get your order delivered to your doorstep at the earliest from FreshCart pickup stores near you.",
+    icon: <BsClock />,
   },
   {
     id: 2,
     title: "Best Prices & Offers",
     details:
       "Cheaper prices than your local supermarket, great cashback offers to top it off. Get best pricess & offers.",
-    icon: iconAiOutlineGift,
+    icon: <AiOutlineGift />,
   },
   {
     id: 3,
     title: "Wide Assortment",
     details:
       "Choose from 5000+ products across food, personal care, household, bakery, veg and non-veg & other categories.",
-    icon: iconAiOutlineCodeSandbox,
+    icon: <AiOutlineCodeSandbox />,
   },
   {
     id: 4,
     title: "Easy Returns",
     details:
       "Not satisfied with a product? Return it at the doorstep & get a refund within hours. No questions asked policy.",
-    icon: iconBiRefresh,
+    icon: <BiRefresh />,
   },
 ];
 const Benefit = () => {

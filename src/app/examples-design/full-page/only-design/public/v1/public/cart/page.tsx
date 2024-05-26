@@ -15,7 +15,7 @@ import Item from "./item";
 const createData = (id: number) => ({
   id,
   title: "Nutrient Value & Benefits",
-  img: "/1.png",
+  img: "https://i.ibb.co/CQ5PcKh/2.png",
   weight: ".98/lb",
   price: "5.00",
 });

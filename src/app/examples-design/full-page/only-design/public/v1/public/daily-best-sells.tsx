@@ -24,14 +24,15 @@ import {
 } from "react-icons/ai";
 import { HiOutlineArrowsRightLeft } from "react-icons/hi2";
 import { BiPound } from "react-icons/bi";
+import { BsArrowRightShort } from "react-icons/bs";
 
 const CreateLink = ({ url }: { url: string }) => (
   <div className="w-full min-w-[290px]  max-w-[355px] rounded-lg border px-6 pb-4 pt-8 duration-300 hover:border-green-400 hover:shadow-xl lg:max-w-[49%] xl:max-w-[300px]">
     <Link href="/#" className="group relative">
       <Image
-        height={200}
-        width={120}
-        src={`/${url}`}
+        height={800}
+        width={800}
+        src={url}
         alt="Slider"
         className="h-auto w-full rounded-lg"
       />
@@ -153,14 +154,20 @@ const DailyBestSells = () => {
                 <div className="mt-4 flex w-full items-center justify-between">
                   <Button className="mt-2 flex items-center gap-2 bg-green-400 hover:bg-green-500">
                     Shop now{" "}
-                    <span className="text-xl">{iconBsArrowRightShort}</span>
+                    <span className="text-xl">
+                      <BsArrowRightShort />
+                    </span>
                   </Button>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        {["1.png", "1.png", "1.png"].map((curr) => (
+        {[
+          "https://i.ibb.co/xLbNqc4/1.png",
+          "https://i.ibb.co/CQ5PcKh/2.png",
+          "https://i.ibb.co/bL4F59C/3.png",
+        ].map((curr) => (
           <CreateLink url={curr} />
         ))}
       </div>
