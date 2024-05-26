@@ -49,6 +49,7 @@ import V1_Cart_Page from "./only-design/cart/v1/cart/page";
 import V1_Category_Page from "./only-design/category/v1/category/page";
 import V1_Single_Product_Page from "./only-design/single-product/v1/single-product/page";
 import V1_Refund_Page from "./only-design/refund/v1/refund/page";
+import V1_Terms_And_Condition_Page from "./only-design/terms-and-conditions/v1/terms-and-conditions/page";
 import V1_d_Page from "./only-design/refund/v1/refund/page";
 export const exampleData: exampleDataType[] = [
   {
@@ -530,6 +531,22 @@ export const exampleData: exampleDataType[] = [
         path: "@/examples-design/full-page/only-design/refund/v1/refund",
         urlPath:
           "http://localhost:3000/examples-design/full-page/only-design/refund/v1/refund",
+        component: <V1_Refund_Page />,
+      },
+    ],
+  },
+  {
+    id: "23",
+    pageName: "Terms and Conditions",
+    children: [
+      {
+        id: "1",
+        name: "Terms and Conditions",
+        version: "v1",
+
+        path: "@/examples-design/full-page/only-design/terms-and-conditions/v1/terms-and-conditions",
+        urlPath:
+          "http://localhost:3000/examples-design/full-page/only-design/terms-and-conditions/v1/terms-and-conditions",
         component: <V1_Refund_Page />,
       },
     ],
