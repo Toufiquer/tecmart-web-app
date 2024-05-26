@@ -31,6 +31,7 @@ import V1_Event_Details_Page from "./only-design/event-details/v1/event-details/
 import V1_FAQ_Page from "./only-design/faq/v1/faq/page";
 import V1_Forgot_Password_Page from "./only-design/forgot-password/v1/forgot-password/page";
 import V1_Help_Details_Page from "./only-design/help-details/v1/help-details/page";
+import V2_Help_Details_Page from "./only-design/help-details/v2/help-details/page";
 import V1_Sign_In_Page from "./only-design/sign-in/v1/sign-in/page";
 import V2_Sign_In_Page from "./only-design/sign-in/v2/sign-in/page";
 import V3_Sign_In_Page from "./only-design/sign-in/v3/sign-in/page";
@@ -243,6 +244,16 @@ export const exampleData: exampleDataType[] = [
         urlPath:
           "/examples-design/full-page/only-design/help-details/v1/help-details",
         component: <V1_Help_Details_Page />,
+      },
+      {
+        id: "2",
+        name: "Help Details",
+        version: "v2",
+
+        path: "@/app/examples-design/full-page/only-design/help-details/v2/help-details",
+        urlPath:
+          "/examples-design/full-page/only-design/help-details/v2/help-details",
+        component: <V2_Help_Details_Page />,
       },
     ],
   },
