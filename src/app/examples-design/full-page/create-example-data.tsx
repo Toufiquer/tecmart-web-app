@@ -48,6 +48,8 @@ import V1_Account_Page from "./only-design/account/v1/account/page";
 import V1_Cart_Page from "./only-design/cart/v1/cart/page";
 import V1_Category_Page from "./only-design/category/v1/category/page";
 import V1_Single_Product_Page from "./only-design/single-product/v1/single-product/page";
+import V1_Refund_Page from "./only-design/refund/v1/refund/page";
+import V1_d_Page from "./only-design/refund/v1/refund/page";
 export const exampleData: exampleDataType[] = [
   {
     id: "1",
@@ -513,6 +515,22 @@ export const exampleData: exampleDataType[] = [
         urlPath:
           "http://localhost:3000/examples-design/full-page/only-design/single-product/v1/single-product",
         component: <V1_Single_Product_Page />,
+      },
+    ],
+  },
+  {
+    id: "22",
+    pageName: "Refund",
+    children: [
+      {
+        id: "1",
+        name: "Refund",
+        version: "v1",
+
+        path: "@/examples-design/full-page/only-design/refund/v1/refund",
+        urlPath:
+          "http://localhost:3000/examples-design/full-page/only-design/refund/v1/refund",
+        component: <V1_Refund_Page />,
       },
     ],
   },
