@@ -55,6 +55,7 @@ import V1_Refund_Page from "./only-design/refund/v1/refund/page";
 import V1_Terms_And_Condition_Page from "./only-design/terms-and-conditions/v1/terms-and-conditions/page";
 import V1_Terms_Of_Service_Page from "./only-design/terms-of-service/v1/terms-of-service/page";
 import V1_Dashboard_Page from "./only-design/dashboard/v1/dashboard/page";
+import V1_Payment_Details_Page from "./only-design/payment-details/v1/payment-details/page";
 export const exampleData: exampleDataType[] = [
   {
     id: "1",
@@ -594,6 +595,22 @@ export const exampleData: exampleDataType[] = [
         urlPath:
           "/examples-design/full-page/only-design/dashboard/v1/dashboard",
         component: <V1_Dashboard_Page />,
+      },
+    ],
+  },
+  {
+    id: "26",
+    pageName: "Payment Details",
+    children: [
+      {
+        id: "1",
+        name: "Payment Details",
+        version: "v1",
+
+        path: "@/app/examples-design/full-page/only-design/payment-details/v1/payment-details",
+        urlPath:
+          "/examples-design/full-page/only-design/payment-details/v1/payment-details",
+        component: <V1_Payment_Details_Page />,
       },
     ],
   },
