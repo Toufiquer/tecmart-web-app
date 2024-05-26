@@ -34,6 +34,10 @@ const FullPageSidebar = ({
   return (
     <main>
       <ScrollArea className="w-full h-screen">
+        <div className="text-slate-400 text-xs text-center">
+          Total Page:{" "}
+          {data.reduce((acc, curr) => acc + curr.children.length, 0)}
+        </div>
         <div className="w-full flex flex-col gap-2 p-2">
           {data
             .sort(
