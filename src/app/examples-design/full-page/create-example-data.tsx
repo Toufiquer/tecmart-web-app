@@ -59,6 +59,7 @@ import V1_Dashboard_Page from "./only-design/dashboard/v1/dashboard/page";
 import V1_Payment_Details_Page from "./only-design/payment-details/v1/payment-details/page";
 import V1_Order_History_Page from "./only-design/order-history/v1/order-history/page";
 import V1_Wishlist_Page from "./only-design/wishlist/v1/wishlist/page";
+import V1_Landing_Page from "./only-design/landing-page/v1/landing-page/page";
 export const exampleData: exampleDataType[] = [
   {
     id: "1",
@@ -654,6 +655,22 @@ export const exampleData: exampleDataType[] = [
         path: "@/app/examples-design/full-page/only-design/wishlist/v1/wishlist",
         urlPath: "/examples-design/full-page/only-design/wishlist/v1/wishlist",
         component: <V1_Wishlist_Page />,
+      },
+    ],
+  },
+  {
+    id: "29",
+    pageName: "Landing Page",
+    children: [
+      {
+        id: "1",
+        name: "Landing Page",
+        version: "v1",
+
+        path: "@/app/examples-design/full-page/only-design/landing-page/v1/landing-page",
+        urlPath:
+          "/examples-design/full-page/only-design/landing-page/v1/landing-page",
+        component: <V1_Landing_Page />,
       },
     ],
   },
