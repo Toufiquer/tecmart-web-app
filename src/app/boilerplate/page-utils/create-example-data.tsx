@@ -77,6 +77,12 @@ NEXT_PUBLIC_MONGOOSE_URI=exampleOfHash`,
                   code: ["process.env.NEXT_PUBLIC_MONGOOSE_URI"],
                 },
                 {
+                  id: "2.3",
+                  name: "Import json data",
+                  fileName: "your file name",
+                  code: [`import data from "./test.json";`],
+                },
+                {
                   id: "3",
                   name: "Backend Api",
                   fileName: "route.ts",

@@ -59,13 +59,19 @@ export const exampleBoilerPlateData: boilerPageInterface = {
                 "You can configure your api key with the help of environment variables",
               content: [
                 {
-                  id: "1",
+                  id: "1.1",
                   name: "Export",
                   fileName: ".env.local",
                   code: [
                     `MONGOOSE_URI=exampleOfHash
 NEXT_PUBLIC_MONGOOSE_URI=exampleOfHash`,
                   ],
+                },
+                {
+                  id: "1.2",
+                  name: "Import json data",
+                  fileName: "your file name",
+                  code: [`import data from "./test.json";`],
                 },
                 {
                   id: "2.1",

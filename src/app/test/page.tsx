@@ -5,12 +5,13 @@
 | @copyright: Toufiquer, May, 2024
 |-----------------------------------------
 */
-import Header from "@/components/common/header";
+
+import data from "./test.json";
 const Page = () => {
+  console.log("data : ", data);
   return (
-    <main>
-      <Header />
-      <main className="bg-slate-800 text-white flex items-center justify-center w-full h-screen"></main>
+    <main className="bg-slate-800 text-white flex items-center justify-center w-full h-screen">
+      working
     </main>
   );
 };

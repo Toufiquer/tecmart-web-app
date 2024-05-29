@@ -19,26 +19,18 @@ const SpyScrollWrapper = ({
   refId: string;
   setSpyDiv: Dispatch<SetStateAction<string>>;
 }) => {
-  console.log("RefDiv", refId);
   const divRef = useRef(null);
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         const [entry] = entries;
-        console.log("");
-        console.log("");
-        console.log("");
-        console.log("");
+
         if (entry.isIntersecting) {
           // Element is visible
 
-          console.log("Div is visible");
-          console.log("ref Id :", refId);
           setSpyDiv(refId);
         } else {
           // Element is not visible
-          console.log("Div is not visible");
-          console.log("ref Id :", refId);
         }
       },
       { threshold: 0.02 }
