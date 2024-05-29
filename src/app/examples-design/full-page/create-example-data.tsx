@@ -24,6 +24,7 @@ export type exampleDataType = {
 import V1_Help_Center_Page from "./only-design/help-center/v1/help-center/page";
 import V2_Help_Center_Page from "./only-design/help-center/v2/help-center/page";
 import V1_About_Us_Page from "./only-design/about-us/v1/about-us/page";
+import V2_About_Us_Page from "./only-design/about-us/v2/about-us/page";
 import V1_Checkout_Page from "./only-design/checkout/v1/checkout/page";
 import V1_Contact_Us_Page from "./only-design/contact-us/v1/contact-us/page";
 import V1_Create_an_event_Page from "./only-design/create-an-event/v1/create-an-event/page";
@@ -107,6 +108,15 @@ export const exampleData: exampleDataType[] = [
         path: "@/app/examples-design/full-page/only-design/about-us/v1/about-us",
         urlPath: "/examples-design/full-page/only-design/about-us/v1/about-us",
         component: <V1_About_Us_Page />,
+      },
+      {
+        id: "2",
+        name: "About us",
+        version: "v2",
+
+        path: "@/app/examples-design/full-page/only-design/about-us/v2/about-us",
+        urlPath: "/examples-design/full-page/only-design/about-us/v2/about-us",
+        component: <V2_About_Us_Page />,
       },
     ],
   },
@@ -533,7 +543,7 @@ export const exampleData: exampleDataType[] = [
     ],
   },
   {
-    id: "21",
+    id: "22",
     pageName: "Single Product",
     children: [
       {
@@ -549,7 +559,7 @@ export const exampleData: exampleDataType[] = [
     ],
   },
   {
-    id: "22",
+    id: "23",
     pageName: "Refund",
     children: [
       {
@@ -564,7 +574,7 @@ export const exampleData: exampleDataType[] = [
     ],
   },
   {
-    id: "23",
+    id: "24",
     pageName: "Terms and Conditions",
     children: [
       {
@@ -580,7 +590,7 @@ export const exampleData: exampleDataType[] = [
     ],
   },
   {
-    id: "24",
+    id: "25",
     pageName: "Terms of Service",
     children: [
       {
@@ -596,7 +606,7 @@ export const exampleData: exampleDataType[] = [
     ],
   },
   {
-    id: "25",
+    id: "26",
     pageName: "Dashboard",
     children: [
       {
@@ -612,7 +622,7 @@ export const exampleData: exampleDataType[] = [
     ],
   },
   {
-    id: "26",
+    id: "27",
     pageName: "Payment Details",
     children: [
       {
@@ -628,7 +638,7 @@ export const exampleData: exampleDataType[] = [
     ],
   },
   {
-    id: "27",
+    id: "28",
     pageName: "Order History",
     children: [
       {
@@ -644,7 +654,7 @@ export const exampleData: exampleDataType[] = [
     ],
   },
   {
-    id: "28",
+    id: "29",
     pageName: "Wishlist",
     children: [
       {
@@ -659,7 +669,7 @@ export const exampleData: exampleDataType[] = [
     ],
   },
   {
-    id: "29",
+    id: "30",
     pageName: "Landing Page",
     children: [
       {
