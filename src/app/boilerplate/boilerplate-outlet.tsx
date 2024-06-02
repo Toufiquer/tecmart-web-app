@@ -72,6 +72,18 @@ const BoilerplateOutlet = ({
                         example Path : {curr.examplePath}
                       </div>
                     )}
+                    {curr.exampleUrlPath && (
+                      <div className="text-sm text-slate-100">
+                        Project example :{" "}
+                        <Link
+                          target="_blank"
+                          href={curr.exampleUrlPath}
+                          className="hover:underline"
+                        >
+                          {curr.exampleUrlPath}
+                        </Link>
+                      </div>
+                    )}
                     <div className="  mb-4">
                       <Accordion type="single" collapsible>
                         <AccordionItem value="item-1">

@@ -6,11 +6,14 @@
 |-----------------------------------------
 */
 
+import { Url } from "url";
+
 export type singleBoilerPlateType = {
   id: string;
   title?: string;
   description?: string[];
   examplePath?: string;
+  exampleUrlPath?: string;
   boilerPlate?: {
     id: string;
     name: string;
